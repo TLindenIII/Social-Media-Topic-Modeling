@@ -12,7 +12,6 @@
 ## What's in this repo
 ```
 data/                      # raw + cleaned text and metadata per entity & slice
-  abstract.pdf
   presentation.pdf
   poster.pdf
   n8n/					   # n8n workflows for both domain and user feeds
