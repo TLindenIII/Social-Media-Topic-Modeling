@@ -24,7 +24,7 @@ data/                      # raw + cleaned text and metadata per entity & slice
       checkpoints/         # codomain checkpoint files (sentiment scoring, outputs, etc.)
       figures/             # exported PNGs for this entity's codomain slice
 ```
-> Tip: Start by browsing outputs/figures/ — each entity has paired views (signed difference and log₂ ratio) for unigrams and n-grams.
+> Tip: Start by browsing figures/ — each entity has paired views (signed difference and log₂ ratio) for unigrams and n-grams.
 
 ## Methods in one page
 
