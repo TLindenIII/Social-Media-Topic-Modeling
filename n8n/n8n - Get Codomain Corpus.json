@@ -1,0 +1,503 @@
+{
+  "name": "Get Codomain Corpus",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -432,
+        -80
+      ],
+      "id": "5438f58b-d8e2-4be9-98f7-693fe7528fcc",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po",
+          "mode": "list",
+          "cachedResultName": "Twitter/X Data PolSent",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 430030708,
+          "mode": "list",
+          "cachedResultName": "Neg Users",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po/edit#gid=430030708"
+        },
+        "options": {
+          "dataLocationOnSheet": {
+            "values": {
+              "rangeDefinition": "specifyRangeA1",
+              "range": "A:A"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -208,
+        -80
+      ],
+      "id": "5d7a313e-59a4-4536-9cbe-53597fff72d2",
+      "name": "Get User IDs",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ba9llz0nBcOq8NIw",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Normalize Author IDs to strings, drop blanks, and dedupe.\nfunction toId(v) {\n  if (v === null || v === undefined) return null;\n  if (typeof v === 'string') return v.trim();\n  // Handle numeric cells safely (even very large) via BigInt when possible\n  try { return BigInt(v).toString(); } catch (e) { return String(v).trim(); }\n}\n\nconst seen = new Set();\nconst out = [];\n\nfor (const it of items) {\n  const raw = it.json[\"Author ID\"] ?? it.json.authorId ?? null;\n  const id = toId(raw);\n  if (!id) continue;           // skip empties\n  if (seen.has(id)) continue;  // skip duplicates\n  seen.add(id);\n\n  out.push({\n    json: {\n      authorId: id,                 // <-- normalized string\n      rowNumber: it.json.row_number ?? null,\n      collected: 0,\n      next_token: null\n    }\n  });\n}\n\nreturn out;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16,
+        -80
+      ],
+      "id": "1ff0c176-7370-4b2e-8cec-9b193d8f6e26",
+      "name": "Normalize IDs"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Flatten all tweets into individual items\nconst allTweets = items.flatMap(item => item.json?.data?.tweets || []);\n\n// Return one n8n item per tweet with all metadata intact\nreturn allTweets.map(tweet => ({ json: tweet }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        -256
+      ],
+      "id": "8c46dd89-36fb-4757-8621-21dc75cf2471",
+      "name": "Flatten Pages To Tweet Array",
+      "retryOnFail": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Grab ALL outputs from your loop node\nconst sourceItems = $items(\"Flatten Pages To Tweet Array\", 0);\n\nlet allTweets = [];\n\n// Loop through each item and collect tweets\nfor (const item of sourceItems) {\n  const j = item.json ?? {};\n\n  if (Array.isArray(j.data?.tweets)) {\n    allTweets.push(...j.data.tweets);\n  } else if (Array.isArray(j.tweets)) {\n    allTweets.push(...j.tweets);\n  } else if (j.type === 'tweet' && j.id) {\n    allTweets.push(j); // already a tweet object\n  }\n}\n\n// Format date helper\nfunction formatDate(dateString) {\n  if (!dateString) return '';\n  const d = new Date(dateString);\n  return isNaN(d) ? dateString : d.toLocaleString('en-US', {\n    year: 'numeric', month: 'long', day: 'numeric',\n    hour: '2-digit', minute: '2-digit'\n  });\n}\n\n// Map into one output item per tweet\nreturn allTweets.map(tweet => ({\n  json: {\n    tweetId: tweet.id || '',\n    url: tweet.url || tweet.twitterUrl || '',\n    content: tweet.text || '',\n    likeCount: tweet.likeCount ?? 0,\n    viewCount: tweet.viewCount ?? 0,\n    createdAt: formatDate(tweet.createdAt),\n\n    // Author fields\n    authorUserName: tweet.author?.userName || '',\n    authorId: tweet.author?.id || '',\n    authorLocation: tweet.author?.location || '',\n    authorIsBlueVerified: !!tweet.author?.isBlueVerified,\n    authorFollowers: tweet.author?.followers ?? 0,\n\n    hashtags: (tweet.entities?.hashtags || []).map(h => h.text)\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        944,
+        -272
+      ],
+      "id": "9f6d430b-582e-456d-ac7b-3b728bd8fb90",
+      "name": "Convert JSON",
+      "retryOnFail": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "authorId",
+              "order": "descending"
+            },
+            {
+              "fieldName": "createdAt",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        1168,
+        -288
+      ],
+      "id": "b2c39d65-945a-45fa-8b37-90aa5cb87238",
+      "name": "Sort Date"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po",
+          "mode": "list",
+          "cachedResultName": "Twitter/X Data PolSent",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1350757620,
+          "mode": "list",
+          "cachedResultName": "User Corpus",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po/edit#gid=1350757620"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Tweet ID": "={{ $json.tweetId }}",
+            "URL": "={{ $json.url }}",
+            "Content": "={{ $json.content }}",
+            "Author ID": "={{ $json.authorId }}",
+            "Author Username": "={{ $json.authorUserName }}",
+            "Author Blue Verified (T/F)": "={{ $json.authorIsBlueVerified }}",
+            "Followers": "={{ $json.authorFollowers }}",
+            "Author Location": "={{ $json.authorLocation }}",
+            "Likes": "={{ $json.likeCount }}",
+            "Views": "={{ $json.viewCount }}",
+            "Date": "={{ $json.createdAt }}",
+            "Original User Sentiment": "Negative"
+          },
+          "matchingColumns": [
+            "Tweet ID"
+          ],
+          "schema": [
+            {
+              "id": "Tweet ID",
+              "displayName": "Tweet ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "URL",
+              "displayName": "URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author ID",
+              "displayName": "Author ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author Username",
+              "displayName": "Author Username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author Blue Verified (T/F)",
+              "displayName": "Author Blue Verified (T/F)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Followers",
+              "displayName": "Followers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author Location",
+              "displayName": "Author Location",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Likes",
+              "displayName": "Likes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Views",
+              "displayName": "Views",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Original User Sentiment",
+              "displayName": "Original User Sentiment",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1616,
+        -80
+      ],
+      "id": "389ef7af-580d-40f2-adf1-29deb29f19c6",
+      "name": "Add to Sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ba9llz0nBcOq8NIw",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "tweetId",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        1344,
+        -288
+      ],
+      "id": "729f3ce4-1c48-4fb0-916f-368f854746f7",
+      "name": "Remove Duplicates"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.twitterapi.io/twitter/user/last_tweets",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "userId",
+              "value": "={{ $json.authorId }}"
+            },
+            {
+              "name": "cursor",
+              "value": "={{ $response.body.next_cursor }}"
+            }
+          ]
+        },
+        "options": {
+          "pagination": {
+            "pagination": {
+              "paginationMode": "responseContainsNextURL",
+              "nextURL": "=https://api.twitterapi.io/twitter/user/last_tweets?cursor={{ $response.body.next_cursor }}",
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{ $response.body.has_next_page == false }}",
+              "limitPagesFetched": true,
+              "maxRequests": 2,
+              "requestInterval": 100
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        496,
+        -240
+      ],
+      "id": "69c4fdd9-1e82-4ae5-9715-a025836db157",
+      "name": "Get Tweets 20 / Page (40 / User)",
+      "retryOnFail": true,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "auStWXdEJPnut49L",
+          "name": "Twitter API IO Auth"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "batchSize": 4,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        240,
+        -80
+      ],
+      "id": "756965db-ac91-445e-b855-555997e3ea10",
+      "name": "4 Users / Loop",
+      "retryOnFail": true,
+      "onError": "continueErrorOutput"
+    }
+  ],
+  "pinData": {
+    "When clicking ‘Test workflow’": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get User IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get User IDs": {
+      "main": [
+        [
+          {
+            "node": "Normalize IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize IDs": {
+      "main": [
+        [
+          {
+            "node": "4 Users / Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Flatten Pages To Tweet Array": {
+      "main": [
+        [
+          {
+            "node": "Convert JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert JSON": {
+      "main": [
+        [
+          {
+            "node": "Sort Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort Date": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Add to Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Tweets 20 / Page (40 / User)": {
+      "main": [
+        [
+          {
+            "node": "Flatten Pages To Tweet Array",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add to Sheet": {
+      "main": [
+        [
+          {
+            "node": "4 Users / Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4 Users / Loop": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Get Tweets 20 / Page (40 / User)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "83fab225-1b5d-4beb-a6f9-f5d02df122d3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3087938cc2ad14e171fe788bdc03954eacb1e7d20a6a7e1a49ba9fc7cbd48ccd"
+  },
+  "id": "yvtI7qpMLku7Fm3h",
+  "tags": []
+}
