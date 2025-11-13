@@ -15,7 +15,8 @@ data/                      # raw + cleaned text and metadata per entity & slice
   abstract.pdf
   presentation.pdf
   poster.pdf
-  {entity}/                # entities: costco, keir_starmer, nfl
+  n8n/					   # n8n workflows for both domain and user feeds
+  entity/                  # entities: costco, keir_starmer, nfl
     domain/                # CSV of on-keyword corpus for this entity
       checkpoints/         # domain checkpoint files (sentiment scoring, outputs, etc.)
       figures/             # exported PNGs for this entity's domain slice
