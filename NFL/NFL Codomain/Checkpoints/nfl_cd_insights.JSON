@@ -1,0 +1,302 @@
+{
+  "topic": "nfl_cd",
+  "key_themes": [
+    {
+      "topic_id": 0,
+      "label": "man · love · look · game",
+      "why_it_matters": "Discussion frequently pivots to man, love, look. Understanding this thread clarifies how evaluations form in real time and what arguments tend to land with the audience.",
+      "evidence": [
+        "st brown dynasty amon ra shine nfl unique name family legacy captivate fan amon ra st brown legacy athletic excellence unique heritage first step onto nfl field",
+        "thought bengal defense self confidence non existent tweet patriot offense turn ball eagle still look much team daniel jones year's sam darnold"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "one · play · best · not",
+      "why_it_matters": "Conversations here dwell on one, play, best, often using one · play · best · not as the frame for what matters on and off the field. This slice of talk helps explain where attention goes and how quickly narratives shift after each game.",
+      "evidence": [
+        "good extremely overrated qb literal dogshit elite sit behind rodgers still mostly bad offense malik willis effecient throw ball best line best wr duo nfl",
+        "harold reynolds idiot aaron judge dhing take away great around player note come mvp conversation go ignore number game cal raleigh dh mlb"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "defense · raven · nfl · lamar",
+      "why_it_matters": "Conversations here dwell on defense, raven, nfl, often using defense · raven · nfl · lamar as the frame for what matters on and off the field. This slice of talk helps explain where attention goes and how quickly narratives shift after each game.",
+      "evidence": [
+        "monday night football game great offenses go however lion defense step meanwhile raven defense look lose field many blown coverage pas defense nonexistent get b",
+        "charlie kolar shine monday night light raven tower tight end impress lion charlie kolar shine monday night football raven tight end impress lion baltimore raven"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "let go · go · need · let",
+      "why_it_matters": "This theme surfaces when fans and media latch onto go, need, let. It’s useful because it reveals which details shape reputations—whether that’s credit after wins or scrutiny after mistakes.",
+      "evidence": [
+        "baker mayfield dazzle career best stats interception woe linger buccaneer quarterback thrill season baker mayfield shine record break performance baker mayfield",
+        "criticize leave wing cancel culture someone ask question name one person get cancel deserve give criticize right wing cancel culture name one person get cancel"
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "free · win · go · spin",
+      "why_it_matters": "Conversations here dwell on free, win, go, often using free · win · go · spin as the frame for what matters on and off the field. This slice of talk helps explain where attention goes and how quickly narratives shift after each game.",
+      "evidence": [
+        "spin special offer want exclusive promo code get free event period june june step join follow official account retweet pinned post june capture screenshot provi",
+        "toronto day fight night sept rebel arena light noise fight mma 247ibet get ready claim live night reward free sign kyc bonus limit 247ibet shirt crowd roar figh"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.961
+      },
+      {
+        "term": "game",
+        "score": 0.794
+      },
+      {
+        "term": "nfl",
+        "score": 0.669
+      },
+      {
+        "term": "bad",
+        "score": 0.666
+      },
+      {
+        "term": "fuck",
+        "score": 0.655
+      },
+      {
+        "term": "go",
+        "score": 0.627
+      },
+      {
+        "term": "team",
+        "score": 0.616
+      },
+      {
+        "term": "no",
+        "score": 0.596
+      },
+      {
+        "term": "shit",
+        "score": 0.502
+      },
+      {
+        "term": "play",
+        "score": 0.498
+      },
+      {
+        "term": "lose",
+        "score": 0.418
+      }
+    ],
+    "neutral": [
+      {
+        "term": "game",
+        "score": 1.0
+      },
+      {
+        "term": "get",
+        "score": 0.925
+      },
+      {
+        "term": "week",
+        "score": 0.845
+      },
+      {
+        "term": "go",
+        "score": 0.741
+      },
+      {
+        "term": "nfl",
+        "score": 0.722
+      },
+      {
+        "term": "play",
+        "score": 0.652
+      },
+      {
+        "term": "yard",
+        "score": 0.616
+      },
+      {
+        "term": "lion",
+        "score": 0.595
+      },
+      {
+        "term": "not",
+        "score": 0.593
+      },
+      {
+        "term": "win",
+        "score": 0.568
+      },
+      {
+        "term": "raven",
+        "score": 0.552
+      },
+      {
+        "term": "one",
+        "score": 0.523
+      }
+    ],
+    "positive": [
+      {
+        "term": "win",
+        "score": 0.991
+      },
+      {
+        "term": "nfl",
+        "score": 0.99
+      },
+      {
+        "term": "get",
+        "score": 0.89
+      },
+      {
+        "term": "game",
+        "score": 0.889
+      },
+      {
+        "term": "good",
+        "score": 0.86
+      },
+      {
+        "term": "go",
+        "score": 0.818
+      },
+      {
+        "term": "best",
+        "score": 0.742
+      },
+      {
+        "term": "play",
+        "score": 0.685
+      },
+      {
+        "term": "great",
+        "score": 0.677
+      },
+      {
+        "term": "love",
+        "score": 0.644
+      },
+      {
+        "term": "back",
+        "score": 0.568
+      },
+      {
+        "term": "one",
+        "score": 0.557
+      }
+    ]
+  },
+  "contrasts": [
+    {
+      "concept": "Performance & outcomes",
+      "negative_corpus_keywords": [
+        "get",
+        "not"
+      ],
+      "positive_corpus_keywords": [
+        "win",
+        "nfl"
+      ],
+      "commentary": "Negative language leans on get, not to frame blame or frustration, while positive talk gravitates to win, nfl to emphasize momentum and credit."
+    },
+    {
+      "concept": "Leadership & decisions",
+      "negative_corpus_keywords": [
+        "game",
+        "nfl"
+      ],
+      "positive_corpus_keywords": [
+        "get",
+        "game"
+      ],
+      "commentary": "Negative language leans on game, nfl to frame blame or frustration, while positive talk gravitates to get, game to emphasize momentum and credit."
+    },
+    {
+      "concept": "Officiating & fairness",
+      "negative_corpus_keywords": [
+        "bad",
+        "fuck"
+      ],
+      "positive_corpus_keywords": [
+        "good",
+        "go"
+      ],
+      "commentary": "Negative language leans on bad, fuck to frame blame or frustration, while positive talk gravitates to good, go to emphasize momentum and credit."
+    }
+  ],
+  "recommendations": [
+    {
+      "audience": "Team communications",
+      "message": "Anchor updates on tangible progress and address recurring pain points directly.",
+      "language_to_use": [
+        "win",
+        "nfl",
+        "get",
+        "game",
+        "good",
+        "go"
+      ],
+      "language_to_avoid": [
+        "get",
+        "not",
+        "game",
+        "nfl",
+        "bad",
+        "fuck"
+      ]
+    },
+    {
+      "audience": "Broadcast/Media",
+      "message": "Balance highlight reels with explanations of decision-making to satisfy both praise- and critique-oriented viewers.",
+      "language_to_use": [
+        "win",
+        "nfl",
+        "get",
+        "game",
+        "good",
+        "go"
+      ],
+      "language_to_avoid": [
+        "get",
+        "not",
+        "game",
+        "nfl",
+        "bad",
+        "fuck"
+      ]
+    },
+    {
+      "audience": "Social media managers",
+      "message": "Lean into moments fans already celebrate and preempt the known friction areas with context threads.",
+      "language_to_use": [
+        "win",
+        "nfl",
+        "get",
+        "game",
+        "good",
+        "go"
+      ],
+      "language_to_avoid": [
+        "get",
+        "not",
+        "game",
+        "nfl",
+        "bad",
+        "fuck"
+      ]
+    }
+  ]
+}

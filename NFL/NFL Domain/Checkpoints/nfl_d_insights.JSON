@@ -1,0 +1,283 @@
+{
+  "topic": "nfl_d",
+  "key_themes": [
+    {
+      "topic_id": 0,
+      "label": "nfl · football · week · get",
+      "why_it_matters": "“nfl · football · week · get” tends to surface when talk shifts to nfl, football, week. This pattern helps explain swingy sentiment week to week and where credibility is won or lost. Injuries amplify volatility, so clear status updates matter.",
+      "evidence": [
+        "marvin harrison jr update ignites cardinal fan hope star power boost marvin harrison jr update elevates cardinal fan expectation arizona cardinal generate buzz",
+        "marvin harrison jr injury news erupts ignite cardinal fan frenzy marvin harrison jr spark excitement among cardinal fan arizona cardinal gear promise electrifyi"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "last night · nfl · game · steelers",
+      "why_it_matters": "“last night · nfl · game · steelers” tends to surface when talk shifts to nfl, game, steelers. That emphasis shapes expectations for upcoming games and colors postgame reactions. Talent moves (depth, rookies) give fans a reason to stay patient.",
+      "evidence": [
+        "nfl best bet soar line collab chig okonkwo receiving yard mgm okonkwo go line game season average receive yard per game week yard week yard week yard week yard",
+        "jordan whittington close rostered fantasy league cooper kupp miss game last whittington fill nicely put solid number rookie game reception yard game reception y"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "nfl · fan · not · player",
+      "why_it_matters": "Conversation around “nfl · fan · not · player” zeros in on nfl, fan, not. It points to the levers that actually move opinion, not just the loudest takes.",
+      "evidence": [
+        "george kittle sensational return ignite 49ers playoff hope george kittle impact 49ers playoff aspiration george kittle return san francisco 49ers lineup pivotal",
+        "george kittle stuns 49ers fan surprise return falcon no snap limit george kittle make stunning return 49ers falcon san francisco 49ers navigate challenging seas"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "nfl · good · play · not",
+      "why_it_matters": "Conversation around “nfl · good · play · not” zeros in on nfl, good, play. It highlights what audiences weigh most when judging progress versus setbacks. Concrete stats beat platitudes—use drive efficiency and red‑zone data.",
+      "evidence": [
+        "lehners care squeeze every dollar could brown certainly care win foster climate among player happy nfl cashing check not win meddlesome haslams approach force s",
+        "always bias mean shit look college get many award include position specific nfl dont necessary qb yeah no reason mahomes shouldve win mvp opoty take away great"
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "team nfl · nfl · team · bad",
+      "why_it_matters": "In “team nfl · nfl · team · bad”, people keep coming back to nfl, team, bad. It highlights what audiences weigh most when judging progress versus setbacks. Explaining adjustments in plain terms builds trust after close games.",
+      "evidence": [
+        "mac bad league blitz dead last brock purdy rank top blitz season play tampa bay blitz lot get turnover atlanta however lead nfl blitz rate game get ugly mac tur",
+        "need dex get back past form truly unleash dline carter continue adjust nfl go good dex best dt nfl last two play far even get top welcome"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.3388
+      },
+      {
+        "term": "get",
+        "score": 0.2453
+      },
+      {
+        "term": "game",
+        "score": 0.2278
+      },
+      {
+        "term": "bad",
+        "score": 0.2025
+      },
+      {
+        "term": "team",
+        "score": 0.1918
+      },
+      {
+        "term": "no",
+        "score": 0.0876
+      },
+      {
+        "term": "player",
+        "score": 0.0482
+      },
+      {
+        "term": "play",
+        "score": 0.0312
+      },
+      {
+        "term": "go",
+        "score": 0.0309
+      },
+      {
+        "term": "fan",
+        "score": 0.0231
+      },
+      {
+        "term": "one",
+        "score": 0.0
+      }
+    ],
+    "neutral": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "week",
+        "score": 0.3963
+      },
+      {
+        "term": "game",
+        "score": 0.2739
+      },
+      {
+        "term": "play",
+        "score": 0.1723
+      },
+      {
+        "term": "not",
+        "score": 0.1475
+      },
+      {
+        "term": "team",
+        "score": 0.1353
+      },
+      {
+        "term": "get",
+        "score": 0.0972
+      },
+      {
+        "term": "sunday",
+        "score": 0.0529
+      },
+      {
+        "term": "player",
+        "score": 0.0469
+      },
+      {
+        "term": "go",
+        "score": 0.0146
+      },
+      {
+        "term": "pick",
+        "score": 0.0111
+      },
+      {
+        "term": "make",
+        "score": 0.0
+      }
+    ],
+    "positive": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "best",
+        "score": 0.3729
+      },
+      {
+        "term": "game",
+        "score": 0.2807
+      },
+      {
+        "term": "get",
+        "score": 0.1959
+      },
+      {
+        "term": "good",
+        "score": 0.184
+      },
+      {
+        "term": "great",
+        "score": 0.1157
+      },
+      {
+        "term": "play",
+        "score": 0.1103
+      },
+      {
+        "term": "week",
+        "score": 0.0983
+      },
+      {
+        "term": "love",
+        "score": 0.0724
+      },
+      {
+        "term": "win",
+        "score": 0.0563
+      },
+      {
+        "term": "one",
+        "score": 0.0344
+      },
+      {
+        "term": "team",
+        "score": 0.0
+      }
+    ]
+  },
+  "contrasts": [
+    {
+      "concept": "Tone shift",
+      "negative_corpus_keywords": [
+        "nfl",
+        "not",
+        "get",
+        "game",
+        "bad",
+        "team"
+      ],
+      "positive_corpus_keywords": [
+        "nfl",
+        "best",
+        "game",
+        "get",
+        "good",
+        "great"
+      ],
+      "commentary": "Negative language leans on problems and friction points; positive language highlights wins, standout players, and momentum. Tailor messaging to bridge this gap with concrete proof points."
+    }
+  ],
+  "recommendations": [
+    {
+      "audience": "Comms/PR",
+      "message": "Lead with recent, verifiable positives and pre-empt known concerns with specifics.",
+      "language_to_use": [
+        "nfl",
+        "best",
+        "game",
+        "get",
+        "good",
+        "great",
+        "play",
+        "week"
+      ],
+      "language_to_avoid": [
+        "nfl",
+        "not",
+        "get",
+        "game",
+        "bad",
+        "team",
+        "no",
+        "player"
+      ]
+    },
+    {
+      "audience": "Social team",
+      "message": "Spotlight clips and stats that reinforce momentum; address hot-button issues succinctly in threads.",
+      "language_to_use": [
+        "nfl",
+        "best",
+        "game",
+        "get",
+        "good",
+        "great"
+      ],
+      "language_to_avoid": [
+        "nfl",
+        "not",
+        "get",
+        "game",
+        "bad",
+        "team"
+      ]
+    },
+    {
+      "audience": "Analysts/Stakeholders",
+      "message": "Track shifts in the top terms weekly to detect narrative changes and tie them to on-field events.",
+      "language_to_use": [
+        "nfl",
+        "week",
+        "game",
+        "play",
+        "not",
+        "team"
+      ],
+      "language_to_avoid": []
+    }
+  ]
+}
