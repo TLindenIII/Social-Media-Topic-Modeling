@@ -1,0 +1,116 @@
+{
+  "topic": "costco_cd",
+  "key_themes": [
+    {
+      "topic_id": 0,
+      "label": "not · lorex · work · see",
+      "why_it_matters": "Discussion here leans skeptical, mixing complaints with practical talk about what does or doesn’t work. It’s useful because it surfaces friction points that can erode trust if they repeat.",
+      "evidence": [
+        "decade attempt work academia clear esp social sci...and truth without rct general belief methodological superiori",
+        "gplay review lorex star veener june buy camera nv...ra online even though sensor light never buy lorex conclusio"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "get · one · make · good",
+      "why_it_matters": "People highlight wins and small delights, often in everyday contexts. Capturing these moments helps explain what earns advocacy and repeat engagement.",
+      "evidence": [
+        "curve shower bench let build many idea come sh...ry much easy one crazy idea make curve sure could pull come to",
+        "pebble floor beauty pain sell sheet set come could no no co...e pebble less grout way go honestly worth walk give perfect sp"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "not · get · know · would",
+      "why_it_matters": "This thread blends everyday actions with opinionated takes. It matters as it frames how casual chatter shapes overall perception.",
+      "evidence": [
+        "—",
+        "—"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "day · every · not · right",
+      "why_it_matters": "People talk in day-to-day terms, contrasting routine expectations with moments that feel off. That split helps identify where operational hiccups interrupt otherwise steady habits.",
+      "evidence": [
+        "—",
+        "—"
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "trump · buy · team · since",
+      "why_it_matters": "Opinionated, newsy language appears alongside shopping cues, showing how broader conversations can bleed into product or brand perceptions. It’s relevant when timing offers or messaging around sensitive cycles.",
+      "evidence": [
+        "—",
+        "—"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      { "term": "not", "score": 1.0 },
+      { "term": "get", "score": 0.835 },
+      { "term": "go", "score": 0.585 },
+      { "term": "no", "score": 0.5844 },
+      { "term": "want", "score": 0.4912 },
+      { "term": "know", "score": 0.4629 },
+      { "term": "one", "score": 0.4619 },
+      { "term": "bad", "score": 0.4129 },
+      { "term": "even", "score": 0.4029 },
+      { "term": "make", "score": 0.3865 }
+    ],
+    "neutral": [
+      { "term": "get", "score": 1.0 },
+      { "term": "not", "score": 0.9396 },
+      { "term": "one", "score": 0.8744 },
+      { "term": "go", "score": 0.8417 },
+      { "term": "make", "score": 0.7531 },
+      { "term": "no", "score": 0.7338 },
+      { "term": "new", "score": 0.7175 },
+      { "term": "see", "score": 0.6443 },
+      { "term": "know", "score": 0.6415 },
+      { "term": "need", "score": 0.6221 }
+    ],
+    "positive": [
+      { "term": "good", "score": 1.0 },
+      { "term": "stock", "score": 0.9647 },
+      { "term": "love", "score": 0.9618 },
+      { "term": "day", "score": 0.8462 },
+      { "term": "get", "score": 0.8259 },
+      { "term": "new", "score": 0.7634 },
+      { "term": "make", "score": 0.7498 },
+      { "term": "best", "score": 0.6767 },
+      { "term": "one", "score": 0.6363 },
+      { "term": "go", "score": 0.6292 }
+    ]
+  },
+  "contrasts": [
+    {
+      "concept": "quality & satisfaction",
+      "negative_corpus_keywords": ["not", "no"],
+      "positive_corpus_keywords": ["good", "love"],
+      "commentary": "Negative language centers on absence and failure (“not”, “no”), whereas positive talk names outcomes (“good”, “love”) and assets (“stock”). The shift suggests problems are framed as blockers, while praise points to tangible benefits."
+    },
+    {
+      "concept": "momentum vs. blockage",
+      "negative_corpus_keywords": ["not", "no", "bad"],
+      "positive_corpus_keywords": ["new", "best", "day"],
+      "commentary": "Where negative posts pause on what’s broken, positive ones move forward with “new”, “best”, or specific days, implying progress and timeliness."
+    }
+  ],
+  "recommendations": [
+    {
+      "audience": "CX & Social",
+      "message": "Acknowledge friction succinctly, pivot to a concrete next step or workaround.",
+      "language_to_use": ["we hear you", "here’s how to fix", "we’ll make it right"],
+      "language_to_avoid": ["generic apologies", "deflection without action"]
+    },
+    {
+      "audience": "Merchandising",
+      "message": "Lean into items/experiences fans already call “good” or “best”; bundle them with timely “new” drops.",
+      "language_to_use": ["back in stock", "member favorite", "new arrival"],
+      "language_to_avoid": ["vague superlatives without proof"]
+    }
+  ]
+}

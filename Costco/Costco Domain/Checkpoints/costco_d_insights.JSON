@@ -1,0 +1,318 @@
+{
+  "topic": "costco_d",
+  "key_themes": [
+    {
+      "topic_id": 0,
+      "label": "hot dog · costco hot · dog · not",
+      "why_it_matters": "Discussions lean toward hot dog · costco hot · dog · not—dog, not, no. with emphasis on practical tradeoffs customers notice. That makes it a lever for changing perception quickly.",
+      "evidence": [
+        "northern chicago area hour not see single muzzy female also not costco hur hur hur not many indian either except awesome engineer co worker amongst scrutinized",
+        "suspect play love wife act surprised announcement happen victim poor loving wife blindside need run costco can't wait watch go book five star hotel view betty f"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "go costco · trader joe · go · kid",
+      "why_it_matters": "Conversation often spotlights go costco · trader joe · go · kid—go, go costco, kid. with emphasis on practical tradeoffs customers notice. This pattern points to near‑term wins if messaging and operations align.",
+      "evidence": [
+        "junk food get basic food cook clean healthy meal go costco bjs bulk good still expensive af liberal dude play game wrong",
+        "make financial sense shop father trader joe's many kid buy bulk costco similar store ingredient learn cook scratch lot healthy way"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "price · not · chicken · go",
+      "why_it_matters": "People keep returning to price · not · chicken · go—price, not, chicken. as a proxy for consistency and reliability. The language signals where small fixes would deliver outsized goodwill.",
+      "evidence": [
+        "not disagree argument generalise stuff costco maybe rest dangerous side careful far arrest law breaker also agree however practicality questionable violent fee",
+        "death threat not protect yet someone attack family member costco camera threaten kill someone police make arrest guess ethnicity victim criminal scum guess pers"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "sam club · costco sam · sam · club",
+      "why_it_matters": "The thread here is about sam club · costco sam · sam · club—sam, club, store. and what it says about customer expectations. It reveals where outcomes, not intent, drive sentiment.",
+      "evidence": [
+        "major retailer pull xbox console shelf costco remove xbox listing clear stock across uk walmart target employee report xbox section dismantle microsoft insists",
+        "next xbox not happen already see sam club costco not sell console anymore best buy canada havent xbox series month gamestop eb game stop sell xbox bundle"
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "costco membership · go costco · membership · buy",
+      "why_it_matters": "People keep returning to costco membership · go costco · membership · buy—membership, buy, gold. with emphasis on practical tradeoffs customers notice. The language signals where small fixes would deliver outsized goodwill.",
+      "evidence": [
+        "duracell seem kodak moment life cycle buy another pack flashlight costco use include rechargeable pack use aaa universe pay power flashlight aaa price much less",
+        "may head costco stock pantry staple supply know carry many item diy home improvement include tool tool may not know could buy costco need home workshop"
+      ]
+    },
+    {
+      "topic_id": 5,
+      "label": "buy · get · sell · one",
+      "why_it_matters": "A lot of attention goes to buy · get · sell · one—buy, get, sell. and how that shapes day-to-day experiences. The language signals where small fixes would deliver outsized goodwill.",
+      "evidence": [
+        "costco midwest sell halal meat inhumane need ban hold meat producer standard farmer no exception make islam islamist want halal meat plenty middle eastern pract",
+        "toss protein costco grass feed protein site jello pack devil costco also sell organic a2 whole fat plain yogurt get rid greek sour cream taste crap body cant ev"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "go",
+        "score": 0.991
+      },
+      {
+        "term": "get",
+        "score": 0.86
+      },
+      {
+        "term": "buy",
+        "score": 0.655
+      },
+      {
+        "term": "no",
+        "score": 0.638
+      },
+      {
+        "term": "one",
+        "score": 0.484
+      },
+      {
+        "term": "go costco",
+        "score": 0.429
+      },
+      {
+        "term": "price",
+        "score": 0.398
+      },
+      {
+        "term": "even",
+        "score": 0.374
+      },
+      {
+        "term": "sell",
+        "score": 0.361
+      },
+      {
+        "term": "store",
+        "score": 0.352
+      },
+      {
+        "term": "make",
+        "score": 0.351
+      }
+    ],
+    "neutral": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "go",
+        "score": 0.94
+      },
+      {
+        "term": "buy",
+        "score": 0.841
+      },
+      {
+        "term": "not",
+        "score": 0.712
+      },
+      {
+        "term": "store",
+        "score": 0.585
+      },
+      {
+        "term": "sam",
+        "score": 0.572
+      },
+      {
+        "term": "sell",
+        "score": 0.551
+      },
+      {
+        "term": "one",
+        "score": 0.509
+      },
+      {
+        "term": "price",
+        "score": 0.505
+      },
+      {
+        "term": "go costco",
+        "score": 0.497
+      },
+      {
+        "term": "need",
+        "score": 0.486
+      },
+      {
+        "term": "club",
+        "score": 0.486
+      }
+    ],
+    "positive": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "good",
+        "score": 0.93
+      },
+      {
+        "term": "love",
+        "score": 0.626
+      },
+      {
+        "term": "go",
+        "score": 0.613
+      },
+      {
+        "term": "one",
+        "score": 0.55
+      },
+      {
+        "term": "buy",
+        "score": 0.539
+      },
+      {
+        "term": "make",
+        "score": 0.423
+      },
+      {
+        "term": "great",
+        "score": 0.416
+      },
+      {
+        "term": "best",
+        "score": 0.402
+      },
+      {
+        "term": "sale",
+        "score": 0.341
+      },
+      {
+        "term": "new",
+        "score": 0.325
+      },
+      {
+        "term": "day",
+        "score": 0.297
+      }
+    ]
+  },
+  "contrasts": [
+    {
+      "concept": "hot dog · costco hot · dog · not",
+      "negative_corpus_keywords": [
+        "not",
+        "go costco"
+      ],
+      "positive_corpus_keywords": [
+        "get",
+        "good",
+        "love",
+        "go",
+        "one"
+      ],
+      "commentary": "On “hot dog · costco hot · dog · not”, negative talk leans on concrete pain words (not, go costco) while positive language highlights value or reassurance (get, good, love)."
+    },
+    {
+      "concept": "go costco · trader joe · go · kid",
+      "negative_corpus_keywords": [
+        "go",
+        "go costco"
+      ],
+      "positive_corpus_keywords": [
+        "good",
+        "go"
+      ],
+      "commentary": "On “go costco · trader joe · go · kid”, negative talk leans on concrete pain words (go, go costco) while positive language highlights value or reassurance (good, go)."
+    },
+    {
+      "concept": "price · not · chicken · go",
+      "negative_corpus_keywords": [
+        "not",
+        "go",
+        "go costco",
+        "price"
+      ],
+      "positive_corpus_keywords": [
+        "good",
+        "go"
+      ],
+      "commentary": "On “price · not · chicken · go”, negative talk leans on concrete pain words (not, go, go costco) while positive language highlights value or reassurance (good, go)."
+    }
+  ],
+  "recommendations": [
+    {
+      "audience": "Customer Support",
+      "message": "Acknowledge friction plainly, offer a concrete path to resolution, and close the loop with timing and next steps.",
+      "language_to_use": [
+        "get",
+        "good",
+        "love",
+        "go",
+        "one",
+        "buy"
+      ],
+      "language_to_avoid": [
+        "not",
+        "go",
+        "get",
+        "buy",
+        "no",
+        "one"
+      ]
+    },
+    {
+      "audience": "Comms/PR",
+      "message": "Re-center the narrative on dependable value and transparency; pair claims with specifics customers can verify.",
+      "language_to_use": [
+        "get",
+        "go",
+        "buy",
+        "not",
+        "store",
+        "sam",
+        "get",
+        "good",
+        "love",
+        "go"
+      ],
+      "language_to_avoid": [
+        "not",
+        "go",
+        "get",
+        "buy",
+        "no",
+        "one"
+      ]
+    },
+    {
+      "audience": "Store & Ops",
+      "message": "Prioritize quick wins where the language shows consistent pain—fix processes, signage, or stock practices that repeatedly trigger complaints.",
+      "language_to_use": [
+        "get",
+        "good",
+        "love",
+        "go"
+      ],
+      "language_to_avoid": [
+        "not",
+        "go",
+        "get",
+        "buy",
+        "no",
+        "one"
+      ]
+    }
+  ]
+}
