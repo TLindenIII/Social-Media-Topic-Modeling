@@ -1,0 +1,277 @@
+{
+  "topic": "ks_d",
+  "key_themes": [
+    {
+      "topic_id": 0,
+      "label": "tel aviv · maccabi tel · aviv fan · tel",
+      "why_it_matters": "Discussions focus on policing, football fandom, and Israeli/Jewish safety at events. It highlights anxiety about public order and fairness in enforcement. How these incidents are handled colors perceptions of leadership and community trust.",
+      "evidence": [
+        "choose cater islamist rather protect jew fail every single jew every single one britain choose save…",
+        "emily damari shock core disgust decision ban maccabi tel aviv fan aston villa match lose control ca…"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "need · not · build · uk",
+      "why_it_matters": "Language here emphasizes practical policy outcomes—housing, safety, and national priorities. People are weighing competence and trade‑offs rather than rhetoric. Clarity about delivery and measurable progress is what persuades this audience.",
+      "evidence": [
+        "uk last foil terrorist plot pre incident arrest motivate religious doctrine remain tie islamist ext…",
+        "uk hate crime level victim muslim jewish uk home office figure hate towards two faith group glare o…"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "ban · football · fan · israeli",
+      "why_it_matters": "This theme reflects debates over bans and protections, balancing civil liberties with security for Jewish/Israeli groups. Perceived bias or inconsistency becomes a flashpoint. Transparent criteria and even‑handed enforcement mitigate backlash.",
+      "evidence": [
+        "know nothing football read twitter notoriously unreliable not israeli football fan would unsafe bri…",
+        "wrong role police ensure football fan enjoy game without fear violence intimidation therefore stop …"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "police · antisemitism · get · jewish",
+      "why_it_matters": "Conversation centers on antisemitism, policing, and institutional responses. Stakeholders are attentive to whether action matches stated values. Visible steps and accountability signals reduce skepticism.",
+      "evidence": [
+        "no uk lack direct equivalent national guard reserve army reserve focus military augmentation rather…",
+        "mark not see elite employ simple divide conquer tactic distract real issue love england love flag l…"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "starmer",
+        "score": 0.807
+      },
+      {
+        "term": "keir",
+        "score": 0.68
+      },
+      {
+        "term": "no",
+        "score": 0.674
+      },
+      {
+        "term": "uk",
+        "score": 0.645
+      },
+      {
+        "term": "fan",
+        "score": 0.636
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.623
+      },
+      {
+        "term": "get",
+        "score": 0.618
+      },
+      {
+        "term": "ban",
+        "score": 0.606
+      },
+      {
+        "term": "go",
+        "score": 0.6
+      }
+    ],
+    "neutral": [
+      {
+        "term": "starmer",
+        "score": 1.0
+      },
+      {
+        "term": "keir",
+        "score": 0.888
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.845
+      },
+      {
+        "term": "not",
+        "score": 0.815
+      },
+      {
+        "term": "uk",
+        "score": 0.532
+      },
+      {
+        "term": "go",
+        "score": 0.521
+      },
+      {
+        "term": "know",
+        "score": 0.496
+      },
+      {
+        "term": "get",
+        "score": 0.485
+      },
+      {
+        "term": "fan",
+        "score": 0.471
+      },
+      {
+        "term": "no",
+        "score": 0.468
+      }
+    ],
+    "positive": [
+      {
+        "term": "great",
+        "score": 1.0
+      },
+      {
+        "term": "love",
+        "score": 0.979
+      },
+      {
+        "term": "good",
+        "score": 0.886
+      },
+      {
+        "term": "starmer",
+        "score": 0.784
+      },
+      {
+        "term": "keir",
+        "score": 0.782
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.733
+      },
+      {
+        "term": "well",
+        "score": 0.726
+      },
+      {
+        "term": "thank",
+        "score": 0.713
+      },
+      {
+        "term": "uk",
+        "score": 0.63
+      },
+      {
+        "term": "go",
+        "score": 0.625
+      }
+    ]
+  },
+  "contrasts": [
+    {
+      "concept": "Leadership & competence",
+      "negative_corpus_keywords": [
+        "not",
+        "no",
+        "uk",
+        "fan",
+        "keir starmer",
+        "get"
+      ],
+      "positive_corpus_keywords": [
+        "great",
+        "love",
+        "good",
+        "well",
+        "thank",
+        "uk"
+      ],
+      "commentary": "Negative language leans on negators and sanction terms (“not”, “no”, “ban”, “police”), casting actions as failures; positive language uses evaluatives (“great”, “good”, “well”, “thank”) that attribute credit and efficacy."
+    },
+    {
+      "concept": "Public order vs. civil liberties",
+      "negative_corpus_keywords": [
+        "ban",
+        "police",
+        "football",
+        "fan"
+      ],
+      "positive_corpus_keywords": [
+        "support",
+        "protect",
+        "right",
+        "safe"
+      ],
+      "commentary": "Where critics emphasize bans and policing around football and demonstrations, supporters speak in terms of protection, rights, and safety—same domain, different framing."
+    },
+    {
+      "concept": "National direction",
+      "negative_corpus_keywords": [
+        "uk",
+        "britain",
+        "need",
+        "let",
+        "no"
+      ],
+      "positive_corpus_keywords": [
+        "uk",
+        "make",
+        "right",
+        "one",
+        "day"
+      ],
+      "commentary": "Both sides invoke the nation (“UK”), but negatives pair it with scarcity or decline (“need”, “no”), while positives pair it with agency and progress (“make”, “right”)."
+    }
+  ],
+  "recommendations": [
+    {
+      "audience": "Comms team",
+      "message": "Lead with concrete actions on safety and even‑handed enforcement; show how decisions were applied consistently.",
+      "language_to_use": [
+        "protect",
+        "safety",
+        "clear criteria",
+        "consistent",
+        "evidence",
+        "law"
+      ],
+      "language_to_avoid": [
+        "ban first",
+        "political",
+        "gesture",
+        "blame",
+        "spin"
+      ]
+    },
+    {
+      "audience": "Community outreach",
+      "message": "Acknowledge harm from antisemitism and all hate crimes; outline channels for reporting and follow‑up.",
+      "language_to_use": [
+        "reporting",
+        "support",
+        "Jewish and Muslim communities",
+        "follow‑up",
+        "trust"
+      ],
+      "language_to_avoid": [
+        "downplay",
+        "both-sidesing",
+        "delay"
+      ]
+    },
+    {
+      "audience": "Policy advisors",
+      "message": "Publish measurable targets on housing/safety; update progress at set intervals to demonstrate delivery.",
+      "language_to_use": [
+        "targets",
+        "delivery",
+        "progress update",
+        "independent metrics"
+      ],
+      "language_to_avoid": [
+        "vague",
+        "announce-only",
+        "one-off"
+      ]
+    }
+  ]
+}

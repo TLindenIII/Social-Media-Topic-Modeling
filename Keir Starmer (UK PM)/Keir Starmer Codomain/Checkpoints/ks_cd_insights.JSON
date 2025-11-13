@@ -1,0 +1,259 @@
+{
+  "topic": "ks_cd",
+  "key_themes": [
+    {
+      "topic_id": 0,
+      "label": "keir starmer · digital id · prime minister · starmer",
+      "why_it_matters": "Conversation often gravitates to starmer, uk, digital, india and keir. It reveals what people weigh first when judging keir starmer · digital id · prime minister · starmer. The pattern hints at where expectations are set—and where they’re missed.",
+      "evidence": [
+        "pm narendra modi global fintech fest mumbai india's digital ecosystem set global standard innovation inclusion 20b monthly upi transaction worth 25l cr uk pm ke",
+        "india uk friendship pm shri ji along uk pm lead union especially shri ji shri ji effort across dimension diplomacy include trade economic fta negotiation signif"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "gary neville · new · gary · white",
+      "why_it_matters": "Here the talk is about new, gary, white, neville, gary neville—not in passing, but as recurring checkpoints. That focus shapes how credibility is earned. If you move these needles, perception tends to follow.",
+      "evidence": [
+        "auspicious occasion pujya gurudevshri's birth anniversary lose worldly maze arrive change gratitude bow guru divine lead home beyond space sadguruwhispers quote",
+        "support boycott sky sport gary neville blame middle age white men put union jack flag synago"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "make · new · happy · day",
+      "why_it_matters": "Discussions zero in on make, new, happy, day, good. It’s a shorthand for value in this space. Meeting those cues reduces friction and makes wins more legible.",
+      "evidence": [
+        "august research product roundup elevenlabs not quiet summer proud research team push frontier product team continuous incredible pace eleven music live first hi",
+        "open elevenlabs brazil day one mission build ai audio world technology work language voice globally vision guide everything train model source voice across many"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "love · god · stop · leave",
+      "why_it_matters": "The thread ties together love, god, stop, leave, right with practical outcomes. People are comparing what was promised with what landed. Close that gap and the narrative shifts quickly.",
+      "evidence": [
+        "ukraine boast target russian energy facility russia respond give message game play two one single russian strike take ukraine's gas production single day octobe",
+        "plant life god keep alive make good sin cause death destruction god give good thing abundance water can't make sun moon reflect sun god hold sun possession posi"
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "not · british · go · want",
+      "why_it_matters": "Attention clusters around not, british, go, want, see. That’s the scorecard participants are keeping. Aligning updates to that scorecard pays the largest reputational dividend.",
+      "evidence": [
+        "tell really smug plebe face open bank account get mortgage rent house interaction funny bit apparently underground working stop work oh remove cash use good not",
+        "would get benefit replace unimproved land value tax low tax capital income instead see demand side boom income house price dislocation every policy since not un"
+      ]
+    },
+    {
+      "topic_id": 5,
+      "label": "no · one · migrant · know",
+      "why_it_matters": "What stands out is no, one, migrant, know, english—the details that travel in word‑of‑mouth. It signals where delight—or disappointment—accumulates. Design to those moments and you change the story at the source.",
+      "evidence": [
+        "morning market buzz market kick midweek heavy action tc tata elxsi lead earnings parade prestige estate q2 sale yoy cr senco gold q2 plan new store fy26 contain",
+        "insanity thing democrat demand fund million circumcision vasectomy zambia 833k transgender nepal million lgbtq western balkan uganda million pastry cooking clas"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "no",
+        "score": 0.6288
+      },
+      {
+        "term": "get",
+        "score": 0.5996
+      },
+      {
+        "term": "go",
+        "score": 0.5779
+      },
+      {
+        "term": "uk",
+        "score": 0.4459
+      },
+      {
+        "term": "want",
+        "score": 0.4179
+      },
+      {
+        "term": "one",
+        "score": 0.4104
+      },
+      {
+        "term": "attack",
+        "score": 0.4086
+      },
+      {
+        "term": "starmer",
+        "score": 0.3725
+      },
+      {
+        "term": "right",
+        "score": 0.3644
+      }
+    ],
+    "neutral": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "india",
+        "score": 0.9782
+      },
+      {
+        "term": "uk",
+        "score": 0.7034
+      },
+      {
+        "term": "new",
+        "score": 0.6835
+      },
+      {
+        "term": "break",
+        "score": 0.6606
+      },
+      {
+        "term": "digital",
+        "score": 0.6577
+      },
+      {
+        "term": "no",
+        "score": 0.6127
+      },
+      {
+        "term": "trump",
+        "score": 0.6119
+      },
+      {
+        "term": "one",
+        "score": 0.6117
+      },
+      {
+        "term": "id",
+        "score": 0.5995
+      }
+    ],
+    "positive": [
+      {
+        "term": "india",
+        "score": 1.0
+      },
+      {
+        "term": "love",
+        "score": 0.7313
+      },
+      {
+        "term": "life",
+        "score": 0.6379
+      },
+      {
+        "term": "new",
+        "score": 0.6374
+      },
+      {
+        "term": "great",
+        "score": 0.6182
+      },
+      {
+        "term": "good",
+        "score": 0.6088
+      },
+      {
+        "term": "day",
+        "score": 0.5547
+      },
+      {
+        "term": "make",
+        "score": 0.5427
+      },
+      {
+        "term": "one",
+        "score": 0.5418
+      },
+      {
+        "term": "world",
+        "score": 0.4996
+      }
+    ]
+  },
+  "contrasts": [
+    {
+      "concept": "tone & emphasis",
+      "negative_corpus_keywords": [
+        "not",
+        "no",
+        "get",
+        "go"
+      ],
+      "positive_corpus_keywords": [
+        "india",
+        "love",
+        "life",
+        "new"
+      ],
+      "commentary": "Negative phrasing leans into friction and risk; positive phrasing centers on outcomes and reliability."
+    },
+    {
+      "concept": "pain points vs outcomes",
+      "negative_corpus_keywords": [
+        "uk",
+        "want",
+        "one",
+        "attack"
+      ],
+      "positive_corpus_keywords": [
+        "great",
+        "good",
+        "day",
+        "make"
+      ],
+      "commentary": "Pain points collect around what blocks progress; outcomes language highlights what payoffs people notice."
+    }
+  ],
+  "recommendations": [
+    {
+      "audience": "Communications",
+      "message": "Anchor updates to the concrete outcomes people cite; preempt the top two pain points with proof and timelines.",
+      "language_to_use": [
+        "india",
+        "love",
+        "life",
+        "new",
+        "great",
+        "good"
+      ],
+      "language_to_avoid": [
+        "not",
+        "no",
+        "get",
+        "go",
+        "uk",
+        "want"
+      ]
+    },
+    {
+      "audience": "Product/Policy",
+      "message": "Prioritize fixes where negative language clusters; validate wins using the positive terms users already volunteer.",
+      "language_to_use": [
+        "india",
+        "love",
+        "life",
+        "new"
+      ],
+      "language_to_avoid": [
+        "not",
+        "no",
+        "get",
+        "go"
+      ]
+    }
+  ]
+}
