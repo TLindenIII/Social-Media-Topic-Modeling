@@ -1,0 +1,157 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "domain",
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "starmer",
+        "score": 0.811786
+      },
+      {
+        "term": "keir",
+        "score": 0.68842
+      },
+      {
+        "term": "no",
+        "score": 0.682888
+      },
+      {
+        "term": "uk",
+        "score": 0.654113
+      },
+      {
+        "term": "fan",
+        "score": 0.647983
+      }
+    ],
+    "neutral": [
+      {
+        "term": "starmer",
+        "score": 1.0
+      },
+      {
+        "term": "keir",
+        "score": 0.891994
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.850596
+      },
+      {
+        "term": "not",
+        "score": 0.82086
+      },
+      {
+        "term": "uk",
+        "score": 0.548062
+      },
+      {
+        "term": "go",
+        "score": 0.44164
+      }
+    ],
+    "positive": [
+      {
+        "term": "great",
+        "score": 1.0
+      },
+      {
+        "term": "love",
+        "score": 0.979504
+      },
+      {
+        "term": "good",
+        "score": 0.887982
+      },
+      {
+        "term": "starmer",
+        "score": 0.788503
+      },
+      {
+        "term": "keir",
+        "score": 0.786634
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.70911
+      }
+    ]
+  },
+  "diagnostics": {
+    "analysis_mode": "domain",
+    "off_topic_risk": "medium",
+    "confidence": "medium",
+    "generic_terms": [
+      "get",
+      "go",
+      "know",
+      "great",
+      "good",
+      "well",
+      "make"
+    ],
+    "generic_term_share": 0.3333,
+    "subject_topic_share": 0.5,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "tel aviv · muslim · let · britain",
+        "matched_subject_terms": [
+          "britain"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "not · need · go · no",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "fan · football · ban · not",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "not · police · trump · community",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 4,
+        "label": "keir starmer · prime minister · starmer · keir",
+        "matched_subject_terms": [
+          "keir",
+          "starmer",
+          "labour",
+          "prime minister"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 5,
+        "label": "not · uk · go · british",
+        "matched_subject_terms": [
+          "labour",
+          "pm",
+          "britain"
+        ],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      }
+    ]
+  }
+}

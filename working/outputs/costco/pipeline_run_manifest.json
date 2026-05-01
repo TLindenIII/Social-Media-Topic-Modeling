@@ -1,0 +1,53 @@
+{
+  "subject": "costco",
+  "datasets": [
+    "domain"
+  ],
+  "run_llm": true,
+  "llm_backend": "ollama",
+  "llm_model": "isotnek/qwen3.5:9B-Unsloth-UD-Q4_K_XL",
+  "stages": [
+    {
+      "stage": "01_ingest",
+      "dataset": "all",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/01_ingest/costco__manifest.json"
+    },
+    {
+      "stage": "02_preprocess",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/02_preprocess/costco__domain__preprocess_summary.json"
+    },
+    {
+      "stage": "03_sentiment",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/03_sentiment/costco__domain__sentiment_summary.json"
+    },
+    {
+      "stage": "04_eda",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/costco__domain__eda_summary.json"
+    },
+    {
+      "stage": "05_tfidf",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/costco__domain__tfidf_summary.json"
+    },
+    {
+      "stage": "06_topic_modeling",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_model_summary.json"
+    },
+    {
+      "stage": "07_local_llm",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/07_local_llm/costco__domain__prompt.txt"
+    }
+  ]
+}

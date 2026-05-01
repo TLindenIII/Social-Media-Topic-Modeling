@@ -1,0 +1,142 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "codomain",
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "no",
+        "score": 0.641569
+      },
+      {
+        "term": "get",
+        "score": 0.613287
+      },
+      {
+        "term": "go",
+        "score": 0.592333
+      },
+      {
+        "term": "uk",
+        "score": 0.464889
+      },
+      {
+        "term": "want",
+        "score": 0.437897
+      }
+    ],
+    "neutral": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "india",
+        "score": 0.979152
+      },
+      {
+        "term": "uk",
+        "score": 0.716955
+      },
+      {
+        "term": "new",
+        "score": 0.697936
+      },
+      {
+        "term": "break",
+        "score": 0.67609
+      },
+      {
+        "term": "digital",
+        "score": 0.673366
+      }
+    ],
+    "positive": [
+      {
+        "term": "india",
+        "score": 1.0
+      },
+      {
+        "term": "love",
+        "score": 0.733078
+      },
+      {
+        "term": "life",
+        "score": 0.640329
+      },
+      {
+        "term": "new",
+        "score": 0.639841
+      },
+      {
+        "term": "great",
+        "score": 0.620726
+      },
+      {
+        "term": "good",
+        "score": 0.611392
+      }
+    ]
+  },
+  "diagnostics": {
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "low",
+    "confidence": "high",
+    "generic_terms": [
+      "get",
+      "go",
+      "want",
+      "one",
+      "right",
+      "need",
+      "new",
+      "great",
+      "good",
+      "day"
+    ],
+    "generic_term_share": 0.4444,
+    "subject_topic_share": 0.25,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "digital id · keir starmer · starmer · uk",
+        "matched_subject_terms": [
+          "keir",
+          "starmer",
+          "labour",
+          "pm"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "india · make · new · life",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "not · no · see · attack",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "not · right · israel · gaza",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      }
+    ]
+  }
+}

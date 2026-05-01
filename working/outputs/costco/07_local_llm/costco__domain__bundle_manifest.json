@@ -1,0 +1,584 @@
+{
+  "subject": "costco",
+  "dataset": "domain",
+  "polar_terms_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/07_local_llm/costco__domain__polar_terms.jsonl",
+  "topic_summaries_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/07_local_llm/costco__domain__topic_summaries.jsonl",
+  "topic_exemplars_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/07_local_llm/costco__domain__topic_exemplars.jsonl",
+  "deterministic_output_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/07_local_llm/costco__domain__deterministic_output.json",
+  "prompt_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/07_local_llm/costco__domain__prompt.txt",
+  "prompt": "You are an analyst. You receive JSONL files that describe a topic's language landscape.\nThe files are already computed. Use them to produce concise insights with evidence.\nBe conservative. If the evidence looks noisy, generic, or off-topic, say so directly.\nDo not convert weak or off-topic evidence into confident business advice.\n\nReturn valid JSON with:\n{\n  \"overview\": {\n    \"summary\": \"<2-4 sentences>\",\n    \"analysis_mode\": \"domain|codomain_adjacent_interest\",\n    \"off_topic_risk\": \"low|medium|high\",\n    \"confidence\": \"low|medium|high\"\n  },\n  \"topic_interpretations\": [\n    {\n      \"topic_id\": <int>,\n      \"label\": \"<string>\",\n      \"relevance\": \"high|medium|low\",\n      \"theme_summary\": \"<2-3 sentences explaining what the topic is, what kind of posts drive it, and why it matters or why it looks noisy>\",\n      \"evidence\": [\"<short preview 1>\", \"<short preview 2>\"]\n    }\n  ],\n  \"quality_flags\": [\n    {\n      \"flag\": \"<short label>\",\n      \"severity\": \"low|medium|high\",\n      \"explanation\": \"<what looks wrong or uncertain>\"\n    }\n  ],\n  \"strategic_opportunities\": [\n    {\n      \"opportunity\": \"<short headline>\",\n      \"activation_type\": \"offering|message|content|monitoring\",\n      \"evidence_topic_ids\": [<int>, <int>],\n      \"rationale\": \"<1-2 sentences>\",\n      \"confidence\": \"low|medium|high\"\n    }\n  ],\n  \"takeaways\": [\"<short takeaway>\", \"<short takeaway>\"]\n}\n\nTASK CONTEXT\nsubject=costco\ndataset=domain\nanalysis_goal=Summarize the direct language and themes in the subject conversation.\n\nPOLAR_TERMS_JSONL\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"not\", \"scores\": {\"agg\": 2168.9992449089923, \"iwdf\": 1957.4533228777213, \"agg_norm\": 0.9999999999999996, \"iwdf_norm\": 0.9987207889445607, \"fused_score\": 0.9993603944722802}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"go\", \"scores\": {\"agg\": 2130.7006729381173, \"iwdf\": 1959.9605260508692, \"agg_norm\": 0.9823427453648179, \"iwdf_norm\": 0.9999999999999996, \"fused_score\": 0.9911713726824087}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"get\", \"scores\": {\"agg\": 1877.1518293097001, \"iwdf\": 1715.737164924732, \"agg_norm\": 0.8654460501614705, \"iwdf_norm\": 0.8753937347818813, \"fused_score\": 0.870419892471676}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"buy\", \"scores\": {\"agg\": 1470.9519259344383, \"iwdf\": 1344.9375846786343, \"agg_norm\": 0.6781707874666211, \"iwdf_norm\": 0.68620646528456, \"fused_score\": 0.6821886263755905}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"no\", \"scores\": {\"agg\": 1433.1032610165064, \"iwdf\": 1315.5593641299135, \"agg_norm\": 0.6607209589308255, \"iwdf_norm\": 0.6712172753706616, \"fused_score\": 0.6659691171507436}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"one\", \"scores\": {\"agg\": 1112.535245669975, \"iwdf\": 1052.7897326872223, \"agg_norm\": 0.5129256030315744, \"iwdf_norm\": 0.5371484367639237, \"fused_score\": 0.525037019897749}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"go costco\", \"scores\": {\"agg\": 976.7614483451398, \"iwdf\": 974.0390595231057, \"agg_norm\": 0.45032816430792383, \"iwdf_norm\": 0.4969687126738719, \"fused_score\": 0.4736484384908979}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"price\", \"scores\": {\"agg\": 971.9976346531613, \"iwdf\": 868.8442531375998, \"agg_norm\": 0.4481318455663844, \"iwdf_norm\": 0.4432968121497, \"fused_score\": 0.4457143288580422}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"even\", \"scores\": {\"agg\": 886.4206946960004, \"iwdf\": 857.2147731128694, \"agg_norm\": 0.40867727214593513, \"iwdf_norm\": 0.4373632844739347, \"fused_score\": 0.42302027830993494}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"sell\", \"scores\": {\"agg\": 876.1611683470346, \"iwdf\": 821.2420749755303, \"agg_norm\": 0.4039471984158282, \"iwdf_norm\": 0.4190094974158756, \"fused_score\": 0.4114783479158519}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"store\", \"scores\": {\"agg\": 857.427138344615, \"iwdf\": 807.3386090660821, \"agg_norm\": 0.3953100215950471, \"iwdf_norm\": 0.41191574949358334, \"fused_score\": 0.4036128855443152}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"make\", \"scores\": {\"agg\": 841.4898627361544, \"iwdf\": 816.4013090888451, \"agg_norm\": 0.387962266336087, \"iwdf_norm\": 0.4165396691604878, \"fused_score\": 0.4022509677482874}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"get\", \"scores\": {\"agg\": 2646.738221096341, \"iwdf\": 2467.841127631464, \"agg_norm\": 0.9999999999999997, \"iwdf_norm\": 0.9999999999999997, \"fused_score\": 0.9999999999999997}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"go\", \"scores\": {\"agg\": 2481.8242578940008, \"iwdf\": 2342.7653162951797, \"agg_norm\": 0.937691622885912, \"iwdf_norm\": 0.9493177214951726, \"fused_score\": 0.9435046721905422}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"buy\", \"scores\": {\"agg\": 2247.3637363593625, \"iwdf\": 2101.04677407508, \"agg_norm\": 0.8491069190168913, \"iwdf_norm\": 0.8513703538491477, \"fused_score\": 0.8502386364330194}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"not\", \"scores\": {\"agg\": 1921.753385946287, \"iwdf\": 1802.4742301886074, \"agg_norm\": 0.7260836642734736, \"iwdf_norm\": 0.7303850357330538, \"fused_score\": 0.7282343500032638}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"store\", \"scores\": {\"agg\": 1610.6231217326651, \"iwdf\": 1503.320168605808, \"agg_norm\": 0.6085313269347457, \"iwdf_norm\": 0.6091640793946224, \"fused_score\": 0.608847703164684}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"sam\", \"scores\": {\"agg\": 1540.3458358001405, \"iwdf\": 1508.8273866519044, \"agg_norm\": 0.5819789140922643, \"iwdf_norm\": 0.6113956728243752, \"fused_score\": 0.5966872934583198}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"sell\", \"scores\": {\"agg\": 1524.9112109152054, \"iwdf\": 1424.0256669526436, \"agg_norm\": 0.5761473495038549, \"iwdf_norm\": 0.5770329584868238, \"fused_score\": 0.5765901539953393}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"one\", \"scores\": {\"agg\": 1415.1885136437415, \"iwdf\": 1331.797612374649, \"agg_norm\": 0.5346915317743577, \"iwdf_norm\": 0.5396610006466886, \"fused_score\": 0.5371762662105232}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"price\", \"scores\": {\"agg\": 1422.6020683143884, \"iwdf\": 1307.2519038033613, \"agg_norm\": 0.5374925472323866, \"iwdf_norm\": 0.5297147734376277, \"fused_score\": 0.5336036603350072}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"go costco\", \"scores\": {\"agg\": 1343.2312836971905, \"iwdf\": 1343.2312836971862, \"agg_norm\": 0.5075043965401279, \"iwdf_norm\": 0.544294066849581, \"fused_score\": 0.5258992316948545}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"need\", \"scores\": {\"agg\": 1340.4239054577874, \"iwdf\": 1295.1138968225087, \"agg_norm\": 0.5064437029599973, \"iwdf_norm\": 0.5247963016426049, \"fused_score\": 0.5156200023013011}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"club\", \"scores\": {\"agg\": 1338.5974943458825, \"iwdf\": 1293.803853176115, \"agg_norm\": 0.5057536418510644, \"iwdf_norm\": 0.5242654556202554, \"fused_score\": 0.5150095487356599}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"get\", \"scores\": {\"agg\": 1870.4308341842932, \"iwdf\": 1709.8613527160858, \"agg_norm\": 0.9999999999999996, \"iwdf_norm\": 0.9999999999999994, \"fused_score\": 0.9999999999999996}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"good\", \"scores\": {\"agg\": 1721.3614728237249, \"iwdf\": 1630.7578064989445, \"agg_norm\": 0.9203021257797115, \"iwdf_norm\": 0.9537368652192253, \"fused_score\": 0.9370194954994684}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"love\", \"scores\": {\"agg\": 1206.1400280782582, \"iwdf\": 1167.0098184484868, \"agg_norm\": 0.6448460996443437, \"iwdf_norm\": 0.6825172208230281, \"fused_score\": 0.6636816602336859}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"go\", \"scores\": {\"agg\": 1212.3305080838936, \"iwdf\": 1120.852425835341, \"agg_norm\": 0.64815575423969, \"iwdf_norm\": 0.6555224048165573, \"fused_score\": 0.6518390795281237}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"one\", \"scores\": {\"agg\": 1102.404157512451, \"iwdf\": 1026.7489972497292, \"agg_norm\": 0.5893851498621258, \"iwdf_norm\": 0.6004866977189439, \"fused_score\": 0.5949359237905348}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"buy\", \"scores\": {\"agg\": 1077.1869777106665, \"iwdf\": 1017.0672282146885, \"agg_norm\": 0.5759031331305197, \"iwdf_norm\": 0.5948243853801911, \"fused_score\": 0.5853637592553553}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"make\", \"scores\": {\"agg\": 879.5580360491348, \"iwdf\": 840.53139704221, \"agg_norm\": 0.47024355029557413, \"iwdf_norm\": 0.4915786860186293, \"fused_score\": 0.48091111815710175}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"great\", \"scores\": {\"agg\": 863.675231030636, \"iwdf\": 832.5742233671353, \"agg_norm\": 0.4617520280600431, \"iwdf_norm\": 0.4869249907570604, \"fused_score\": 0.47433850940855177}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"best\", \"scores\": {\"agg\": 835.8433221272006, \"iwdf\": 816.4528131958942, \"agg_norm\": 0.4468720825444031, \"iwdf_norm\": 0.47749650104610664, \"fused_score\": 0.4621842917952549}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"sale\", \"scores\": {\"agg\": 794.476255566018, \"iwdf\": 665.3318732950311, \"agg_norm\": 0.4247557520150131, \"iwdf_norm\": 0.38911451635430105, \"fused_score\": 0.4069351341846571}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"new\", \"scores\": {\"agg\": 709.8490168567475, \"iwdf\": 694.0246346608797, \"agg_norm\": 0.379510968213009, \"iwdf_norm\": 0.4058952695541267, \"fused_score\": 0.39270311888356785}}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"day\", \"scores\": {\"agg\": 672.158599996554, \"iwdf\": 643.8309353720034, \"agg_norm\": 0.35936030764253646, \"iwdf_norm\": 0.3765398488885011, \"fused_score\": 0.3679500782655188}}\n\nTOPIC_SUMMARIES_JSONL\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 0, \"label\": \"hot dog · not · dog · hot\", \"top_words\": \"not, dog, hot, hot dog, love, one, see, pizza, no, run, great, eat\", \"exemplars\": [\"@junizamel @greg16676935420 @mansourtarek_ Assuming an average price of $3 for a prepared hot dog in the US (based on street vendor and event prices around 2025\", \"@CholulaPatty @JonFraserTF Maybe they should fill those with homeless Canadians first instead of tossing them to the side. I see these newcomers driving new SUV\", \"Attention Costco members! Discover the Steve Madden Men's Sneakers in white: 5 pairs for just $45, 3 pairs for $35, or individual pairs for $15 each. Plus, enjo\"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 1, \"label\": \"go costco · sam club · costco sam · trader joe\", \"top_words\": \"go, go costco, sam, club, sam club, costco sam, store, trader, kid, shop, joe, trader joe\", \"exemplars\": [\"@ReddCinema It's prolly tons more expensive now. TJ's is good food and reasonable prices, but w 6 kids, Costco or Sam's club for bulk. Aldi and Walmart are actu\", \"Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https\", \"Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https\"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 2, \"label\": \"parking lot · lot · parking · spot\", \"top_words\": \"lot, parking, spot, park, come, look, parking lot, car, not, local, tesla, chicken\", \"exemplars\": [\"@elonmusk 😂, Still fine-tuning its parking lot ninja skills, 20 minutes to find a spot at Costco with FSD V14.1 is a bit like watching a robot chef overthink a \", \"FSD V14.1 Spends 20 Minutes Looking For Parking Spot at Costco\\nThis video is sped up 35x once we get hunting for a spot and during that time the car pulls of so\", \"@Luhwang_Konyak @elonmusk Tesla's Full Self-Driving (FSD) software is getting smarter. In this video, a Tesla car drives around a busy Costco parking lot for 20\"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 3, \"label\": \"walmart · not · shop · xbox\", \"top_words\": \"walmart, not, shop, xbox, store, target, no, cart, shopping, game, go, yesterday\", \"exemplars\": [\"https://t.co/OVopDckwIE\\n\\n🚨 Major retailers are pulling Xbox consoles from shelves. Costco has removed all Xbox listings and is clearing stock across the US, UK,\", \"Target And Walmart Are Pulling Their Xbox Stock\\n\\nLast month, one of the largest retailers in the world, Costco, confirmed that it would no longer be selling Xbo\", \"@MrOGKush93 @Witchbrook What is cope? Do you not follow gaming news? This is not a console wars thing or being a Sony fanboy. It’s literally what is happening. \"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 4, \"label\": \"costco membership · membership · gold · buy\", \"top_words\": \"membership, gold, buy, sell, costco membership, not, bar, need, get, silver, no, price\", \"exemplars\": [\"how does this gold => bitcoin rotation logistically happen? does the chinese normie who bought laopu go fsh their jewelry, travel to HK and buy btc on the stree\", \"You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here \", \"You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here \"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 5, \"label\": \"buy · get · good · make\", \"top_words\": \"buy, get, good, make, go, sell, price, guy, one, beef, cheap, bag\", \"exemplars\": [\"@GrandpaJoeSux I have a “food at home” solution that even my kids prefer.\\n\\nFrozen patties\\nFrozen buns (ready to use at anytime)\\nCostco bagged fries ($6 for 3lbs\", \"@MattWallaceTech Toss both proteins. Costco has grass fed protein on their site. Jello packs are the devil.  Costco also sells organic A2 whole fat plain yogurt\", \"American bought a box of soda at Costco for her kid\\n\\nShe cut the labels off and found every single one has been relabeled by the manufacturer and used to be “en\"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 6, \"label\": \"get costco · costco get · costco hotdog · get\", \"top_words\": \"get, one, hotdog, get costco, card, back, costco get, costco hotdog, sample, well, free, know\", \"exemplars\": [\"🚨GIVEAWAY Day 7 of 31🚨\\n\\nOver $1500 value! \\n\\nPrizes:\\n-8x BBWF Bundles\\n-2x Blooming Waters🔥\\n-2x Pris Bundles\\n-2x Pris Sams Boxes\\n-2x Costco Pris Box\\n\\nTo Enter: \\nF\", \"🚨GIVEAWAY Day 8 of 31🚨\\n\\nOver $1500 value! \\n\\nPrizes:\\n-8x BBWF Bundles\\n-2x Blooming Waters🔥\\n-2x Pris Bundles\\n-2x Pris Sams Boxes\\n-2x Costco Pris Box\\n\\nTo Enter: \\nF\", \"🚨GIVEAWAY Day 9 of 31🚨\\n\\nOver $1500 value! \\n\\nPrizes:\\n-8x BBWF Bundles\\n-2x Blooming Waters🔥\\n-2x Pris Bundles\\n-2x Pris Sams Boxes\\n-2x Costco Pris Box\\n\\nTo Enter: \\nF\"]}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 7, \"label\": \"sale · cost · stock · last\", \"top_words\": \"sale, cost, stock, last, retail, week, big, company, market, price, business, high\", \"exemplars\": [\"#Stocks - S&P500 Outlook\\nStocks eased Thursday as shutdown-delayed data kept macro cues thin and attention pivoted to earnings. This morning S&P 500 futures are\", \"@Fynnderella1 Because a majority barely get by on good pay. They see deterioration in our economy, homelessness, and super rich.\\nWages can be higher. A nationwi\", \"@WallStreetMav This cannot be defeated. 1400 year success rate. Only defeating poverty can eliminate extreme religious fervor.\\n\\nHere’s how:\\n\\nA nationwide $25/ho\"]}\n\nTOPIC_EXEMPLARS_JSONL\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 0, \"rank\": 1, \"score\": 0.968693122167883, \"doc_idx\": 9913, \"sentiment\": \"neutral\", \"preview\": \"@junizamel @greg16676935420 @mansourtarek_ Assuming an average price of $3 for a prepared hot dog in the US (based on street vendor and event prices around 2025\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 0, \"rank\": 2, \"score\": 0.964947370230155, \"doc_idx\": 9434, \"sentiment\": \"negative\", \"preview\": \"@CholulaPatty @JonFraserTF Maybe they should fill those with homeless Canadians first instead of tossing them to the side. I see these newcomers driving new SUV\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 0, \"rank\": 3, \"score\": 0.963516002235805, \"doc_idx\": 13181, \"sentiment\": \"positive\", \"preview\": \"Attention Costco members! Discover the Steve Madden Men's Sneakers in white: 5 pairs for just $45, 3 pairs for $35, or individual pairs for $15 each. Plus, enjo\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 1, \"rank\": 1, \"score\": 0.9726216504406164, \"doc_idx\": 1517, \"sentiment\": \"neutral\", \"preview\": \"@ReddCinema It's prolly tons more expensive now. TJ's is good food and reasonable prices, but w 6 kids, Costco or Sam's club for bulk. Aldi and Walmart are actu\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 1, \"rank\": 2, \"score\": 0.9717718307418042, \"doc_idx\": 8980, \"sentiment\": \"neutral\", \"preview\": \"Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 1, \"rank\": 3, \"score\": 0.9717718307418042, \"doc_idx\": 9157, \"sentiment\": \"neutral\", \"preview\": \"Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 2, \"rank\": 1, \"score\": 0.9873010890182754, \"doc_idx\": 11048, \"sentiment\": \"neutral\", \"preview\": \"@elonmusk 😂, Still fine-tuning its parking lot ninja skills, 20 minutes to find a spot at Costco with FSD V14.1 is a bit like watching a robot chef overthink a \"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 2, \"rank\": 2, \"score\": 0.985153510142582, \"doc_idx\": 11419, \"sentiment\": \"neutral\", \"preview\": \"FSD V14.1 Spends 20 Minutes Looking For Parking Spot at Costco\\nThis video is sped up 35x once we get hunting for a spot and during that time the car pulls of so\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 2, \"rank\": 3, \"score\": 0.9817594560251728, \"doc_idx\": 10214, \"sentiment\": \"neutral\", \"preview\": \"@Luhwang_Konyak @elonmusk Tesla's Full Self-Driving (FSD) software is getting smarter. In this video, a Tesla car drives around a busy Costco parking lot for 20\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 3, \"rank\": 1, \"score\": 0.9824881788438732, \"doc_idx\": 6586, \"sentiment\": \"negative\", \"preview\": \"https://t.co/OVopDckwIE\\n\\n🚨 Major retailers are pulling Xbox consoles from shelves. Costco has removed all Xbox listings and is clearing stock across the US, UK,\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 3, \"rank\": 2, \"score\": 0.9726258274313344, \"doc_idx\": 6615, \"sentiment\": \"neutral\", \"preview\": \"Target And Walmart Are Pulling Their Xbox Stock\\n\\nLast month, one of the largest retailers in the world, Costco, confirmed that it would no longer be selling Xbo\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 3, \"rank\": 3, \"score\": 0.9687225177226992, \"doc_idx\": 4181, \"sentiment\": \"negative\", \"preview\": \"@MrOGKush93 @Witchbrook What is cope? Do you not follow gaming news? This is not a console wars thing or being a Sony fanboy. It’s literally what is happening. \"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 4, \"rank\": 1, \"score\": 0.970781974745972, \"doc_idx\": 751, \"sentiment\": \"neutral\", \"preview\": \"how does this gold => bitcoin rotation logistically happen? does the chinese normie who bought laopu go fsh their jewelry, travel to HK and buy btc on the stree\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 4, \"rank\": 2, \"score\": 0.968717409459331, \"doc_idx\": 10507, \"sentiment\": \"positive\", \"preview\": \"You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here \"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 4, \"rank\": 3, \"score\": 0.968717409459331, \"doc_idx\": 372, \"sentiment\": \"positive\", \"preview\": \"You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here \"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 5, \"rank\": 1, \"score\": 0.978637608348296, \"doc_idx\": 11829, \"sentiment\": \"positive\", \"preview\": \"@GrandpaJoeSux I have a “food at home” solution that even my kids prefer.\\n\\nFrozen patties\\nFrozen buns (ready to use at anytime)\\nCostco bagged fries ($6 for 3lbs\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 5, \"rank\": 2, \"score\": 0.9726025320615892, \"doc_idx\": 11826, \"sentiment\": \"negative\", \"preview\": \"@MattWallaceTech Toss both proteins. Costco has grass fed protein on their site. Jello packs are the devil.  Costco also sells organic A2 whole fat plain yogurt\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 5, \"rank\": 3, \"score\": 0.9717556580092372, \"doc_idx\": 9878, \"sentiment\": \"negative\", \"preview\": \"American bought a box of soda at Costco for her kid\\n\\nShe cut the labels off and found every single one has been relabeled by the manufacturer and used to be “en\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 6, \"rank\": 1, \"score\": 0.9828362835113984, \"doc_idx\": 13750, \"sentiment\": \"neutral\", \"preview\": \"🚨GIVEAWAY Day 7 of 31🚨\\n\\nOver $1500 value! \\n\\nPrizes:\\n-8x BBWF Bundles\\n-2x Blooming Waters🔥\\n-2x Pris Bundles\\n-2x Pris Sams Boxes\\n-2x Costco Pris Box\\n\\nTo Enter: \\nF\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 6, \"rank\": 2, \"score\": 0.9828362835113984, \"doc_idx\": 12563, \"sentiment\": \"neutral\", \"preview\": \"🚨GIVEAWAY Day 8 of 31🚨\\n\\nOver $1500 value! \\n\\nPrizes:\\n-8x BBWF Bundles\\n-2x Blooming Waters🔥\\n-2x Pris Bundles\\n-2x Pris Sams Boxes\\n-2x Costco Pris Box\\n\\nTo Enter: \\nF\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 6, \"rank\": 3, \"score\": 0.9828362835113984, \"doc_idx\": 11377, \"sentiment\": \"neutral\", \"preview\": \"🚨GIVEAWAY Day 9 of 31🚨\\n\\nOver $1500 value! \\n\\nPrizes:\\n-8x BBWF Bundles\\n-2x Blooming Waters🔥\\n-2x Pris Bundles\\n-2x Pris Sams Boxes\\n-2x Costco Pris Box\\n\\nTo Enter: \\nF\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 7, \"rank\": 1, \"score\": 0.9915706900397292, \"doc_idx\": 10744, \"sentiment\": \"neutral\", \"preview\": \"#Stocks - S&P500 Outlook\\nStocks eased Thursday as shutdown-delayed data kept macro cues thin and attention pivoted to earnings. This morning S&P 500 futures are\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 7, \"rank\": 2, \"score\": 0.9867196571718914, \"doc_idx\": 6389, \"sentiment\": \"negative\", \"preview\": \"@Fynnderella1 Because a majority barely get by on good pay. They see deterioration in our economy, homelessness, and super rich.\\nWages can be higher. A nationwi\"}\n{\"subject\": \"costco\", \"dataset\": \"domain\", \"topic_id\": 7, \"rank\": 3, \"score\": 0.9863307479992892, \"doc_idx\": 6047, \"sentiment\": \"neutral\", \"preview\": \"@WallStreetMav This cannot be defeated. 1400 year success rate. Only defeating poverty can eliminate extreme religious fervor.\\n\\nHere’s how:\\n\\nA nationwide $25/ho\"}\n\nDIAGNOSTICS_JSON\n{\"analysis_mode\": \"domain\", \"off_topic_risk\": \"medium\", \"confidence\": \"medium\", \"generic_terms\": [\"go\", \"get\", \"one\", \"even\", \"make\", \"need\", \"good\", \"great\", \"best\", \"new\"], \"generic_term_share\": 0.5, \"subject_topic_share\": 0.875, \"noise_topic_share\": 0.5, \"topic_diagnostics\": [{\"topic_id\": 0, \"label\": \"hot dog · not · dog · hot\", \"matched_subject_terms\": [\"costco\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 1, \"label\": \"go costco · sam club · costco sam · trader joe\", \"matched_subject_terms\": [\"costco\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 2, \"label\": \"parking lot · lot · parking · spot\", \"matched_subject_terms\": [\"costco\"], \"matched_off_topic_terms\": [\"tesla\"]}, {\"topic_id\": 3, \"label\": \"walmart · not · shop · xbox\", \"matched_subject_terms\": [\"costco\"], \"matched_off_topic_terms\": [\"stock\"]}, {\"topic_id\": 4, \"label\": \"costco membership · membership · gold · buy\", \"matched_subject_terms\": [\"costco\", \"costco membership\"], \"matched_off_topic_terms\": [\"stock\", \"bitcoin\", \"btc\"]}, {\"topic_id\": 5, \"label\": \"buy · get · good · make\", \"matched_subject_terms\": [\"costco\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 6, \"label\": \"get costco · costco get · costco hotdog · get\", \"matched_subject_terms\": [\"costco\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 7, \"label\": \"sale · cost · stock · last\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": [\"stock\", \"stocks\", \"market\", \"earnings\", \"s&p\"]}], \"quality_flags\": [{\"flag\": \"generic_terms\", \"severity\": \"medium\", \"explanation\": \"Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language.\"}, {\"flag\": \"noise_topics\", \"severity\": \"medium\", \"explanation\": \"Several topic summaries contain excluded terms or look like noisy, low-signal content.\"}]}\n\nEND_INPUT_DATA\nDo not continue, copy, or transform any single input JSON row.\nSynthesize across all of the supplied records.\nReturn exactly one JSON object matching the schema above.\nDo not return subject, dataset, sentiment_terms, or diagnostics. Those fields are merged deterministically in code.\nUse only topic_id values that appear in TOPIC_SUMMARIES_JSONL.\nThe diagnostics are heuristics, not truth, but you should respect them when judging off-topic risk and confidence.\nInclude one topic_interpretation for every topic_id in TOPIC_SUMMARIES_JSONL.\nEach topic_interpretation label must be a short human-readable caption, not a bag-of-words list.\nEach topic_interpretation theme_summary must be 2 to 3 sentences.\nSentence 1 should explain the shared theme in plain English.\nSentence 2 should explain what the exemplar posts suggest about the kind of discussion, audience, or behavior driving the topic.\nSentence 3, when useful, should explain why the topic matters for the subject or why it should be treated as noise, off-topic spillover, or low-signal chatter.\nDo not simply restate the top words; translate them into a readable interpretation.\nEven when a topic is weak or messy, still provide a concrete interpretation rather than omitting it.\nInclude 1 to 4 quality_flags, 1 to 4 strategic_opportunities, and 2 to 5 takeaways.\nUse short evidence snippets drawn from the exemplar previews.\nFor codomain, the strategic opportunities should reflect adjacent interests of subject-linked users, not generic campaign or product advice.\nFor codomain, only include a strategic opportunity when it is supported by repeated evidence across multiple topics or exemplars. Do not turn single-account meme streams or fragmented chatter into an opportunity.\nIf the codomain evidence is too fragmented for a real opportunity, return an empty strategic_opportunities list.\nEvery strategic_opportunity must include an activation_type and evidence_topic_ids.\nDo not write generic audience recommendations. Focus on interpretation, quality, opportunities, and presentation-ready takeaways.\nReturn JSON only.\n\nOUTPUT_JSON\n",
+  "deterministic_output": {
+    "subject": "costco",
+    "dataset": "domain",
+    "sentiment_terms": {
+      "negative": [
+        {
+          "term": "not",
+          "score": 0.99936
+        },
+        {
+          "term": "go",
+          "score": 0.991171
+        },
+        {
+          "term": "get",
+          "score": 0.87042
+        },
+        {
+          "term": "buy",
+          "score": 0.682189
+        },
+        {
+          "term": "no",
+          "score": 0.665969
+        },
+        {
+          "term": "one",
+          "score": 0.525037
+        }
+      ],
+      "neutral": [
+        {
+          "term": "get",
+          "score": 1.0
+        },
+        {
+          "term": "go",
+          "score": 0.943505
+        },
+        {
+          "term": "buy",
+          "score": 0.850239
+        },
+        {
+          "term": "not",
+          "score": 0.728234
+        },
+        {
+          "term": "store",
+          "score": 0.608848
+        },
+        {
+          "term": "sam",
+          "score": 0.596687
+        }
+      ],
+      "positive": [
+        {
+          "term": "get",
+          "score": 1.0
+        },
+        {
+          "term": "good",
+          "score": 0.937019
+        },
+        {
+          "term": "love",
+          "score": 0.663682
+        },
+        {
+          "term": "go",
+          "score": 0.651839
+        },
+        {
+          "term": "one",
+          "score": 0.594936
+        },
+        {
+          "term": "buy",
+          "score": 0.585364
+        }
+      ]
+    },
+    "diagnostics": {
+      "analysis_mode": "domain",
+      "off_topic_risk": "medium",
+      "confidence": "medium",
+      "generic_terms": [
+        "go",
+        "get",
+        "one",
+        "even",
+        "make",
+        "need",
+        "good",
+        "great",
+        "best",
+        "new"
+      ],
+      "generic_term_share": 0.5,
+      "subject_topic_share": 0.875,
+      "noise_topic_share": 0.5,
+      "topic_diagnostics": [
+        {
+          "topic_id": 0,
+          "label": "hot dog · not · dog · hot",
+          "matched_subject_terms": [
+            "costco"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 1,
+          "label": "go costco · sam club · costco sam · trader joe",
+          "matched_subject_terms": [
+            "costco"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 2,
+          "label": "parking lot · lot · parking · spot",
+          "matched_subject_terms": [
+            "costco"
+          ],
+          "matched_off_topic_terms": [
+            "tesla"
+          ]
+        },
+        {
+          "topic_id": 3,
+          "label": "walmart · not · shop · xbox",
+          "matched_subject_terms": [
+            "costco"
+          ],
+          "matched_off_topic_terms": [
+            "stock"
+          ]
+        },
+        {
+          "topic_id": 4,
+          "label": "costco membership · membership · gold · buy",
+          "matched_subject_terms": [
+            "costco",
+            "costco membership"
+          ],
+          "matched_off_topic_terms": [
+            "stock",
+            "bitcoin",
+            "btc"
+          ]
+        },
+        {
+          "topic_id": 5,
+          "label": "buy · get · good · make",
+          "matched_subject_terms": [
+            "costco"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 6,
+          "label": "get costco · costco get · costco hotdog · get",
+          "matched_subject_terms": [
+            "costco"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 7,
+          "label": "sale · cost · stock · last",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": [
+            "stock",
+            "stocks",
+            "market",
+            "earnings",
+            "s&p"
+          ]
+        }
+      ],
+      "quality_flags": [
+        {
+          "flag": "generic_terms",
+          "severity": "medium",
+          "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+        },
+        {
+          "flag": "noise_topics",
+          "severity": "medium",
+          "explanation": "Several topic summaries contain excluded terms or look like noisy, low-signal content."
+        }
+      ]
+    }
+  },
+  "topic_summary_rows": [
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 0,
+      "label": "hot dog · not · dog · hot",
+      "top_words": "not, dog, hot, hot dog, love, one, see, pizza, no, run, great, eat",
+      "exemplars": [
+        "@junizamel @greg16676935420 @mansourtarek_ Assuming an average price of $3 for a prepared hot dog in the US (based on street vendor and event prices around 2025",
+        "@CholulaPatty @JonFraserTF Maybe they should fill those with homeless Canadians first instead of tossing them to the side. I see these newcomers driving new SUV",
+        "Attention Costco members! Discover the Steve Madden Men's Sneakers in white: 5 pairs for just $45, 3 pairs for $35, or individual pairs for $15 each. Plus, enjo"
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 1,
+      "label": "go costco · sam club · costco sam · trader joe",
+      "top_words": "go, go costco, sam, club, sam club, costco sam, store, trader, kid, shop, joe, trader joe",
+      "exemplars": [
+        "@ReddCinema It's prolly tons more expensive now. TJ's is good food and reasonable prices, but w 6 kids, Costco or Sam's club for bulk. Aldi and Walmart are actu",
+        "Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https",
+        "Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https"
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 2,
+      "label": "parking lot · lot · parking · spot",
+      "top_words": "lot, parking, spot, park, come, look, parking lot, car, not, local, tesla, chicken",
+      "exemplars": [
+        "@elonmusk 😂, Still fine-tuning its parking lot ninja skills, 20 minutes to find a spot at Costco with FSD V14.1 is a bit like watching a robot chef overthink a ",
+        "FSD V14.1 Spends 20 Minutes Looking For Parking Spot at Costco\nThis video is sped up 35x once we get hunting for a spot and during that time the car pulls of so",
+        "@Luhwang_Konyak @elonmusk Tesla's Full Self-Driving (FSD) software is getting smarter. In this video, a Tesla car drives around a busy Costco parking lot for 20"
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 3,
+      "label": "walmart · not · shop · xbox",
+      "top_words": "walmart, not, shop, xbox, store, target, no, cart, shopping, game, go, yesterday",
+      "exemplars": [
+        "https://t.co/OVopDckwIE\n\n🚨 Major retailers are pulling Xbox consoles from shelves. Costco has removed all Xbox listings and is clearing stock across the US, UK,",
+        "Target And Walmart Are Pulling Their Xbox Stock\n\nLast month, one of the largest retailers in the world, Costco, confirmed that it would no longer be selling Xbo",
+        "@MrOGKush93 @Witchbrook What is cope? Do you not follow gaming news? This is not a console wars thing or being a Sony fanboy. It’s literally what is happening. "
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 4,
+      "label": "costco membership · membership · gold · buy",
+      "top_words": "membership, gold, buy, sell, costco membership, not, bar, need, get, silver, no, price",
+      "exemplars": [
+        "how does this gold => bitcoin rotation logistically happen? does the chinese normie who bought laopu go fsh their jewelry, travel to HK and buy btc on the stree",
+        "You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here ",
+        "You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here "
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 5,
+      "label": "buy · get · good · make",
+      "top_words": "buy, get, good, make, go, sell, price, guy, one, beef, cheap, bag",
+      "exemplars": [
+        "@GrandpaJoeSux I have a “food at home” solution that even my kids prefer.\n\nFrozen patties\nFrozen buns (ready to use at anytime)\nCostco bagged fries ($6 for 3lbs",
+        "@MattWallaceTech Toss both proteins. Costco has grass fed protein on their site. Jello packs are the devil.  Costco also sells organic A2 whole fat plain yogurt",
+        "American bought a box of soda at Costco for her kid\n\nShe cut the labels off and found every single one has been relabeled by the manufacturer and used to be “en"
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 6,
+      "label": "get costco · costco get · costco hotdog · get",
+      "top_words": "get, one, hotdog, get costco, card, back, costco get, costco hotdog, sample, well, free, know",
+      "exemplars": [
+        "🚨GIVEAWAY Day 7 of 31🚨\n\nOver $1500 value! \n\nPrizes:\n-8x BBWF Bundles\n-2x Blooming Waters🔥\n-2x Pris Bundles\n-2x Pris Sams Boxes\n-2x Costco Pris Box\n\nTo Enter: \nF",
+        "🚨GIVEAWAY Day 8 of 31🚨\n\nOver $1500 value! \n\nPrizes:\n-8x BBWF Bundles\n-2x Blooming Waters🔥\n-2x Pris Bundles\n-2x Pris Sams Boxes\n-2x Costco Pris Box\n\nTo Enter: \nF",
+        "🚨GIVEAWAY Day 9 of 31🚨\n\nOver $1500 value! \n\nPrizes:\n-8x BBWF Bundles\n-2x Blooming Waters🔥\n-2x Pris Bundles\n-2x Pris Sams Boxes\n-2x Costco Pris Box\n\nTo Enter: \nF"
+      ]
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 7,
+      "label": "sale · cost · stock · last",
+      "top_words": "sale, cost, stock, last, retail, week, big, company, market, price, business, high",
+      "exemplars": [
+        "#Stocks - S&P500 Outlook\nStocks eased Thursday as shutdown-delayed data kept macro cues thin and attention pivoted to earnings. This morning S&P 500 futures are",
+        "@Fynnderella1 Because a majority barely get by on good pay. They see deterioration in our economy, homelessness, and super rich.\nWages can be higher. A nationwi",
+        "@WallStreetMav This cannot be defeated. 1400 year success rate. Only defeating poverty can eliminate extreme religious fervor.\n\nHere’s how:\n\nA nationwide $25/ho"
+      ]
+    }
+  ],
+  "topic_exemplar_rows": [
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 0,
+      "rank": 1,
+      "score": 0.968693122167883,
+      "doc_idx": 9913,
+      "sentiment": "neutral",
+      "preview": "@junizamel @greg16676935420 @mansourtarek_ Assuming an average price of $3 for a prepared hot dog in the US (based on street vendor and event prices around 2025"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 0,
+      "rank": 2,
+      "score": 0.964947370230155,
+      "doc_idx": 9434,
+      "sentiment": "negative",
+      "preview": "@CholulaPatty @JonFraserTF Maybe they should fill those with homeless Canadians first instead of tossing them to the side. I see these newcomers driving new SUV"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 0,
+      "rank": 3,
+      "score": 0.963516002235805,
+      "doc_idx": 13181,
+      "sentiment": "positive",
+      "preview": "Attention Costco members! Discover the Steve Madden Men's Sneakers in white: 5 pairs for just $45, 3 pairs for $35, or individual pairs for $15 each. Plus, enjo"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 1,
+      "rank": 1,
+      "score": 0.9726216504406164,
+      "doc_idx": 1517,
+      "sentiment": "neutral",
+      "preview": "@ReddCinema It's prolly tons more expensive now. TJ's is good food and reasonable prices, but w 6 kids, Costco or Sam's club for bulk. Aldi and Walmart are actu"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 1,
+      "rank": 2,
+      "score": 0.9717718307418042,
+      "doc_idx": 8980,
+      "sentiment": "neutral",
+      "preview": "Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 1,
+      "rank": 3,
+      "score": 0.9717718307418042,
+      "doc_idx": 9157,
+      "sentiment": "neutral",
+      "preview": "Weight-loss medications like Ozempic and Wegovy are now available to customers at several stores, including Costco and Sam's Club, even without insurance. https"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 2,
+      "rank": 1,
+      "score": 0.9873010890182754,
+      "doc_idx": 11048,
+      "sentiment": "neutral",
+      "preview": "@elonmusk 😂, Still fine-tuning its parking lot ninja skills, 20 minutes to find a spot at Costco with FSD V14.1 is a bit like watching a robot chef overthink a "
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 2,
+      "rank": 2,
+      "score": 0.985153510142582,
+      "doc_idx": 11419,
+      "sentiment": "neutral",
+      "preview": "FSD V14.1 Spends 20 Minutes Looking For Parking Spot at Costco\nThis video is sped up 35x once we get hunting for a spot and during that time the car pulls of so"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 2,
+      "rank": 3,
+      "score": 0.9817594560251728,
+      "doc_idx": 10214,
+      "sentiment": "neutral",
+      "preview": "@Luhwang_Konyak @elonmusk Tesla's Full Self-Driving (FSD) software is getting smarter. In this video, a Tesla car drives around a busy Costco parking lot for 20"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 3,
+      "rank": 1,
+      "score": 0.9824881788438732,
+      "doc_idx": 6586,
+      "sentiment": "negative",
+      "preview": "https://t.co/OVopDckwIE\n\n🚨 Major retailers are pulling Xbox consoles from shelves. Costco has removed all Xbox listings and is clearing stock across the US, UK,"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 3,
+      "rank": 2,
+      "score": 0.9726258274313344,
+      "doc_idx": 6615,
+      "sentiment": "neutral",
+      "preview": "Target And Walmart Are Pulling Their Xbox Stock\n\nLast month, one of the largest retailers in the world, Costco, confirmed that it would no longer be selling Xbo"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 3,
+      "rank": 3,
+      "score": 0.9687225177226992,
+      "doc_idx": 4181,
+      "sentiment": "negative",
+      "preview": "@MrOGKush93 @Witchbrook What is cope? Do you not follow gaming news? This is not a console wars thing or being a Sony fanboy. It’s literally what is happening. "
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 4,
+      "rank": 1,
+      "score": 0.970781974745972,
+      "doc_idx": 751,
+      "sentiment": "neutral",
+      "preview": "how does this gold => bitcoin rotation logistically happen? does the chinese normie who bought laopu go fsh their jewelry, travel to HK and buy btc on the stree"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 4,
+      "rank": 2,
+      "score": 0.968717409459331,
+      "doc_idx": 10507,
+      "sentiment": "positive",
+      "preview": "You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here "
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 4,
+      "rank": 3,
+      "score": 0.968717409459331,
+      "doc_idx": 372,
+      "sentiment": "positive",
+      "preview": "You may head to Costco to stock up on pantry staples and other supplies, but did you know they carry many items for DIY home improvement, including tools? Here "
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 5,
+      "rank": 1,
+      "score": 0.978637608348296,
+      "doc_idx": 11829,
+      "sentiment": "positive",
+      "preview": "@GrandpaJoeSux I have a “food at home” solution that even my kids prefer.\n\nFrozen patties\nFrozen buns (ready to use at anytime)\nCostco bagged fries ($6 for 3lbs"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 5,
+      "rank": 2,
+      "score": 0.9726025320615892,
+      "doc_idx": 11826,
+      "sentiment": "negative",
+      "preview": "@MattWallaceTech Toss both proteins. Costco has grass fed protein on their site. Jello packs are the devil.  Costco also sells organic A2 whole fat plain yogurt"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 5,
+      "rank": 3,
+      "score": 0.9717556580092372,
+      "doc_idx": 9878,
+      "sentiment": "negative",
+      "preview": "American bought a box of soda at Costco for her kid\n\nShe cut the labels off and found every single one has been relabeled by the manufacturer and used to be “en"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 6,
+      "rank": 1,
+      "score": 0.9828362835113984,
+      "doc_idx": 13750,
+      "sentiment": "neutral",
+      "preview": "🚨GIVEAWAY Day 7 of 31🚨\n\nOver $1500 value! \n\nPrizes:\n-8x BBWF Bundles\n-2x Blooming Waters🔥\n-2x Pris Bundles\n-2x Pris Sams Boxes\n-2x Costco Pris Box\n\nTo Enter: \nF"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 6,
+      "rank": 2,
+      "score": 0.9828362835113984,
+      "doc_idx": 12563,
+      "sentiment": "neutral",
+      "preview": "🚨GIVEAWAY Day 8 of 31🚨\n\nOver $1500 value! \n\nPrizes:\n-8x BBWF Bundles\n-2x Blooming Waters🔥\n-2x Pris Bundles\n-2x Pris Sams Boxes\n-2x Costco Pris Box\n\nTo Enter: \nF"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 6,
+      "rank": 3,
+      "score": 0.9828362835113984,
+      "doc_idx": 11377,
+      "sentiment": "neutral",
+      "preview": "🚨GIVEAWAY Day 9 of 31🚨\n\nOver $1500 value! \n\nPrizes:\n-8x BBWF Bundles\n-2x Blooming Waters🔥\n-2x Pris Bundles\n-2x Pris Sams Boxes\n-2x Costco Pris Box\n\nTo Enter: \nF"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 7,
+      "rank": 1,
+      "score": 0.9915706900397292,
+      "doc_idx": 10744,
+      "sentiment": "neutral",
+      "preview": "#Stocks - S&P500 Outlook\nStocks eased Thursday as shutdown-delayed data kept macro cues thin and attention pivoted to earnings. This morning S&P 500 futures are"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 7,
+      "rank": 2,
+      "score": 0.9867196571718914,
+      "doc_idx": 6389,
+      "sentiment": "negative",
+      "preview": "@Fynnderella1 Because a majority barely get by on good pay. They see deterioration in our economy, homelessness, and super rich.\nWages can be higher. A nationwi"
+    },
+    {
+      "subject": "costco",
+      "dataset": "domain",
+      "topic_id": 7,
+      "rank": 3,
+      "score": 0.9863307479992892,
+      "doc_idx": 6047,
+      "sentiment": "neutral",
+      "preview": "@WallStreetMav This cannot be defeated. 1400 year success rate. Only defeating poverty can eliminate extreme religious fervor.\n\nHere’s how:\n\nA nationwide $25/ho"
+    }
+  ],
+  "available_backends": [
+    "prompt_only",
+    "ollama"
+  ],
+  "model_options": [
+    {
+      "backend": "ollama",
+      "recommended_models": [
+        "isotnek/qwen3.5:9B-Unsloth-UD-Q4_K_XL",
+        "qwen2.5:7b-instruct",
+        "qwen2.5:14b-instruct",
+        "llama3.1:8b-instruct",
+        "mistral-small:24b-instruct-2501"
+      ],
+      "notes": "Simplest cross-platform path. The default here is an Ollama community build of Qwen3.5-9B; qwen2.5:7b-instruct remains the smaller fallback."
+    },
+    {
+      "backend": "mlx_lm",
+      "recommended_models": [
+        "mlx-community/Qwen2.5-7B-Instruct-4bit",
+        "mlx-community/Llama-3.1-8B-Instruct-4bit",
+        "mlx-community/Mistral-Small-24B-Instruct-2501-4bit"
+      ],
+      "notes": "Best local performance path on Apple Silicon if you want an MLX-native stack."
+    },
+    {
+      "backend": "llama_cpp",
+      "recommended_models": [
+        "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+      ],
+      "notes": "Good when you want GGUF portability and fine-grained runtime control."
+    },
+    {
+      "backend": "prompt_only",
+      "recommended_models": [],
+      "notes": "Write the prompt bundle only. Useful when the prompt is ready but the local runtime is not."
+    }
+  ]
+}

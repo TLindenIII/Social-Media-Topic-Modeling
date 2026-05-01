@@ -1,0 +1,195 @@
+{
+  "subject": "costco",
+  "dataset": "domain",
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 0.99936
+      },
+      {
+        "term": "go",
+        "score": 0.991171
+      },
+      {
+        "term": "get",
+        "score": 0.87042
+      },
+      {
+        "term": "buy",
+        "score": 0.682189
+      },
+      {
+        "term": "no",
+        "score": 0.665969
+      },
+      {
+        "term": "one",
+        "score": 0.525037
+      }
+    ],
+    "neutral": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "go",
+        "score": 0.943505
+      },
+      {
+        "term": "buy",
+        "score": 0.850239
+      },
+      {
+        "term": "not",
+        "score": 0.728234
+      },
+      {
+        "term": "store",
+        "score": 0.608848
+      },
+      {
+        "term": "sam",
+        "score": 0.596687
+      }
+    ],
+    "positive": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "good",
+        "score": 0.937019
+      },
+      {
+        "term": "love",
+        "score": 0.663682
+      },
+      {
+        "term": "go",
+        "score": 0.651839
+      },
+      {
+        "term": "one",
+        "score": 0.594936
+      },
+      {
+        "term": "buy",
+        "score": 0.585364
+      }
+    ]
+  },
+  "diagnostics": {
+    "analysis_mode": "domain",
+    "off_topic_risk": "medium",
+    "confidence": "medium",
+    "generic_terms": [
+      "go",
+      "get",
+      "one",
+      "even",
+      "make",
+      "need",
+      "good",
+      "great",
+      "best",
+      "new"
+    ],
+    "generic_term_share": 0.5,
+    "subject_topic_share": 0.875,
+    "noise_topic_share": 0.5,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "hot dog · not · dog · hot",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "go costco · sam club · costco sam · trader joe",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "parking lot · lot · parking · spot",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": [
+          "tesla"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "label": "walmart · not · shop · xbox",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": [
+          "stock"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "label": "costco membership · membership · gold · buy",
+        "matched_subject_terms": [
+          "costco",
+          "costco membership"
+        ],
+        "matched_off_topic_terms": [
+          "stock",
+          "bitcoin",
+          "btc"
+        ]
+      },
+      {
+        "topic_id": 5,
+        "label": "buy · get · good · make",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 6,
+        "label": "get costco · costco get · costco hotdog · get",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 7,
+        "label": "sale · cost · stock · last",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": [
+          "stock",
+          "stocks",
+          "market",
+          "earnings",
+          "s&p"
+        ]
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      },
+      {
+        "flag": "noise_topics",
+        "severity": "medium",
+        "explanation": "Several topic summaries contain excluded terms or look like noisy, low-signal content."
+      }
+    ]
+  }
+}

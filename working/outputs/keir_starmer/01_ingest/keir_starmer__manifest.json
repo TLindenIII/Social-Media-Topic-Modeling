@@ -1,0 +1,84 @@
+{
+  "subject": "keir_starmer",
+  "source_paths": {
+    "domain_corpus": "/Users/thomas/Documents/Projects/X Sentiment/working/data/keir_starmer/domain/ks_d_corpus.csv",
+    "codomain_corpus": "/Users/thomas/Documents/Projects/X Sentiment/working/data/keir_starmer/codomain/ks_cd_corpus.csv",
+    "codomain_seed_pre": "/Users/thomas/Documents/Projects/X Sentiment/working/data/keir_starmer/codomain/ks_cd_sent_pre.csv",
+    "codomain_seed_post": "/Users/thomas/Documents/Projects/X Sentiment/working/data/keir_starmer/codomain/ks_cd_sent_post.csv"
+  },
+  "outputs": {
+    "domain_corpus": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/01_ingest/keir_starmer__domain__corpus.csv",
+      "summary": {
+        "name": "keir_starmer_domain_corpus",
+        "rows": 13888,
+        "columns": [
+          "Subject",
+          "Dataset",
+          "Tweet ID",
+          "URL",
+          "Content",
+          "Author ID",
+          "Author Username",
+          "Author Blue Verified (T/F)",
+          "Followers",
+          "Author Location",
+          "Likes",
+          "Views",
+          "Date"
+        ],
+        "unique_authors": 10050
+      }
+    },
+    "codomain_corpus": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/01_ingest/keir_starmer__codomain__corpus.csv",
+      "summary": {
+        "name": "keir_starmer_codomain_corpus",
+        "rows": 11115,
+        "columns": [
+          "Subject",
+          "Dataset",
+          "Tweet ID",
+          "URL",
+          "Content",
+          "Author ID",
+          "Author Username",
+          "Author Blue Verified (T/F)",
+          "Followers",
+          "Author Location",
+          "Likes",
+          "Views",
+          "Date",
+          "Original User Sentiment"
+        ],
+        "unique_authors": 330
+      }
+    },
+    "codomain_seed_pre": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/01_ingest/keir_starmer__codomain__seed_pre.csv",
+      "summary": {
+        "name": "keir_starmer_codomain_seed_pre",
+        "rows": 675,
+        "columns": [
+          "Tweet ID",
+          "URL",
+          "Content",
+          "Author ID",
+          "Author Username",
+          "Author Blue Verified (T/F)",
+          "Followers",
+          "Author Location",
+          "Likes",
+          "Views",
+          "Date"
+        ],
+        "unique_authors": 675
+      }
+    },
+    "codomain_seed_labels": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/01_ingest/keir_starmer__codomain__seed_labels.csv",
+      "rows": 675
+    }
+  },
+  "issues": []
+}

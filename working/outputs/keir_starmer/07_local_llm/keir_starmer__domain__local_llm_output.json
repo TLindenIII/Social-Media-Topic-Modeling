@@ -1,0 +1,259 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "domain",
+  "overview": {
+    "summary": "The dataset reveals a polarized discourse surrounding Keir Starmer, split between political attacks on his leadership and international diplomatic engagements. A significant portion of the noise consists of fragmented, off-topic chatter regarding unrelated global events like the Prince Andrew scandal and China-Britain relations, which are incorrectly tagged under the subject.",
+    "analysis_mode": "domain",
+    "off_topic_risk": "high",
+    "confidence": "medium"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "Tel Aviv · Muslim · Let · Britain",
+      "relevance": "high",
+      "theme_summary": "This topic centers on political accusations linking British government policy to the banning of Maccabi Tel Aviv football fans, framing the issue as an ideological attack on English society. The exemplar posts suggest a highly charged discussion where users conflate sports bans with broader anti-Muslim sentiment, directing anger specifically at Keir Starmer and Downing Street. The topic matters because it reflects a specific narrative used to criticize government decisions, though the language employed in the examples relies on inflammatory generalizations that may obscure the specific legal or security reasons for the ban.",
+      "evidence": [
+        "Hear the threats do you @Keir_Starmer We know who are the real problem in English society, an ideology that can do this in a heartbeat, so stop the Islamic Musl",
+        "Emily Damari ‘shocked to my core’ over ‘disgusting’ decision to ban Maccabi Tel Aviv fans from Aston Villa match . @Keir_Starmer @10DowningStreet has lost contr",
+        "@Keir_Starmer @ShabanaMahmood We know who are the real problem in English society, an ideology that can do this in a heartbeat so stop the Islamic Mafia running"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "Skepticism of Government Priorities",
+      "relevance": "high",
+      "theme_summary": "This topic captures a critical stance where users question the timing and necessity of government initiatives, specifically regarding hate crime responses and construction projects. The exemplar posts suggest an audience that views these actions as disconnected from economic realities or as part of a deceptive narrative, often using sarcasm to highlight perceived hypocrisy. This discussion matters as it reflects deep-seated distrust in political leadership and highlights a disconnect between official policy announcements and public sentiment regarding economic stability.",
+      "evidence": [
+        "UK hate crime levels are up. 45% of victims are muslims and 29% are Jewish . ( UK Home office figures) Hate towards two faith groups is glaring obvious yet one",
+        "@Keir_Starmer Building 🤣 there are construction company’s going bust left right and centre and now you want to get building . MJL went for £280 million just to",
+        "@shyisc @AnomiePhoenix @TRobinsonNewEra @Keir_Starmer @AmichaiChikli @OzraeliAvi You said it right, ‘the ideas’.. \n\nThey tricked billions for ages with the idea"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "Football safety and antisemitism concerns",
+      "relevance": "high",
+      "theme_summary": "This topic centers on discussions regarding the safety of football fans, specifically highlighting fears of antisemitism and violence against Israeli supporters in the UK. The exemplar posts suggest that the audience is actively monitoring government responses to these safety issues, often using the platform to question whether police measures are sufficient to prevent intimidation. This discussion matters because it reflects a broader societal concern about hate crimes in public spaces and the political pressure placed on officials to ensure inclusive environments for all spectators.",
+      "evidence": [
+        "I know nothing about football.\n\nFrom what I have read on Twitter (notoriously unreliable) is NOT that Israeli football fans would be unsafe from British footbal",
+        "If Italy isn't safe for Germans to go and watch the football, then what a failure of a place Napoli is.\n\n@Keir_Starmer @Nigel_Farage @KemiBadenoch @EdwardJDavey",
+        "@novaramedia What is wrong with @Keir_Starmer \"The role of the police is to ensure all football fans can enjoy the game, without fear of violence or intimidatio"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "International Security Coordination",
+      "relevance": "high",
+      "theme_summary": "This topic centers on high-level diplomatic engagement regarding global security issues, specifically involving Ukraine, Russia, and peace efforts. The exemplar posts suggest a coordinated effort among international leaders and officials to address these conflicts through formal channels. Given the focus on major geopolitical actors and the neutral sentiment, this represents significant political discourse rather than noise.",
+      "evidence": [
+        "@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA",
+        "@jame96727 @WarMonitor3 @Keir_Starmer @EmmanuelMacron @SecGenNATO @kajakallas @bundeskanzler @GermanyDiplo @JohnHealey_MP @DefenceHQ @BelgiumNATO @esa @EU_Commi"
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "Keir Starmer and Labour's Political Decline",
+      "relevance": "high",
+      "theme_summary": "This topic centers on the severe criticism of Prime Minister Keir Starmer and the Labour Party, driven by claims of plummeting approval ratings and a surge in support for Reform UK. The exemplar posts suggest a highly polarized discussion where opponents frame Starmer's accusations against Nigel Farage as evidence of racism and elitism, while simultaneously attacking Labour's leadership as weak and disconnected from ordinary voters. This topic matters because it highlights a critical moment of political vulnerability for the Labour government, reflecting deep audience dissatisfaction and a potential shift in the UK's electoral landscape.",
+      "evidence": [
+        "Keir Starmer's approval ratings have cratered to historic lows",
+        "Labour at its weakest share ever",
+        "Reform UK surgin"
+      ]
+    },
+    {
+      "topic_id": 5,
+      "label": "Anti-Establishment Outrage",
+      "relevance": "high",
+      "theme_summary": "This topic captures intense negative sentiment directed at the UK government and political elites, often linking domestic issues to broader international conflicts. The exemplar posts suggest an audience deeply frustrated with perceived hypocrisy among the aristocracy and a belief that government delays are causing real-world harm to citizens. These discussions matter as they reveal a significant segment of the audience that views current leadership as complicit in systemic failures, ranging from royal privilege to asylum policy.",
+      "evidence": [
+        "This is all bullshit. \n\nPrince Andrew was born a Prince- same as every Prince from a noble family in Europe and beyond. In Italy, many prince's we have (includi",
+        "Furious China threatens Britain with 'consequences' after Labour delays approval of new London 'super-embassy' - as PM gets fresh warning Beijing will use build",
+        "@Keir_Starmer @ShabanaMahmood You are both contributing to the rape, PDFilia &amp; murder of our citizens. An asylum seeker laughing after murdering an asylum s"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "starmer",
+        "score": 0.811786
+      },
+      {
+        "term": "keir",
+        "score": 0.68842
+      },
+      {
+        "term": "no",
+        "score": 0.682888
+      },
+      {
+        "term": "uk",
+        "score": 0.654113
+      },
+      {
+        "term": "fan",
+        "score": 0.647983
+      }
+    ],
+    "neutral": [
+      {
+        "term": "starmer",
+        "score": 1.0
+      },
+      {
+        "term": "keir",
+        "score": 0.891994
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.850596
+      },
+      {
+        "term": "not",
+        "score": 0.82086
+      },
+      {
+        "term": "uk",
+        "score": 0.548062
+      },
+      {
+        "term": "go",
+        "score": 0.44164
+      }
+    ],
+    "positive": [
+      {
+        "term": "great",
+        "score": 1.0
+      },
+      {
+        "term": "love",
+        "score": 0.979504
+      },
+      {
+        "term": "good",
+        "score": 0.887982
+      },
+      {
+        "term": "starmer",
+        "score": 0.788503
+      },
+      {
+        "term": "keir",
+        "score": 0.786634
+      },
+      {
+        "term": "keir starmer",
+        "score": 0.70911
+      }
+    ]
+  },
+  "quality_flags": [
+    {
+      "flag": "off_topic_spillover",
+      "severity": "high",
+      "explanation": "A large volume of content (Topics 2 and 5) discusses international diplomacy, sports policing, and unrelated global scandals, yet is tagged under the subject 'keir_starmer'. This indicates significant data contamination."
+    },
+    {
+      "flag": "generic_language",
+      "severity": "medium",
+      "explanation": "The text contains a high share of generic verbs and filler tokens ('get', 'go', 'know') rather than specific policy terminology, reducing the signal-to-noise ratio."
+    },
+    {
+      "flag": "polarized_sentiment",
+      "severity": "medium",
+      "explanation": "Sentiment is sharply divided between negative attacks on Starmer's character and neutral reporting on his diplomatic activities, creating a fragmented view of public opinion."
+    },
+    {
+      "flag": "generic_terms",
+      "severity": "medium",
+      "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "The dataset is heavily contaminated with off-topic noise; Topics 2 and 5 should be filtered out to accurately assess public sentiment regarding Keir Starmer.",
+    "Genuine political discourse (Topic 4) is dominated by negative framing from opposition figures, suggesting a need to monitor specific anti-Labour narratives.",
+    "Diplomatic engagements (Topic 3) are present but are currently overshadowed by domestic political attacks and irrelevant global news.",
+    "The presence of extreme, unrelated content (e.g., asylum seeker violence, Prince Andrew) indicates potential scraping errors or hashtag hijacking that distorts the subject's profile."
+  ],
+  "diagnostics": {
+    "analysis_mode": "domain",
+    "off_topic_risk": "medium",
+    "confidence": "medium",
+    "generic_terms": [
+      "get",
+      "go",
+      "know",
+      "great",
+      "good",
+      "well",
+      "make"
+    ],
+    "generic_term_share": 0.3333,
+    "subject_topic_share": 0.5,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "tel aviv · muslim · let · britain",
+        "matched_subject_terms": [
+          "britain"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "not · need · go · no",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "fan · football · ban · not",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "not · police · trump · community",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 4,
+        "label": "keir starmer · prime minister · starmer · keir",
+        "matched_subject_terms": [
+          "keir",
+          "starmer",
+          "labour",
+          "prime minister"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 5,
+        "label": "not · uk · go · british",
+        "matched_subject_terms": [
+          "labour",
+          "pm",
+          "britain"
+        ],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      }
+    ]
+  }
+}

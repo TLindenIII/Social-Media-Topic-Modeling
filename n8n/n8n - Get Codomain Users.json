@@ -1,0 +1,344 @@
+{
+  "name": "Get Codomain Users",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po",
+          "mode": "list",
+          "cachedResultName": "Twitter/X Data PolSent",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Latest Topic Tweets",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a_v7FlPgo8P19OlGejURfZN7uXNo6aO_FjdHABV08po/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Tweet ID": "={{ $json.tweetId }}",
+            "URL": "={{ $json.url }}",
+            "Content": "={{ $json.content }}",
+            "Author ID": "={{ $json.authorId }}",
+            "Author Username": "={{ $json.authorUserName }}",
+            "Author Blue Verified (T/F)": "={{ $json.authorIsBlueVerified }}",
+            "Followers": "={{ $json.authorFollowers }}",
+            "Author Location": "={{ $json.authorLocation }}",
+            "Likes": "={{ $json.likeCount }}",
+            "Views": "={{ $json.viewCount }}",
+            "Date": "={{ $json.createdAt }}"
+          },
+          "matchingColumns": [
+            "Author ID"
+          ],
+          "schema": [
+            {
+              "id": "Tweet ID",
+              "displayName": "Tweet ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "URL",
+              "displayName": "URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author ID",
+              "displayName": "Author ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Author Username",
+              "displayName": "Author Username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author Blue Verified (T/F)",
+              "displayName": "Author Blue Verified (T/F)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Followers",
+              "displayName": "Followers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Author Location",
+              "displayName": "Author Location",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Likes",
+              "displayName": "Likes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Views",
+              "displayName": "Views",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1104,
+        0
+      ],
+      "id": "0df3a5a3-3f50-4590-91f9-1d4ec0873f03",
+      "name": "Add to Sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "3VniXCJQlWIIAjXC",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "authorId",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        864,
+        0
+      ],
+      "id": "0ce914b1-fa98-4c44-9a36-ea3aef3cd229",
+      "name": "Deduplicate Users"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Initialize an empty array to collect all tweets\nlet allTweets = [];\n\n// Loop through each input item\nfor (let item of $input.all()) {\n  if (item.json.tweets && Array.isArray(item.json.tweets)) {\n    allTweets = allTweets.concat(item.json.tweets);\n  }\n}\n\n// Function to format the date in a more human-readable way\nfunction formatDate(dateString) {\n  if (!dateString) return '';\n  \n  try {\n    const date = new Date(dateString);\n    return date.toLocaleString('en-US', {\n      year: 'numeric',\n      month: 'long',\n      day: 'numeric',\n      hour: '2-digit',\n      minute: '2-digit'\n    });\n  } catch (error) {\n    console.log(\"Error formatting date:\", error);\n    return dateString;\n  }\n}\n\n// Convert and structure the tweets properly\nconst formattedTweets = allTweets.map(tweet => ({\n  json: {\n    tweetId: tweet.id || '',\n    url: tweet.url || '',\n    content: tweet.text || '',\n    likeCount: tweet.likeCount || 0,\n    viewCount: tweet.viewCount || 0,\n    createdAt: formatDate(tweet.createdAt),\n\n    // --- Author fields ---\n    authorUserName: tweet.author?.userName || '',\n    authorId: tweet.author?.id || '',\n    authorLocation: tweet.author?.location || '',\n    authorIsBlueVerified: tweet.author?.isBlueVerified || false,\n    authorFollowers: tweet.author?.followers || 0\n  }\n}));\n\n// Output all tweets as separate items\nreturn formattedTweets;\n"
+      },
+      "id": "c46cb3dc-bc13-4226-b882-acc89c9cb4dd",
+      "name": "Convert JSON",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        432,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "367f17b9-bc24-41db-8c14-fca28163a834",
+      "name": "Start Workflow"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "createdAt",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        640,
+        0
+      ],
+      "id": "c3906b79-4488-42af-997f-d7874b8b56db",
+      "name": "Sort Date"
+    },
+    {
+      "parameters": {
+        "url": "https://api.twitterapi.io/twitter/tweet/advanced_search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=@keir_starmer OR keir starmer OR #keirstarmer"
+            },
+            {
+              "name": "queryType",
+              "value": "Latest"
+            }
+          ]
+        },
+        "options": {
+          "pagination": {
+            "pagination": {
+              "paginationMode": "responseContainsNextURL",
+              "nextURL": "=https://api.twitterapi.io/twitter/tweet/advanced_search?cursor={{ $response.body.next_cursor }}",
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{ $response.body.has_next_page == false }}",
+              "limitPagesFetched": true,
+              "maxRequests": 50,
+              "requestInterval": 100
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "ef592b8d-4afa-4194-8d33-285ca26890da",
+      "name": "Get 1000 Tweets",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "auStWXdEJPnut49L",
+          "name": "Twitter API IO Auth"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Start Workflow": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "connections": {
+    "Deduplicate Users": {
+      "main": [
+        [
+          {
+            "node": "Add to Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert JSON": {
+      "main": [
+        [
+          {
+            "node": "Sort Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start Workflow": {
+      "main": [
+        [
+          {
+            "node": "Get 1000 Tweets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort Date": {
+      "main": [
+        [
+          {
+            "node": "Deduplicate Users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get 1000 Tweets": {
+      "main": [
+        [
+          {
+            "node": "Convert JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "fa2187c4-5239-40c5-817c-50a9f7b2b139",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3087938cc2ad14e171fe788bdc03954eacb1e7d20a6a7e1a49ba9fc7cbd48ccd"
+  },
+  "id": "a2YUQdOffhELiNz2",
+  "tags": []
+}

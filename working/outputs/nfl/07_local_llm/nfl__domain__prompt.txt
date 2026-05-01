@@ -1,0 +1,133 @@
+You are an analyst. You receive JSONL files that describe a topic's language landscape.
+The files are already computed. Use them to produce concise insights with evidence.
+Be conservative. If the evidence looks noisy, generic, or off-topic, say so directly.
+Do not convert weak or off-topic evidence into confident business advice.
+
+Return valid JSON with:
+{
+  "overview": {
+    "summary": "<2-4 sentences>",
+    "analysis_mode": "domain|codomain_adjacent_interest",
+    "off_topic_risk": "low|medium|high",
+    "confidence": "low|medium|high"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": <int>,
+      "label": "<string>",
+      "relevance": "high|medium|low",
+      "theme_summary": "<2-3 sentences explaining what the topic is, what kind of posts drive it, and why it matters or why it looks noisy>",
+      "evidence": ["<short preview 1>", "<short preview 2>"]
+    }
+  ],
+  "quality_flags": [
+    {
+      "flag": "<short label>",
+      "severity": "low|medium|high",
+      "explanation": "<what looks wrong or uncertain>"
+    }
+  ],
+  "strategic_opportunities": [
+    {
+      "opportunity": "<short headline>",
+      "activation_type": "offering|message|content|monitoring",
+      "evidence_topic_ids": [<int>, <int>],
+      "rationale": "<1-2 sentences>",
+      "confidence": "low|medium|high"
+    }
+  ],
+  "takeaways": ["<short takeaway>", "<short takeaway>"]
+}
+
+TASK CONTEXT
+subject=nfl
+dataset=domain
+analysis_goal=Summarize the direct language and themes in the subject conversation.
+
+POLAR_TERMS_JSONL
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "nfl", "scores": {"agg": 4157.555417529276, "iwdf": 3977.1885525177604, "agg_norm": 0.9999999999999998, "iwdf_norm": 0.9999999999999998, "fused_score": 0.9999999999999998}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "not", "scores": {"agg": 2317.5872477437715, "iwdf": 2112.8190159163846, "agg_norm": 0.5574398931574678, "iwdf_norm": 0.5312343098691822, "fused_score": 0.5443371015133249}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "get", "scores": {"agg": 2036.8435725485936, "iwdf": 1869.1022611838796, "agg_norm": 0.48991375171110396, "iwdf_norm": 0.4699556574959574, "fused_score": 0.4799347046035307}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "game", "scores": {"agg": 2018.436623891153, "iwdf": 1789.9289872011855, "agg_norm": 0.4854864027502621, "iwdf_norm": 0.4500488130159356, "fused_score": 0.46776760788309885}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "bad", "scores": {"agg": 1908.3485164299484, "iwdf": 1756.7244985190773, "agg_norm": 0.4590073552318464, "iwdf_norm": 0.44170007916948817, "fused_score": 0.4503537172006673}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "team", "scores": {"agg": 1917.7392440467625, "iwdf": 1689.8177948197058, "agg_norm": 0.46126606898878647, "iwdf_norm": 0.42487746620661615, "fused_score": 0.4430717675977013}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "no", "scores": {"agg": 1557.830357398066, "iwdf": 1462.2607466045035, "agg_norm": 0.3746986392123289, "iwdf_norm": 0.36766191174889573, "fused_score": 0.3711802754806123}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "player", "scores": {"agg": 1451.8147171484197, "iwdf": 1347.7878295987002, "agg_norm": 0.34919912577165213, "iwdf_norm": 0.33887954061053566, "fused_score": 0.3440393331910939}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "play", "scores": {"agg": 1433.268121019324, "iwdf": 1272.2225521218097, "agg_norm": 0.34473818796889943, "iwdf_norm": 0.3198798687370325, "fused_score": 0.33230902835296594}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "go", "scores": {"agg": 1392.1245154194087, "iwdf": 1309.5078313588153, "agg_norm": 0.3348420828138259, "iwdf_norm": 0.3292546516382359, "fused_score": 0.3320483672260309}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "fan", "scores": {"agg": 1397.337548159061, "iwdf": 1262.4870860885414, "agg_norm": 0.336095952507943, "iwdf_norm": 0.31743204261445523, "fused_score": 0.3267639975611991}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "negative", "term": "one", "scores": {"agg": 1313.8250314680731, "iwdf": 1215.3560078942696, "agg_norm": 0.31600902442061585, "iwdf_norm": 0.3055816921540941, "fused_score": 0.31079535828735494}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "nfl", "scores": {"agg": 5928.774167814455, "iwdf": 5588.374311407387, "agg_norm": 0.9999999999999999, "iwdf_norm": 0.9999999999999999, "fused_score": 0.9999999999999999}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "week", "scores": {"agg": 3293.342192844218, "iwdf": 2911.1807411900822, "agg_norm": 0.5554845065144814, "iwdf_norm": 0.5209351734452671, "fused_score": 0.5382098399798743}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "game", "scores": {"agg": 2794.5537720461457, "iwdf": 2335.0850239122065, "agg_norm": 0.47135439686958286, "iwdf_norm": 0.41784692538323076, "fused_score": 0.44460066112640684}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "play", "scores": {"agg": 2234.8124851196417, "iwdf": 1994.3860167214577, "agg_norm": 0.37694343246396045, "iwdf_norm": 0.356881251252332, "fused_score": 0.36691234185814625}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "not", "scores": {"agg": 2077.094352754755, "iwdf": 1930.2297182445982, "agg_norm": 0.3503412837059438, "iwdf_norm": 0.34540093606551653, "fused_score": 0.34787110988573017}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "team", "scores": {"agg": 2065.9714541234475, "iwdf": 1836.4686488080038, "agg_norm": 0.34846519628610406, "iwdf_norm": 0.3286230568090747, "fused_score": 0.33854412654758936}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "get", "scores": {"agg": 1867.144963603522, "iwdf": 1698.304985592939, "agg_norm": 0.3149293447100236, "iwdf_norm": 0.3038996479040851, "fused_score": 0.3094144963070543}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "sunday", "scores": {"agg": 1604.4217269157764, "iwdf": 1567.352751000066, "agg_norm": 0.2706160972744927, "iwdf_norm": 0.28046667307175077, "fused_score": 0.27554138517312177}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "player", "scores": {"agg": 1630.482822977788, "iwdf": 1491.4045655395453, "agg_norm": 0.2750117944834519, "iwdf_norm": 0.2668762832323497, "fused_score": 0.2709440388579008}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "go", "scores": {"agg": 1490.9949297416003, "iwdf": 1346.0862624023578, "agg_norm": 0.2514845206679935, "iwdf_norm": 0.24087260219034193, "fused_score": 0.24617856142916772}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "pick", "scores": {"agg": 1479.0629723335396, "iwdf": 1328.2433014390892, "agg_norm": 0.2494719701693026, "iwdf_norm": 0.237679730709481, "fused_score": 0.24357585043939178}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "neutral", "term": "make", "scores": {"agg": 1396.6783990885144, "iwdf": 1311.138099543814, "agg_norm": 0.23557625228342552, "iwdf_norm": 0.23461887598821457, "fused_score": 0.23509756413582006}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "nfl", "scores": {"agg": 2221.0390501593993, "iwdf": 2103.7872373836326, "agg_norm": 0.9999999999999996, "iwdf_norm": 0.9999999999999996, "fused_score": 0.9999999999999996}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "best", "scores": {"agg": 1267.7294451085406, "iwdf": 1191.987702945227, "agg_norm": 0.5707821503712678, "iwdf_norm": 0.5665913747188798, "fused_score": 0.5686867625450738}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "game", "scores": {"agg": 1179.8030391480074, "iwdf": 1008.5386679153888, "agg_norm": 0.5311941899730827, "iwdf_norm": 0.4793919508560447, "fused_score": 0.5052930704145637}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "get", "scores": {"agg": 1002.2603613945909, "iwdf": 931.3285404864504, "agg_norm": 0.4512574244575575, "iwdf_norm": 0.4426914109644915, "fused_score": 0.44697441771102453}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "good", "scores": {"agg": 981.4509103885542, "iwdf": 916.5843166234864, "agg_norm": 0.4418881830637409, "iwdf_norm": 0.43568299129116916, "fused_score": 0.438785587177455}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "great", "scores": {"agg": 865.2434337944104, "iwdf": 829.1193255028621, "agg_norm": 0.3895669613428514, "iwdf_norm": 0.3941079738338906, "fused_score": 0.391837467588371}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "play", "scores": {"agg": 900.9884750415339, "iwdf": 779.5315902921434, "agg_norm": 0.4056607987044944, "iwdf_norm": 0.3705372750818684, "fused_score": 0.38809903689318137}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "week", "scores": {"agg": 895.161193107555, "iwdf": 750.2016505233279, "agg_norm": 0.40303712491831734, "iwdf_norm": 0.3565957798357562, "fused_score": 0.37981645237703676}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "love", "scores": {"agg": 805.1466860931546, "iwdf": 760.6398069446523, "agg_norm": 0.3625090184863569, "iwdf_norm": 0.3615573825281966, "fused_score": 0.3620332005072767}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "win", "scores": {"agg": 792.9160147888849, "iwdf": 725.7054460425393, "agg_norm": 0.3570022844632014, "iwdf_norm": 0.34495191963663585, "fused_score": 0.3509771020499186}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "one", "scores": {"agg": 749.4907367355552, "iwdf": 703.6271624651035, "agg_norm": 0.3374504994325811, "iwdf_norm": 0.3344573776101839, "fused_score": 0.3359539385213825}}
+{"subject": "nfl", "dataset": "domain", "sentiment": "positive", "term": "team", "scores": {"agg": 711.3747844252131, "iwdf": 639.9309992216637, "agg_norm": 0.32028918373774606, "iwdf_norm": 0.3041804740756538, "fused_score": 0.31223482890669996}}
+
+TOPIC_SUMMARIES_JSONL
+{"subject": "nfl", "dataset": "domain", "topic_id": 0, "label": "nfl week · nfl · week · sunday", "top_words": "nfl, week, sunday, pick, football, game, bet, injury, nfl week, eagle, new, vs", "exemplars": ["@KremOf81594 Here's a 10-leg parlay for Sunday's NFL games (Oct 19, 2025), based on current odds and analysis from ESPN, FOX, and FanDuel. All moneyline picks f", "@OunMuhammad1214 @AdamSchefter Confirmed from NFL reports: Key outs for Oct 19 include Rams' Puka Nacua (ankle) & Rob Havenstein (shoulder); Browns' David Njoku", "@KremOf81594 @Playbook Here's an updated 10-leg NFL parlay for Sunday, Oct 19, 2025, using latest odds from ESPN, FOX, and BetMGM. All moneyline picks—high risk"]}
+{"subject": "nfl", "dataset": "domain", "topic_id": 1, "label": "nfl · game · yard · steelers", "top_words": "nfl, game, yard, steelers, last, play, bengal, defense, back, week, flacco, joe", "exemplars": ["NFL Best Bet\n\nMatthew Golden over 46.5 Receiving Yards (-115 MGM)  \n\nCooked with @MikeL0cks & @coleycashes \n\nI just ran this same spot last week & it cashed wit", "🚨NFL Best Bet🚨\n\nHe will SOAR over this line🚀\n\nCollab with @coleycashes & @MattL0cks \n\nMatthew Golden OVER 46.5 Receiving Yards (-115 MGM)  \n\nGolden has recorded", "⭐️ NFL Sunday Week 7 Prop #1 ⭐️ \n\n🏈 J.K. Dobbins o58.5 Rush Yards\n-135 #BroncosCountry vs #NYGiants \n\nCollab w/ @QuentinLocks 📲\n\nHit ❤️ for more NFL Sunday Prop"]}
+{"subject": "nfl", "dataset": "domain", "topic_id": 2, "label": "nfl · team · not · fan", "top_words": "nfl, team, not, fan, no, one, get, call, bad, player, game, make", "exemplars": ["@TimsCardShop @ChiefsReceipts @danorlovsky7 @FirstTake Tim, here’s the thing, the play isn’t really the point anymore. The frustration comes from the league’s s", "@TousA \nThink you would be the people to make this happen  \"Kid Rock, duet with Dolly for a MAGA halftime rebuttal? NFL's got Bad Bunny—we've got real America.\"", "@barstoolsports I wasn't aware of the NFL films video, but I heard they gave Branch a box of Kleenex and it fixed the problem.\n\nCan you please enlighten us by a"]}
+{"subject": "nfl", "dataset": "domain", "topic_id": 3, "label": "nfl · get · game · not", "top_words": "nfl, get, game, not, play, go, good, win, qb, player, team, see", "exemplars": ["@PetePacer @Colt_Hoosier @PSU_FB_Thoughts There is no scenario where I see that as smart BUT in the coming days or NIL, teams will effectively hire players like", "@RapSheet So when is the nfl going to admit they dont like the lions and the league is rigged for certain teams to win and certain teams to lose ....... Jack ha", "Can’t wait to see Breer and Aditi spin this.\n\n“You know this is the NFL. Players get frustrated sometimes.\n\nBut I look at last offseason where he trashed the te"]}
+
+TOPIC_EXEMPLARS_JSONL
+{"subject": "nfl", "dataset": "domain", "topic_id": 0, "rank": 1, "score": 0.9839765746058908, "doc_idx": 1021, "sentiment": "neutral", "preview": "@KremOf81594 Here's a 10-leg parlay for Sunday's NFL games (Oct 19, 2025), based on current odds and analysis from ESPN, FOX, and FanDuel. All moneyline picks f"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 0, "rank": 2, "score": 0.9837268240544934, "doc_idx": 597, "sentiment": "neutral", "preview": "@OunMuhammad1214 @AdamSchefter Confirmed from NFL reports: Key outs for Oct 19 include Rams' Puka Nacua (ankle) & Rob Havenstein (shoulder); Browns' David Njoku"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 0, "rank": 3, "score": 0.981539065825702, "doc_idx": 976, "sentiment": "neutral", "preview": "@KremOf81594 @Playbook Here's an updated 10-leg NFL parlay for Sunday, Oct 19, 2025, using latest odds from ESPN, FOX, and BetMGM. All moneyline picks—high risk"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 1, "rank": 1, "score": 0.9961464538252108, "doc_idx": 2145, "sentiment": "neutral", "preview": "NFL Best Bet\n\nMatthew Golden over 46.5 Receiving Yards (-115 MGM)  \n\nCooked with @MikeL0cks & @coleycashes \n\nI just ran this same spot last week & it cashed wit"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 1, "rank": 2, "score": 0.9958675174362164, "doc_idx": 2232, "sentiment": "positive", "preview": "🚨NFL Best Bet🚨\n\nHe will SOAR over this line🚀\n\nCollab with @coleycashes & @MattL0cks \n\nMatthew Golden OVER 46.5 Receiving Yards (-115 MGM)  \n\nGolden has recorded"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 1, "rank": 3, "score": 0.9951000212020912, "doc_idx": 7097, "sentiment": "neutral", "preview": "⭐️ NFL Sunday Week 7 Prop #1 ⭐️ \n\n🏈 J.K. Dobbins o58.5 Rush Yards\n-135 #BroncosCountry vs #NYGiants \n\nCollab w/ @QuentinLocks 📲\n\nHit ❤️ for more NFL Sunday Prop"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 2, "rank": 1, "score": 0.9831020668397302, "doc_idx": 4208, "sentiment": "negative", "preview": "@TimsCardShop @ChiefsReceipts @danorlovsky7 @FirstTake Tim, here’s the thing, the play isn’t really the point anymore. The frustration comes from the league’s s"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 2, "rank": 2, "score": 0.9820044127694804, "doc_idx": 7948, "sentiment": "positive", "preview": "@TousA \nThink you would be the people to make this happen  \"Kid Rock, duet with Dolly for a MAGA halftime rebuttal? NFL's got Bad Bunny—we've got real America.\""}
+{"subject": "nfl", "dataset": "domain", "topic_id": 2, "rank": 3, "score": 0.9816899143342488, "doc_idx": 7641, "sentiment": "neutral", "preview": "@barstoolsports I wasn't aware of the NFL films video, but I heard they gave Branch a box of Kleenex and it fixed the problem.\n\nCan you please enlighten us by a"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 3, "rank": 1, "score": 0.9858512535943122, "doc_idx": 5841, "sentiment": "neutral", "preview": "@PetePacer @Colt_Hoosier @PSU_FB_Thoughts There is no scenario where I see that as smart BUT in the coming days or NIL, teams will effectively hire players like"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 3, "rank": 2, "score": 0.9755308570863528, "doc_idx": 12344, "sentiment": "negative", "preview": "@RapSheet So when is the nfl going to admit they dont like the lions and the league is rigged for certain teams to win and certain teams to lose ....... Jack ha"}
+{"subject": "nfl", "dataset": "domain", "topic_id": 3, "rank": 3, "score": 0.9751097055508804, "doc_idx": 6744, "sentiment": "positive", "preview": "Can’t wait to see Breer and Aditi spin this.\n\n“You know this is the NFL. Players get frustrated sometimes.\n\nBut I look at last offseason where he trashed the te"}
+
+DIAGNOSTICS_JSON
+{"analysis_mode": "domain", "off_topic_risk": "low", "confidence": "high", "generic_terms": ["get", "go", "one", "make", "best", "good", "great"], "generic_term_share": 0.3333, "subject_topic_share": 1.0, "noise_topic_share": 0.0, "topic_diagnostics": [{"topic_id": 0, "label": "nfl week · nfl · week · sunday", "matched_subject_terms": ["nfl", "football", "game"], "matched_off_topic_terms": []}, {"topic_id": 1, "label": "nfl · game · yard · steelers", "matched_subject_terms": ["nfl", "game"], "matched_off_topic_terms": []}, {"topic_id": 2, "label": "nfl · team · not · fan", "matched_subject_terms": ["nfl", "team", "game"], "matched_off_topic_terms": []}, {"topic_id": 3, "label": "nfl · get · game · not", "matched_subject_terms": ["nfl", "team", "game"], "matched_off_topic_terms": []}], "quality_flags": [{"flag": "generic_terms", "severity": "medium", "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."}]}
+
+END_INPUT_DATA
+Do not continue, copy, or transform any single input JSON row.
+Synthesize across all of the supplied records.
+Return exactly one JSON object matching the schema above.
+Do not return subject, dataset, sentiment_terms, or diagnostics. Those fields are merged deterministically in code.
+Use only topic_id values that appear in TOPIC_SUMMARIES_JSONL.
+The diagnostics are heuristics, not truth, but you should respect them when judging off-topic risk and confidence.
+Include one topic_interpretation for every topic_id in TOPIC_SUMMARIES_JSONL.
+Each topic_interpretation label must be a short human-readable caption, not a bag-of-words list.
+Each topic_interpretation theme_summary must be 2 to 3 sentences.
+Sentence 1 should explain the shared theme in plain English.
+Sentence 2 should explain what the exemplar posts suggest about the kind of discussion, audience, or behavior driving the topic.
+Sentence 3, when useful, should explain why the topic matters for the subject or why it should be treated as noise, off-topic spillover, or low-signal chatter.
+Do not simply restate the top words; translate them into a readable interpretation.
+Even when a topic is weak or messy, still provide a concrete interpretation rather than omitting it.
+Include 1 to 4 quality_flags, 1 to 4 strategic_opportunities, and 2 to 5 takeaways.
+Use short evidence snippets drawn from the exemplar previews.
+For codomain, the strategic opportunities should reflect adjacent interests of subject-linked users, not generic campaign or product advice.
+For codomain, only include a strategic opportunity when it is supported by repeated evidence across multiple topics or exemplars. Do not turn single-account meme streams or fragmented chatter into an opportunity.
+If the codomain evidence is too fragmented for a real opportunity, return an empty strategic_opportunities list.
+Every strategic_opportunity must include an activation_type and evidence_topic_ids.
+Do not write generic audience recommendations. Focus on interpretation, quality, opportunities, and presentation-ready takeaways.
+Return JSON only.
+
+OUTPUT_JSON
+

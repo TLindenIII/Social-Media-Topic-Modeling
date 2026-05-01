@@ -1,0 +1,14 @@
+{
+  "subject": "costco",
+  "dataset": "codomain",
+  "rows": 12276,
+  "tidy_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/costco__codomain__tfidf_metrics_tidy.parquet",
+  "wide_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/costco__codomain__weighted_idf_wide.parquet",
+  "top_terms_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/costco__codomain__top_terms.csv",
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/figures/costco__codomain__top_weighted_idf_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/figures/costco__codomain__top_weighted_idf_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/figures/costco__codomain__top_weighted_idf_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/05_tfidf/figures/costco__codomain__term_polarity.png"
+  ]
+}

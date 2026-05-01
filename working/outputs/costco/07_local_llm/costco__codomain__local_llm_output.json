@@ -1,0 +1,226 @@
+{
+  "subject": "costco",
+  "dataset": "codomain",
+  "overview": {
+    "summary": "The dataset exhibits severe fragmentation with high noise levels, where the majority of content (75%) is unrelated to the subject 'costco'. The few relevant signals are buried within generic financial chatter and political noise, making it difficult to discern a coherent community interest.",
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "high",
+    "confidence": "low"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "Political polarization and partisan conflict",
+      "relevance": "high",
+      "theme_summary": "This topic centers on intense political rhetoric involving Democrats, liberals, and conservative activism, rather than Costco-specific retail operations. The exemplar posts suggest a discussion driven by ideological confrontation and calls for political mobilization, indicating that the audience is deeply engaged in partisan debates. Because these discussions are unrelated to the subject of Costco, this topic should be treated as noise in a retail-focused analysis.",
+      "evidence": [
+        "Democrats will not be happy until we have a 10/7 event",
+        "NOW LET'S TALK ABOUT THE DEMOCRAT PARTY AND THE SPLC",
+        "inspire more conservative Californians to become more outspoken"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "Personal Life & Mental Wellness",
+      "relevance": "high",
+      "theme_summary": "This topic captures personal narratives focused on mental health, parenting joys, and strategies for overcoming life's chaos or 'funktions.' The exemplar posts suggest a discussion driven by individuals sharing intimate emotional experiences and seeking community support rather than product reviews. While the subject is Costco, these posts appear to be noise or off-topic content where the platform name may be incidental to the user's personal expression.",
+      "evidence": [
+        "The JOY in Autism. Here's a little inside look at the absolute wonder of being a mom",
+        "Welcome to the dark side! Sometimes, the only way out is through. Life has been pure chaos",
+        "In a funk? Break away from it by a quick project that checks something off your list! ADHD is a part of me"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "Crypto Investment Alerts",
+      "relevance": "high",
+      "theme_summary": "This topic consists of enthusiastic announcements celebrating significant percentage gains in cryptocurrency tokens following specific buy signals. The exemplar posts suggest an audience actively monitoring digital asset markets for momentum and growth opportunities, using emojis to convey excitement about financial returns. These posts should be treated as distinct from general retail discussions because they focus exclusively on speculative crypto yields and token valuations rather than the subject's primary business operations.",
+      "evidence": [
+        "$BTBT NOW 39% SINCE MY BUY SIGNAL",
+        "$CLSK NOW 34% SINCE MY BUY SIGNAL",
+        "$ETHZ NOW 60 PERCENT SINCE MY BUY SIGNAL"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "Tech Earnings & AI Market Surge",
+      "relevance": "high",
+      "theme_summary": "This topic centers on major technology companies reporting strong financial results driven by artificial intelligence growth. The exemplar posts suggest that investors and analysts are actively discussing how AI booms are exceeding initial hype and boosting revenue for firms like TSMC and Nvidia. While the subject metadata mentions Costco, the content indicates this is a general market discussion rather than a specific conversation about Costco's operations or products.",
+      "evidence": [
+        "Dan Ives Says Q3 Tech Earnings Will 'Exceed The AI Hype'",
+        "TSMC posts forecast-beating Q3 revenue surge on AI boom",
+        "Elon Musk's Tesla Robot Masters Kung Fu Without Human Control"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "get",
+        "score": 0.836873
+      },
+      {
+        "term": "go",
+        "score": 0.589617
+      },
+      {
+        "term": "no",
+        "score": 0.58901
+      },
+      {
+        "term": "want",
+        "score": 0.496826
+      },
+      {
+        "term": "know",
+        "score": 0.468809
+      }
+    ],
+    "neutral": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.94046
+      },
+      {
+        "term": "one",
+        "score": 0.876072
+      },
+      {
+        "term": "go",
+        "score": 0.843839
+      },
+      {
+        "term": "make",
+        "score": 0.756446
+      },
+      {
+        "term": "no",
+        "score": 0.7374
+      }
+    ],
+    "positive": [
+      {
+        "term": "good",
+        "score": 1.0
+      },
+      {
+        "term": "stock",
+        "score": 0.968009
+      },
+      {
+        "term": "love",
+        "score": 0.965357
+      },
+      {
+        "term": "day",
+        "score": 0.860364
+      },
+      {
+        "term": "get",
+        "score": 0.841892
+      },
+      {
+        "term": "new",
+        "score": 0.785126
+      }
+    ]
+  },
+  "quality_flags": [
+    {
+      "flag": "fragmented_chatter",
+      "severity": "medium",
+      "explanation": "The relevant content is scattered across different topics and lacks a cohesive narrative, making it impossible to identify a unified community sentiment."
+    },
+    {
+      "flag": "low_signal_language",
+      "severity": "high",
+      "explanation": "Generic filler terms and noisy topic clusters are both reducing signal quality, so the corpus reads as low-density rather than clearly thematic."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "The dataset is overwhelmingly dominated by off-topic content, rendering it unsuitable for deriving actionable insights about the subject's audience or market position.",
+    "Any apparent engagement with the subject is incidental, occurring within broader discussions about technology earnings rather than reflecting genuine interest in the company's products or services.",
+    "The presence of crypto and political noise suggests that the data collection method may be capturing adjacent internet culture rather than targeted community feedback."
+  ],
+  "diagnostics": {
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "high",
+    "confidence": "low",
+    "generic_terms": [
+      "get",
+      "go",
+      "want",
+      "know",
+      "one",
+      "even",
+      "make",
+      "would",
+      "need",
+      "new"
+    ],
+    "generic_term_share": 0.6522,
+    "subject_topic_share": 0.25,
+    "noise_topic_share": 0.75,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "not · trump · no · go",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": [
+          "trump",
+          "democrat"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "label": "get · one · not · go",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "morning · team · buy · million",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": [
+          "eth",
+          "nasdaq"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "label": "stock · ai · market · new",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": [
+          "stock",
+          "market",
+          "earnings",
+          "tesla",
+          "ai"
+        ]
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "high",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      },
+      {
+        "flag": "noise_topics",
+        "severity": "high",
+        "explanation": "Several topic summaries contain excluded terms or look like noisy, low-signal content."
+      }
+    ]
+  }
+}

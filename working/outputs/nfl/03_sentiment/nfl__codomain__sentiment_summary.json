@@ -1,0 +1,11 @@
+{
+  "subject": "nfl",
+  "dataset": "codomain",
+  "model_name": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+  "rows": 11955,
+  "label_counts": {
+    "negative": 4200,
+    "neutral": 4615,
+    "positive": 3140
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "codomain",
+  "rows": 8372,
+  "unique_authors": 325,
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__sentiment_distribution.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__tweets_per_user.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__word_counts.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_tokens_raw_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_tokens_filtered_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_bigrams_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_tokens_raw_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_tokens_filtered_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_bigrams_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_tokens_raw_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_tokens_filtered_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/figures/keir_starmer__codomain__top_bigrams_positive.png"
+  ],
+  "top_tokens_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/keir_starmer__codomain__top_tokens.csv",
+  "top_bigrams_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/04_eda/keir_starmer__codomain__top_bigrams.csv"
+}

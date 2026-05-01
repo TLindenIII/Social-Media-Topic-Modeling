@@ -1,0 +1,34 @@
+topic_id,rank,score,doc_idx,preview,sentiment
+0,1,0.9876682340417708,830,"The teaching profession in Nigeria, unfortunately, has not received the due attention it deserves, as a critical contributor to national development. The severe",negative
+0,2,0.9807973606560039,1848,Pujya Gurudevshri Rakeshji showers blessings and extends warm felicitations to Shri C. P. Radhakrishnan ji on being elected as the Hon’ble Vice President of Ind,positive
+0,3,0.980724132719979,2833,Global Fintech Festival 2025 kicks off in Mumbai with PM Narendra Modi & UK PM Keir Starmer. Modi highlights India's digital ecosystem as a global standard for ,positive
+1,1,0.9798318739841454,1975,"Fast & Fabulous – The Super Catwalk was another special moment in an already memorable year for us.
+
+The Chairman’s Collection was showcased once again, paying ",positive
+1,2,0.975939292739315,1961,"Among all the threads that define Raymond’s legacy, education is the one closest to my heart.
+It shapes character, builds communities and empowers generations t",positive
+1,3,0.9752414274207242,1955,"100 years of Raymond is more than a milestone. It is a century of dressing India’s dreams, moments and milestones.
+The centenary celebration brought together fa",positive
+2,1,0.9842665503342664,7602,"🚨Breaking 🚨 
+
+Reports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.
+
+However",negative
+2,2,0.9839521823075977,7603,"🚨Breaking 🚨 
+
+Reports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.
+
+However",negative
+2,3,0.9796924684389821,8244,"🚨 Manchester terror attack update 🚨 
+
+Manchester police have released a full statement responding to the terror attack that occurred today at a synagogue near h",negative
+3,1,0.9911105781567346,8017,"🇹🇭🇰🇭
+Escalation at the Thailand-Cambodia border📝
+What is known as of the end of July 26?
+
+The conflict at the Thailand-Cambodia border has been ongoing for the ",neutral
+3,2,0.990383622762358,1105,Israel and Hamas have reached a long-awaited agreement on a ceasefire and hostage exchange — marking the first phase of U.S. President Donald Trump’s peace plan,neutral
+3,3,0.9863228827886316,8039,"🇷🇺🇺🇦
+Russia is unlikely to show forgiveness to Ukraine!
+
+A compromise between Russia and Ukraine on peace in the evening negotiations is unlikely, — The New Yor",negative

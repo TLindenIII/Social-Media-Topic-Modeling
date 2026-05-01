@@ -1,0 +1,18 @@
+{
+  "subject": "costco",
+  "dataset": "domain",
+  "n_topics": 8,
+  "topic_grid_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_grid_search.csv",
+  "topic_summaries_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_summaries.csv",
+  "topic_exemplars_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_exemplars.csv",
+  "doc_topic_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__doc_topic.parquet",
+  "topic_prevalence_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_prevalence_by_sentiment.csv",
+  "topic_summaries_jsonl_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_summaries.jsonl",
+  "topic_exemplars_jsonl_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__topic_exemplars.jsonl",
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/figures/costco__domain__topic_grid_search.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/figures/costco__domain__topic_prevalence.png"
+  ],
+  "pyldavis_status": "saved",
+  "pyldavis_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/06_topic_modeling/costco__domain__pyldavis.html"
+}

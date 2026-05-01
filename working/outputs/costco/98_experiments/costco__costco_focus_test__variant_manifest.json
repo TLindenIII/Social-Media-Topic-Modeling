@@ -1,0 +1,59 @@
+{
+  "subject": "costco",
+  "variant": "costco_focus_test",
+  "filters": {
+    "include_terms": [
+      "costco",
+      "kirkland",
+      "membership",
+      "warehouse",
+      "wholesale",
+      "food court",
+      "rotisserie",
+      "hot dog",
+      "gas",
+      "tire",
+      "optical"
+    ],
+    "exclude_terms": [
+      "stock",
+      "stocks",
+      "market",
+      "trade",
+      "trading",
+      "bitcoin",
+      "btc",
+      "eth",
+      "crypto",
+      "analyst",
+      "earnings",
+      "nasdaq",
+      "dow",
+      "s&p",
+      "sp500",
+      "trump",
+      "democrat",
+      "republican",
+      "tesla",
+      "ai"
+    ],
+    "drop_retweets": true,
+    "drop_replies": false,
+    "max_posts_per_user": 12,
+    "min_include_matches": 1,
+    "max_exclude_matches": 0,
+    "min_relevance_score": 1,
+    "min_author_include_hits": 1,
+    "min_author_focus_share": 0.1
+  },
+  "corpus_csv_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_focus_test__filtered_corpus.csv",
+  "corpus_parquet_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_focus_test__filtered_corpus.parquet",
+  "audit_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_focus_test__filter_audit.csv",
+  "author_summary_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_focus_test__author_focus_summary.csv",
+  "kept_sample_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_focus_test__kept_sample.csv",
+  "dropped_sample_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_focus_test__dropped_sample.csv",
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/figures/costco__costco_focus_test__filter_audit_rows.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/figures/costco__costco_focus_test__relevance_score_distribution.png"
+  ]
+}

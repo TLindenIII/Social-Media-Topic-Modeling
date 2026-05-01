@@ -1,0 +1,11 @@
+{
+  "subject": "costco",
+  "dataset": "domain",
+  "model_name": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+  "rows": 13936,
+  "label_counts": {
+    "negative": 3666,
+    "neutral": 6853,
+    "positive": 3417
+  }
+}

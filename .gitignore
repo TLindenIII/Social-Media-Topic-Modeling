@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local Streamlit state
+.streamlit/secrets.toml
+
+# Local presentation workspace stays out of Git
+presentation/
+
+# Notebook noise
+**/.ipynb_checkpoints/
+
+# Local virtual environments and caches
+working/.venv/
+presentation/.venv/
+presentation/.cache/
+
+# Local OS/editor artifacts
+*.swp
+*.swo

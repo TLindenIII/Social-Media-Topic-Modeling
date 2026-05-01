@@ -1,0 +1,156 @@
+{
+  "subject": "costco",
+  "dataset": "codomain",
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "get",
+        "score": 0.836873
+      },
+      {
+        "term": "go",
+        "score": 0.589617
+      },
+      {
+        "term": "no",
+        "score": 0.58901
+      },
+      {
+        "term": "want",
+        "score": 0.496826
+      },
+      {
+        "term": "know",
+        "score": 0.468809
+      }
+    ],
+    "neutral": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.94046
+      },
+      {
+        "term": "one",
+        "score": 0.876072
+      },
+      {
+        "term": "go",
+        "score": 0.843839
+      },
+      {
+        "term": "make",
+        "score": 0.756446
+      },
+      {
+        "term": "no",
+        "score": 0.7374
+      }
+    ],
+    "positive": [
+      {
+        "term": "good",
+        "score": 1.0
+      },
+      {
+        "term": "stock",
+        "score": 0.968009
+      },
+      {
+        "term": "love",
+        "score": 0.965357
+      },
+      {
+        "term": "day",
+        "score": 0.860364
+      },
+      {
+        "term": "get",
+        "score": 0.841892
+      },
+      {
+        "term": "new",
+        "score": 0.785126
+      }
+    ]
+  },
+  "diagnostics": {
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "high",
+    "confidence": "low",
+    "generic_terms": [
+      "get",
+      "go",
+      "want",
+      "know",
+      "one",
+      "even",
+      "make",
+      "would",
+      "need",
+      "new"
+    ],
+    "generic_term_share": 0.6522,
+    "subject_topic_share": 0.25,
+    "noise_topic_share": 0.75,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "not · trump · no · go",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": [
+          "trump",
+          "democrat"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "label": "get · one · not · go",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "morning · team · buy · million",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": [
+          "eth",
+          "nasdaq"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "label": "stock · ai · market · new",
+        "matched_subject_terms": [
+          "costco"
+        ],
+        "matched_off_topic_terms": [
+          "stock",
+          "market",
+          "earnings",
+          "tesla",
+          "ai"
+        ]
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "high",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      },
+      {
+        "flag": "noise_topics",
+        "severity": "high",
+        "explanation": "Several topic summaries contain excluded terms or look like noisy, low-signal content."
+      }
+    ]
+  }
+}

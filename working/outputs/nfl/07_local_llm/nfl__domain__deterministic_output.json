@@ -1,0 +1,149 @@
+{
+  "subject": "nfl",
+  "dataset": "domain",
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.544337
+      },
+      {
+        "term": "get",
+        "score": 0.479935
+      },
+      {
+        "term": "game",
+        "score": 0.467768
+      },
+      {
+        "term": "bad",
+        "score": 0.450354
+      },
+      {
+        "term": "team",
+        "score": 0.443072
+      }
+    ],
+    "neutral": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "week",
+        "score": 0.53821
+      },
+      {
+        "term": "game",
+        "score": 0.444601
+      },
+      {
+        "term": "play",
+        "score": 0.366912
+      },
+      {
+        "term": "not",
+        "score": 0.347871
+      },
+      {
+        "term": "team",
+        "score": 0.338544
+      }
+    ],
+    "positive": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "best",
+        "score": 0.568687
+      },
+      {
+        "term": "game",
+        "score": 0.505293
+      },
+      {
+        "term": "get",
+        "score": 0.446974
+      },
+      {
+        "term": "good",
+        "score": 0.438786
+      },
+      {
+        "term": "great",
+        "score": 0.391837
+      }
+    ]
+  },
+  "diagnostics": {
+    "analysis_mode": "domain",
+    "off_topic_risk": "low",
+    "confidence": "high",
+    "generic_terms": [
+      "get",
+      "go",
+      "one",
+      "make",
+      "best",
+      "good",
+      "great"
+    ],
+    "generic_term_share": 0.3333,
+    "subject_topic_share": 1.0,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "nfl week · nfl · week · sunday",
+        "matched_subject_terms": [
+          "nfl",
+          "football",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "nfl · game · yard · steelers",
+        "matched_subject_terms": [
+          "nfl",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "nfl · team · not · fan",
+        "matched_subject_terms": [
+          "nfl",
+          "team",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "nfl · get · game · not",
+        "matched_subject_terms": [
+          "nfl",
+          "team",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      }
+    ]
+  }
+}

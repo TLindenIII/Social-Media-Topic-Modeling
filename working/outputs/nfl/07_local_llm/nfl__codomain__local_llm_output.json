@@ -1,0 +1,226 @@
+{
+  "subject": "nfl",
+  "dataset": "codomain",
+  "overview": {
+    "summary": "The dataset exhibits a significant disconnect between the declared 'nfl' subject and the actual content, which is dominated by MMA events, fantasy football trade mechanics, and cryptocurrency updates. While generic terms like 'get' and 'trade' appear frequently, they drive discussions unrelated to standard NFL analysis, suggesting a fragmented user base or cross-sport spillover.",
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "high",
+    "confidence": "high"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "Conspiracy theories and unrelated promotional spam",
+      "relevance": "low",
+      "theme_summary": "This topic aggregates highly disparate content, ranging from political conspiracy theories about the 'Left' and Islam to financial advice on market risks and promotional advertisements for MMA events. The exemplar posts suggest that the discussion is not centered on the NFL subject matter but rather reflects a noisy dataset containing off-topic political rhetoric and commercial spam. Consequently, this topic should be treated as noise because it lacks any coherent thematic connection to the intended sports analysis.",
+      "evidence": [
+        "The LEFT (started way back Obama, Hillary) had and IS united with EVERY ENEMY of The United States of America including and especially ISLAM to destroy the cult",
+        "Risk doesn't exist without threat.\n\nMarkets don't just test your strategy—they hijack your nervous system.\n\nCortisol + adrenaline spike, focus narrows, decision",
+        "🎬 Toronto, 7 days to fight night — Sept 26!\nRebel Arena. The lights, the noise, the fight — MMA 63 x 247iBET\n\n🌟 Get ready to claim your live-night rewards:\n💸 FR"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "NFL Draft Strategy and Fan Perspective",
+      "relevance": "high",
+      "theme_summary": "This topic centers on discussions regarding NFL draft picks, specifically focusing on trading strategies and the value of early selections. The exemplar posts suggest that the audience is deeply engaged in evaluating team management decisions, such as whether to trade away high picks or retain them, while also reflecting on the broader life context of fans who do not view football as their sole priority.",
+      "evidence": [
+        "Trade Ridley for a 3rd",
+        "Trade Simmons for a 2nd and 3rd",
+        "Get the #1 pick again and TRADE BACK a few spots"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "Crypto promotion mixed with NFL content",
+      "relevance": "high",
+      "theme_summary": "This topic represents a significant amount of noise where cryptocurrency advertisements are incorrectly clustered with standard NFL game discussions. The exemplar posts reveal that the discussion is dominated by promotional announcements for a mobile app rather than actual analysis of teams, players, or game outcomes. Consequently, this topic should be treated as noise because the content is irrelevant to the core subject of the NFL dataset.",
+      "evidence": [
+        "🚨🚨Update on SolCex 🚨🚨\n\n📲Tomorrow @SolCex_Exchange will release its highly anticipated Mobile App!",
+        "🚨🚨Update on $SolCex🚨🚨\n\n 📲 @SolCex_Exchange is almost ready  to launch their mobile app!",
+        "We got Refs🦓\n\nSee thread below for breakdown⬇️\n\nCowboys at Eagles | Thursday, Sep. 4 (8:20pm)\nShawn Smith\n\nChiefs at Chargers | Friday, Sep. 5 (8:00pm)\nCarl Che"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "Social Media Engagement Bait",
+      "relevance": "low",
+      "theme_summary": "This topic consists of promotional posts designed to generate likes and follows rather than discussing NFL content. The exemplar posts reveal that the discussion is actually about generic social media engagement tactics, often using sports as a hook to distribute promo codes or fake news. Consequently, this topic should be treated as noise because it does not reflect genuine user interest in the NFL subject matter.",
+      "evidence": [
+        "The most biased MLB umpires tonight (August 29th)🔒\n\nDrop a ❤️ and I'll share my favorite bet from these games!",
+        "🎉【X Spin Special Offer】🎉\nWant an exclusive promo code? \nHere's how you can get it for free!",
+        "Follow our o"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "get",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.966894
+      },
+      {
+        "term": "game",
+        "score": 0.824921
+      },
+      {
+        "term": "nfl",
+        "score": 0.718738
+      },
+      {
+        "term": "bad",
+        "score": 0.716115
+      },
+      {
+        "term": "fuck",
+        "score": 0.706757
+      }
+    ],
+    "neutral": [
+      {
+        "term": "game",
+        "score": 1.0
+      },
+      {
+        "term": "get",
+        "score": 0.927422
+      },
+      {
+        "term": "week",
+        "score": 0.849707
+      },
+      {
+        "term": "go",
+        "score": 0.748497
+      },
+      {
+        "term": "nfl",
+        "score": 0.729778
+      },
+      {
+        "term": "play",
+        "score": 0.662134
+      }
+    ],
+    "positive": [
+      {
+        "term": "win",
+        "score": 0.991533
+      },
+      {
+        "term": "nfl",
+        "score": 0.990802
+      },
+      {
+        "term": "get",
+        "score": 0.897319
+      },
+      {
+        "term": "game",
+        "score": 0.896619
+      },
+      {
+        "term": "good",
+        "score": 0.870118
+      },
+      {
+        "term": "go",
+        "score": 0.830282
+      }
+    ]
+  },
+  "quality_flags": [
+    {
+      "flag": "subject_mismatch",
+      "severity": "high",
+      "explanation": "Multiple topics (0 and 2) contain zero NFL-specific content, discussing MMA and crypto instead, which invalidates the 'nfl' subject label for the dataset."
+    },
+    {
+      "flag": "codomain_collapse",
+      "severity": "high",
+      "explanation": "The 'codomain' of adjacent interests has collapsed into unrelated domains (crypto, MMA) rather than revealing nuanced NFL fan behaviors."
+    },
+    {
+      "flag": "generic_terms",
+      "severity": "medium",
+      "explanation": "High reliance on filler words like 'get', 'go', and 'back' masks the true intent of the posts, making semantic clustering difficult."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "The dataset is not suitable for standard NFL engagement strategies due to the presence of unrelated crypto and MMA content.",
+    "If targeting NFL fans, focus on Topic 1 (Fantasy Trades) and Topic 3 (Betting) as these represent genuine adjacent interests, while filtering out Topic 0 and 2.",
+    "Content quality is low due to fragmented chatter and a lack of cohesive narrative around the primary subject."
+  ],
+  "diagnostics": {
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "low",
+    "confidence": "high",
+    "generic_terms": [
+      "get",
+      "go",
+      "one",
+      "good",
+      "best",
+      "great",
+      "back"
+    ],
+    "generic_term_share": 0.3043,
+    "subject_topic_share": 1.0,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "go · love · get · back",
+        "matched_subject_terms": [
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "get · not · good · one",
+        "matched_subject_terms": [
+          "football"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "game · nfl · lion · raven",
+        "matched_subject_terms": [
+          "nfl",
+          "team",
+          "game",
+          "season"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "go · get · home · nfl",
+        "matched_subject_terms": [
+          "nfl",
+          "team"
+        ],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      },
+      {
+        "flag": "codomain_collapse",
+        "severity": "medium",
+        "explanation": "The codomain still overlaps heavily with direct subject discussion instead of revealing adjacent interests."
+      }
+    ]
+  }
+}

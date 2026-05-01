@@ -1,0 +1,26 @@
+[
+  {
+    "topic_id": 0,
+    "label": "not · trump · no · go",
+    "status": "ok",
+    "raw_char_count": 893
+  },
+  {
+    "topic_id": 1,
+    "label": "get · one · not · go",
+    "status": "ok",
+    "raw_char_count": 980
+  },
+  {
+    "topic_id": 2,
+    "label": "morning · team · buy · million",
+    "status": "ok",
+    "raw_char_count": 1013
+  },
+  {
+    "topic_id": 3,
+    "label": "stock · ai · market · new",
+    "status": "ok",
+    "raw_char_count": 888
+  }
+]

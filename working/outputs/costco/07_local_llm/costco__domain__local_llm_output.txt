@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "summary": "The dataset reveals a fragmented conversation around Costco, oscillating between genuine product discussions, promotional spam, and unrelated financial news. While some users engage with specific food items and membership perks, a significant portion of the data consists of low-signal giveaways and off-topic market commentary that dilutes the core retail narrative.",
+    "analysis_mode": "domain",
+    "off_topic_risk": "high",
+    "confidence": "medium"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 5,
+      "label": "Product Quality & Dietary Concerns",
+      "relevance": "high",
+      "theme_summary": "Consumers are actively debating the quality and safety of specific food items available at the retailer, ranging from frozen proteins to packaged goods. The discussion suggests a highly engaged audience that prioritizes health and ingredient transparency over convenience.",
+      "evidence": ["Toss both proteins. Costco has grass fed protein on their site.", "Jello packs are the devil.", "Costco also sells organic A2 whole fat plain yogurt"]
+    },
+    {
+      "topic_id": 6,
+      "label": "Promotional Giveaways & Spam",
+      "relevance": "low",
+      "theme_summary": "This topic is dominated by repetitive, low-effort promotional posts offering bundles and prizes rather than organic retail discussion. The content appears to be automated or copied spam that hijacks the platform's retail context.",
+      "evidence": ["🚨GIVEAWAY Day 7 of 31🚨", "Over $1500 value!", "To Enter: F"]
+    },
+    {
+      "topic_id": 7,
+      "label": "Financial Markets & Economic Outlook",
+      "relevance": "low",
+      "theme_summary": "The conversation drifts entirely into macroeconomic analysis, stock market performance, and wage discussions, completely ignoring the retail subject. This indicates a severe case of topic spillover where users are discussing unrelated news while tagging the wrong entity.",
+      "evidence": ["#Stocks - S&P500 Outlook", "Stocks eased Thursday", "A nationwide $25/ho"]
+    }
+  ],
+  "quality_flags": [
+    {
+      "flag": "spam_detection",
+      "severity": "high",
+      "explanation": "Multiple records (topic_id 6) consist of identical giveaway templates with no unique content, indicating bot activity or copy-paste spam rather than genuine user discussion."
+    },
+    {
+      "flag": "topic_drift",
+      "severity": "high",
+      "explanation": "Significant noise exists where financial market terms (topic_id 7) appear in a retail dataset, suggesting the 'Costco' tag is being misused or the data ingestion process captured unrelated threads."
+    },
+    {
+      "flag": "generic_language",
+      "severity": "medium",
+      "explanation": "High frequency of filler words and generic verbs reduces the semantic density of the remaining valid discussions, making sentiment analysis less precise."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "Filter out repetitive giveaway spam immediately to prevent skewing sentiment analysis for product quality.",
+    "Investigate the source of financial market chatter (topic_id 7) to determine if it is a data ingestion error or a mislabeled user thread.",
+    "Leverage the high engagement on specific food items (topic_id 5) to create targeted content about organic and grass-fed options, as this is a genuine pain point for the audience."
+  ]
+}

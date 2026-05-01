@@ -1,0 +1,28 @@
+{
+  "mode": "llm_only",
+  "subject": "keir_starmer",
+  "datasets": [
+    "domain",
+    "codomain"
+  ],
+  "llm_backend": "ollama",
+  "llm_model": "isotnek/qwen3.5:9B-Unsloth-UD-Q4_K_XL",
+  "stages": [
+    {
+      "stage": "07_local_llm",
+      "dataset": "domain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__local_llm_output.json",
+      "note": "Structured JSON saved successfully. Dedicated topic pass returned 6 topic interpretations.",
+      "topic_debug_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__topic_call_status.json"
+    },
+    {
+      "stage": "07_local_llm",
+      "dataset": "codomain",
+      "status": "ok",
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__local_llm_output.json",
+      "note": "Structured JSON saved successfully. Dedicated topic pass returned 4 topic interpretations.",
+      "topic_debug_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__topic_call_status.json"
+    }
+  ]
+}

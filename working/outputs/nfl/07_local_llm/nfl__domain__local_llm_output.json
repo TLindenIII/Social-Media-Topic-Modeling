@@ -1,0 +1,230 @@
+{
+  "subject": "nfl",
+  "dataset": "domain",
+  "overview": {
+    "summary": "The dataset reflects a highly active, multi-faceted NFL conversation ecosystem dominated by real-time game analysis, betting strategy, and fan sentiment regarding league integrity and player narratives.",
+    "analysis_mode": "domain",
+    "off_topic_risk": "low",
+    "confidence": "high"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "Sunday NFL Game Betting and Injury Reports",
+      "relevance": "high",
+      "theme_summary": "This topic centers on specific betting strategies and injury updates for Sunday's NFL games, featuring high-risk parlays and confirmed player absences. The exemplar posts suggest an audience actively seeking actionable gambling advice and real-time roster information to inform their wagers. This discussion is highly relevant as it combines speculative financial behavior with critical sports data for immediate decision-making.",
+      "evidence": [
+        "@KremOf81594 Here's a 10-leg parlay for Sunday's NFL games (Oct 19, 2025), based on current odds and analysis from ESPN, FOX, and FanDuel. All moneyline picks f",
+        "@OunMuhammad1214 @AdamSchefter Confirmed from NFL reports: Key outs for Oct 19 include Rams' Puka Nacua (ankle) & Rob Havenstein (shoulder); Browns' David Njoku",
+        "@KremOf81594 @Playbook Here's an updated 10-leg NFL parlay for Sunday, Oct 19, 2025, using latest odds from ESPN, FOX, and BetMGM. All moneyline picks—high risk"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "NFL Betting Prop Wagers",
+      "relevance": "high",
+      "theme_summary": "This topic centers on specific statistical predictions for NFL games, such as individual player receiving or rushing yards, rather than general game outcomes. The exemplar posts suggest a discussion driven by gamblers sharing 'best bets' and collaborating with tipsters to promote specific wagering lines. This content matters because it represents a distinct subset of sports conversation focused on financial risk and gambling strategy rather than team performance or fan support.",
+      "evidence": [
+        "NFL Best Bet\n\nMatthew Golden over 46.5 Receiving Yards (-115 MGM)",
+        "He will SOAR over this line🚀",
+        "Collab with @coleycashes & @MattL0cks"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "NFL Team Identity and Fan Culture",
+      "relevance": "high",
+      "theme_summary": "This topic centers on discussions regarding specific NFL teams, player actions, and the broader cultural identity of the league's fanbase. The exemplar posts suggest that the audience is deeply engaged in debating team representation, player treatment, and the alignment of the NFL with specific cultural or political values. These conversations matter because they reveal how fans use sports as a lens to express broader societal frustrations and expectations.",
+      "evidence": [
+        "@TimsCardShop @ChiefsReceipts @danorlovsky7 @FirstTake Tim, here’s the thing, the play isn’t really the point anymore. The frustration comes from the league’s s",
+        "@TousA \nThink you would be the people to make this happen  \"Kid Rock, duet with Dolly for a MAGA halftime rebuttal? NFL's got Bad Bunny—we've got real America.\"",
+        "@barstoolsports I wasn't aware of the NFL films video, but I heard they gave Branch a box of Kleenex and it fixed the problem.\n\nCan you please enlighten us by a"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "NFL Player Movement and League Integrity",
+      "relevance": "high",
+      "theme_summary": "This topic centers on discussions regarding NFL player acquisitions, specifically the strategic hiring of players under new NIL rules, and accusations that the league is rigged against specific teams. The exemplar posts suggest an audience deeply skeptical of official narratives, with users actively challenging the fairness of team performance and anticipating media spin on player frustrations. These conversations matter because they highlight growing tensions between player agency and traditional league structures, indicating a shift in how fans perceive competitive balance.",
+      "evidence": [
+        "@PetePacer @Colt_Hoosier @PSU_FB_Thoughts There is no scenario where I see that as smart BUT in the coming days or NIL, teams will effectively hire players like",
+        "@RapSheet So when is the nfl going to admit they dont like the lions and the league is rigged for certain teams to win and certain teams to lose ....... Jack ha",
+        "Can’t wait to see Breer and Aditi spin this.\n\n“You know this is the NFL. Players get frustrated sometimes.\n\nBut I look at last offseason where he trashed the te"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "not",
+        "score": 0.544337
+      },
+      {
+        "term": "get",
+        "score": 0.479935
+      },
+      {
+        "term": "game",
+        "score": 0.467768
+      },
+      {
+        "term": "bad",
+        "score": 0.450354
+      },
+      {
+        "term": "team",
+        "score": 0.443072
+      }
+    ],
+    "neutral": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "week",
+        "score": 0.53821
+      },
+      {
+        "term": "game",
+        "score": 0.444601
+      },
+      {
+        "term": "play",
+        "score": 0.366912
+      },
+      {
+        "term": "not",
+        "score": 0.347871
+      },
+      {
+        "term": "team",
+        "score": 0.338544
+      }
+    ],
+    "positive": [
+      {
+        "term": "nfl",
+        "score": 1.0
+      },
+      {
+        "term": "best",
+        "score": 0.568687
+      },
+      {
+        "term": "game",
+        "score": 0.505293
+      },
+      {
+        "term": "get",
+        "score": 0.446974
+      },
+      {
+        "term": "good",
+        "score": 0.438786
+      },
+      {
+        "term": "great",
+        "score": 0.391837
+      }
+    ]
+  },
+  "quality_flags": [
+    {
+      "flag": "collab_heaviness",
+      "severity": "low",
+      "explanation": "Multiple high-ranking posts explicitly mention collaborations with specific influencers, suggesting a coordinated content strategy rather than organic individual discussion."
+    },
+    {
+      "flag": "generic_terms",
+      "severity": "medium",
+      "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+    }
+  ],
+  "strategic_opportunities": [
+    {
+      "opportunity": "Real-time Injury Impact Analysis",
+      "activation_type": "content",
+      "evidence_topic_ids": [
+        0,
+        1
+      ],
+      "rationale": "The intersection of injury news and betting props indicates a high demand for immediate analysis connecting roster availability to player performance metrics.",
+      "confidence": "high"
+    }
+  ],
+  "takeaways": [
+    "Betting communities are highly collaborative, frequently cross-promoting picks and strategies rather than posting in isolation.",
+    "Negative sentiment regarding league integrity is a persistent undercurrent that coexists with high engagement on game-specific topics.",
+    "Injury updates serve as the primary catalyst for shifting betting narratives and parlay construction in real-time."
+  ],
+  "diagnostics": {
+    "analysis_mode": "domain",
+    "off_topic_risk": "low",
+    "confidence": "high",
+    "generic_terms": [
+      "get",
+      "go",
+      "one",
+      "make",
+      "best",
+      "good",
+      "great"
+    ],
+    "generic_term_share": 0.3333,
+    "subject_topic_share": 1.0,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "nfl week · nfl · week · sunday",
+        "matched_subject_terms": [
+          "nfl",
+          "football",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "nfl · game · yard · steelers",
+        "matched_subject_terms": [
+          "nfl",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "nfl · team · not · fan",
+        "matched_subject_terms": [
+          "nfl",
+          "team",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "nfl · get · game · not",
+        "matched_subject_terms": [
+          "nfl",
+          "team",
+          "game"
+        ],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      }
+    ]
+  }
+}

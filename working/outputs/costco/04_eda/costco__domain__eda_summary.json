@@ -1,0 +1,22 @@
+{
+  "subject": "costco",
+  "dataset": "domain",
+  "rows": 13936,
+  "unique_authors": 11681,
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__sentiment_distribution.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__tweets_per_user.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__word_counts.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_tokens_raw_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_tokens_filtered_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_bigrams_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_tokens_raw_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_tokens_filtered_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_bigrams_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_tokens_raw_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_tokens_filtered_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/figures/costco__domain__top_bigrams_positive.png"
+  ],
+  "top_tokens_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/costco__domain__top_tokens.csv",
+  "top_bigrams_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/04_eda/costco__domain__top_bigrams.csv"
+}

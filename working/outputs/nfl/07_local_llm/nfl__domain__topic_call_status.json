@@ -1,0 +1,26 @@
+[
+  {
+    "topic_id": 0,
+    "label": "nfl week · nfl · week · sunday",
+    "status": "ok",
+    "raw_char_count": 1161
+  },
+  {
+    "topic_id": 1,
+    "label": "nfl · game · yard · steelers",
+    "status": "ok",
+    "raw_char_count": 891
+  },
+  {
+    "topic_id": 2,
+    "label": "nfl · team · not · fan",
+    "status": "ok",
+    "raw_char_count": 1175
+  },
+  {
+    "topic_id": 3,
+    "label": "nfl · get · game · not",
+    "status": "ok",
+    "raw_char_count": 1302
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "subject": "nfl",
+  "dataset": "codomain",
+  "rows": 14196,
+  "tidy_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/nfl__codomain__tfidf_metrics_tidy.parquet",
+  "wide_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/nfl__codomain__weighted_idf_wide.parquet",
+  "top_terms_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/nfl__codomain__top_terms.csv",
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/figures/nfl__codomain__top_weighted_idf_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/figures/nfl__codomain__top_weighted_idf_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/figures/nfl__codomain__top_weighted_idf_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/05_tfidf/figures/nfl__codomain__term_polarity.png"
+  ]
+}

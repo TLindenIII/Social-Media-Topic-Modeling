@@ -1,0 +1,9 @@
+{
+  "raw_rows": 11667,
+  "non_empty_content_rows": 11667,
+  "duplicate_rows_removed": 127,
+  "rows_after_duplicate_filter": 11540,
+  "rows_after_language_filter": 8749,
+  "rows_after_preprocess": 8739,
+  "target_language": "en"
+}

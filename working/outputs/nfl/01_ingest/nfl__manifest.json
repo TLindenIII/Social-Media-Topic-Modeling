@@ -1,0 +1,82 @@
+{
+  "subject": "nfl",
+  "source_paths": {
+    "domain_corpus": "/Users/thomas/Documents/Projects/X Sentiment/working/data/nfl/domain/nfl_d_corpus.csv",
+    "codomain_corpus": "/Users/thomas/Documents/Projects/X Sentiment/working/data/nfl/codomain/nfl_cd_corpus.csv",
+    "codomain_seed_pre": "/Users/thomas/Documents/Projects/X Sentiment/working/data/nfl/codomain/nfl_cd_sent_pre.csv",
+    "codomain_seed_post": "/Users/thomas/Documents/Projects/X Sentiment/working/data/nfl/codomain/nfl_cd_sent_post.csv"
+  },
+  "outputs": {
+    "domain_corpus": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/01_ingest/nfl__domain__corpus.csv",
+      "summary": {
+        "name": "nfl_domain_corpus",
+        "rows": 15265,
+        "columns": [
+          "Subject",
+          "Dataset",
+          "Tweet ID",
+          "URL",
+          "Content",
+          "Author ID",
+          "Author Username",
+          "Author Blue Verified (T/F)",
+          "Followers",
+          "Author Location",
+          "Likes",
+          "Views",
+          "Date"
+        ],
+        "unique_authors": 10728
+      }
+    },
+    "codomain_corpus": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/01_ingest/nfl__codomain__corpus.csv",
+      "summary": {
+        "name": "nfl_codomain_corpus",
+        "rows": 15507,
+        "columns": [
+          "Subject",
+          "Dataset",
+          "Tweet ID",
+          "URL",
+          "Content",
+          "Author ID",
+          "Author Username",
+          "Author Blue Verified (T/F)",
+          "Followers",
+          "Author Location",
+          "Likes",
+          "Views",
+          "Date",
+          "Original User Sentiment"
+        ],
+        "unique_authors": 431
+      }
+    },
+    "codomain_seed_pre": {
+      "path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/nfl/01_ingest/nfl__codomain__seed_pre.csv",
+      "summary": {
+        "name": "nfl_codomain_seed_pre",
+        "rows": 862,
+        "columns": [
+          "Tweet ID",
+          "URL",
+          "Content",
+          "Author ID",
+          "Author Username",
+          "Author Blue Verified (T/F)",
+          "Followers",
+          "Author Location",
+          "Likes",
+          "Views",
+          "Date"
+        ],
+        "unique_authors": 862
+      }
+    }
+  },
+  "issues": [
+    "Seed-label file issue: tweet_level_output_not_author_label_map"
+  ]
+}

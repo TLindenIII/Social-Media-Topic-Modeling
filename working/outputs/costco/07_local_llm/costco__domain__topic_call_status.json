@@ -1,0 +1,50 @@
+[
+  {
+    "topic_id": 0,
+    "label": "hot dog · not · dog · hot",
+    "status": "ok",
+    "raw_char_count": 1298
+  },
+  {
+    "topic_id": 1,
+    "label": "go costco · sam club · costco sam · trader joe",
+    "status": "ok",
+    "raw_char_count": 1078
+  },
+  {
+    "topic_id": 2,
+    "label": "parking lot · lot · parking · spot",
+    "status": "ok",
+    "raw_char_count": 1155
+  },
+  {
+    "topic_id": 3,
+    "label": "walmart · not · shop · xbox",
+    "status": "ok",
+    "raw_char_count": 886
+  },
+  {
+    "topic_id": 4,
+    "label": "costco membership · membership · gold · buy",
+    "status": "ok",
+    "raw_char_count": 1073
+  },
+  {
+    "topic_id": 5,
+    "label": "buy · get · good · make",
+    "status": "ok",
+    "raw_char_count": 1316
+  },
+  {
+    "topic_id": 6,
+    "label": "get costco · costco get · costco hotdog · get",
+    "status": "ok",
+    "raw_char_count": 1149
+  },
+  {
+    "topic_id": 7,
+    "label": "sale · cost · stock · last",
+    "status": "ok",
+    "raw_char_count": 985
+  }
+]

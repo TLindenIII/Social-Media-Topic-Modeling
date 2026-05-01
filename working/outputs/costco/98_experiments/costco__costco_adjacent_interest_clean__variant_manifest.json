@@ -1,0 +1,71 @@
+{
+  "subject": "costco",
+  "variant": "costco_adjacent_interest_clean",
+  "filters": {
+    "include_terms": [
+      "costco",
+      "kirkland",
+      "kirkland signature",
+      "costco membership",
+      "costco gas",
+      "costco food court",
+      "costco hot dog",
+      "rotisserie chicken",
+      "warehouse club"
+    ],
+    "exclude_terms": [
+      "stock",
+      "stocks",
+      "market",
+      "trade",
+      "trading",
+      "bitcoin",
+      "btc",
+      "eth",
+      "crypto",
+      "analyst",
+      "earnings",
+      "nasdaq",
+      "dow",
+      "s&p",
+      "sp500",
+      "trump",
+      "democrat",
+      "republican",
+      "tesla",
+      "ai"
+    ],
+    "drop_retweets": false,
+    "drop_replies": false,
+    "max_posts_per_user": 12,
+    "min_include_matches": 1,
+    "max_exclude_matches": 0,
+    "min_relevance_score": 1,
+    "min_author_include_hits": 2,
+    "min_author_focus_share": 0.1,
+    "max_author_url_share": 0.75,
+    "drop_direct_subject_posts_from_kept_users": true,
+    "drop_link_heavy_noise": true,
+    "max_urls": 1,
+    "drop_cashtags": true,
+    "min_alpha_words_with_url": 6,
+    "domain_similarity_quantile": null,
+    "domain_similarity_min": null
+  },
+  "similarity_summary": {},
+  "noise_filter_meta": {
+    "max_urls": 1,
+    "drop_cashtags": true,
+    "min_alpha_words_with_url": 6
+  },
+  "corpus_csv_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_adjacent_interest_clean__filtered_corpus.csv",
+  "corpus_parquet_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_adjacent_interest_clean__filtered_corpus.parquet",
+  "audit_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_adjacent_interest_clean__filter_audit.csv",
+  "author_summary_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_adjacent_interest_clean__author_focus_summary.csv",
+  "kept_sample_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_adjacent_interest_clean__kept_sample.csv",
+  "dropped_sample_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/costco__costco_adjacent_interest_clean__dropped_sample.csv",
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/figures/costco__costco_adjacent_interest_clean__filter_audit_rows.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/costco/98_experiments/figures/costco__costco_adjacent_interest_clean__relevance_score_distribution.png"
+  ]
+}

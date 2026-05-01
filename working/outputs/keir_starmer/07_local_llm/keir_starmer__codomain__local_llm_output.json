@@ -1,0 +1,226 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "codomain",
+  "overview": {
+    "summary": "The dataset presents a fragmented mix of high-signal political coverage regarding Keir Starmer and UK-India relations, contrasted with severe noise from unrelated global crises and generic filler content. While strong positive sentiment exists around Starmer's diplomatic engagements, the signal is diluted by off-topic violence reports and low-quality generic text.",
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "medium",
+    "confidence": "medium"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "International Digital ID and Fintech Events",
+      "relevance": "low",
+      "theme_summary": "This topic captures mentions of Keir Starmer in the context of international digital ID initiatives and global fintech festivals, specifically linking UK leadership with Indian counterparts. The exemplar posts suggest that the discussion is driven by high-level diplomatic and economic events rather than domestic policy debates or public sentiment regarding Starmer's leadership. Because the content focuses on external global ecosystems and unrelated regional issues like Nigerian education, it should be treated as noise for analyzing Starmer's specific political standing.",
+      "evidence": [
+        "The teaching profession in Nigeria, unfortunately, has not received the due attention it deserves, as a critical contributor to national development. The severe",
+        "Pujya Gurudevshri Rakeshji showers blessings and extends warm felicitations to Shri C. P. Radhakrishnan ji on being elected as the Hon’ble Vice President of Ind",
+        "Global Fintech Festival 2025 kicks off in Mumbai with PM Narendra Modi & UK PM Keir Starmer. Modi highlights India's digital ecosystem as a global standard for"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "Raymond Centenary Celebrations",
+      "relevance": "high",
+      "theme_summary": "This topic captures the centenary celebrations of the Raymond fashion brand, highlighting its legacy of dressing India and showcasing new collections. The exemplar posts suggest a discussion focused on brand heritage, community empowerment through education, and positive milestones rather than political content. This topic should be treated as noise because it pertains to a fashion brand and has no connection to the subject Keir Starmer.",
+      "evidence": [
+        "Fast & Fabulous – The Super Catwalk was another special moment in an already memorable year for us.",
+        "Among all the threads that define Raymond’s legacy, education is the one closest to my heart.",
+        "100 years of Raymond is more than a milestone. It is a century of dressing India’s dreams, moments and milestones."
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "Global terror incidents and arrests",
+      "relevance": "high",
+      "theme_summary": "This topic aggregates breaking news regarding international terror attacks and subsequent law enforcement actions, specifically mentioning arrests related to violence against the Chief Justice of India and a synagogue attack in Manchester. The exemplar posts suggest that the discussion is driven by urgent, negative-sentiment updates from news sources rather than direct commentary on Keir Starmer, indicating this is likely noise for a subject-specific analysis. Treating this as noise is advisable because the content focuses on unrelated global events rather than the primary subject of the corpus.",
+      "evidence": [
+        "Reports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.",
+        "Manchester police have released a full statement responding to the terror attack that occurred today at a synagogue"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "Global Conflict Updates",
+      "relevance": "high",
+      "theme_summary": "This topic aggregates news snippets regarding international conflicts, specifically covering the Israel-Hamas ceasefire, the Russia-Ukraine stalemate, and the Thailand-Cambodia border escalation. The exemplar posts suggest that the discussion is driven by a broad audience seeking neutral, headline-style updates on multiple geopolitical crises rather than deep analysis of a single event. The presence of diverse regional conflicts indicates this topic functions as a general news aggregator rather than a focused conversation on Keir Starmer's specific policies.",
+      "evidence": [
+        "Israel and Hamas have reached a long-awaited agreement on a ceasefire and hostage exchange",
+        "Russia is unlikely to show forgiveness to Ukraine!",
+        "Escalation at the Thailand-Cambodia border"
+      ]
+    }
+  ],
+  "sentiment_terms": {
+    "negative": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "no",
+        "score": 0.641569
+      },
+      {
+        "term": "get",
+        "score": 0.613287
+      },
+      {
+        "term": "go",
+        "score": 0.592333
+      },
+      {
+        "term": "uk",
+        "score": 0.464889
+      },
+      {
+        "term": "want",
+        "score": 0.437897
+      }
+    ],
+    "neutral": [
+      {
+        "term": "not",
+        "score": 1.0
+      },
+      {
+        "term": "india",
+        "score": 0.979152
+      },
+      {
+        "term": "uk",
+        "score": 0.716955
+      },
+      {
+        "term": "new",
+        "score": 0.697936
+      },
+      {
+        "term": "break",
+        "score": 0.67609
+      },
+      {
+        "term": "digital",
+        "score": 0.673366
+      }
+    ],
+    "positive": [
+      {
+        "term": "india",
+        "score": 1.0
+      },
+      {
+        "term": "love",
+        "score": 0.733078
+      },
+      {
+        "term": "life",
+        "score": 0.640329
+      },
+      {
+        "term": "new",
+        "score": 0.639841
+      },
+      {
+        "term": "great",
+        "score": 0.620726
+      },
+      {
+        "term": "good",
+        "score": 0.611392
+      }
+    ]
+  },
+  "quality_flags": [
+    {
+      "flag": "topic_fragmentation",
+      "severity": "high",
+      "explanation": "The dataset mixes high-relevance political news with unrelated corporate milestones and violent crime reports, creating a noisy signal for the subject."
+    },
+    {
+      "flag": "sentiment_dissonance",
+      "severity": "low",
+      "explanation": "Positive sentiment scores appear alongside negative news previews, suggesting the sentiment model may be influenced by the subject's name rather than the content's actual tone."
+    },
+    {
+      "flag": "generic_terms",
+      "severity": "medium",
+      "explanation": "A significant portion of the text relies on filler words like 'get', 'go', and 'good', reducing the semantic density of the political discourse."
+    }
+  ],
+  "strategic_opportunities": [
+    {
+      "opportunity": "Leverage UK-India fintech and digital ecosystem partnerships as a core narrative thread.",
+      "activation_type": "content",
+      "evidence_topic_ids": [
+        0
+      ],
+      "rationale": "The presence of Starmer alongside Modi at the Global Fintech Festival indicates a strong, actionable intersection of interests that can be amplified.",
+      "confidence": "high"
+    }
+  ],
+  "takeaways": [
+    "Focus content strategy on the UK-India diplomatic and economic bridge, as evidenced by the high-quality fintech festival coverage.",
+    "Filter out generic corporate milestone chatter and unrelated violence reports to improve signal-to-noise ratio for political analysis.",
+    "Monitor geopolitical conflicts (Topic 3) for potential policy commentary opportunities, though current data suggests low direct relevance."
+  ],
+  "diagnostics": {
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "low",
+    "confidence": "high",
+    "generic_terms": [
+      "get",
+      "go",
+      "want",
+      "one",
+      "right",
+      "need",
+      "new",
+      "great",
+      "good",
+      "day"
+    ],
+    "generic_term_share": 0.4444,
+    "subject_topic_share": 0.25,
+    "noise_topic_share": 0.0,
+    "topic_diagnostics": [
+      {
+        "topic_id": 0,
+        "label": "digital id · keir starmer · starmer · uk",
+        "matched_subject_terms": [
+          "keir",
+          "starmer",
+          "labour",
+          "pm"
+        ],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 1,
+        "label": "india · make · new · life",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 2,
+        "label": "not · no · see · attack",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      },
+      {
+        "topic_id": 3,
+        "label": "not · right · israel · gaza",
+        "matched_subject_terms": [],
+        "matched_off_topic_terms": []
+      }
+    ],
+    "quality_flags": [
+      {
+        "flag": "generic_terms",
+        "severity": "medium",
+        "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "overview": {
+    "summary": "The dataset exhibits severe fragmentation with high noise levels, where the majority of content (75%) is unrelated to the subject 'costco'. The few relevant signals are buried within generic financial chatter and political noise, making it difficult to discern a coherent community interest.",
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "high",
+    "confidence": "low"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "Political polarization and social commentary",
+      "relevance": "low",
+      "theme_summary": "This topic cluster consists of fragmented political discourse and social observations that have no logical connection to the retail subject. The content appears to be spillover from broader political conversations rather than discussions about the company itself.",
+      "evidence": ["I know Democrats don't care", "inspire more conservative Californians", "liberal m"]
+    },
+    {
+      "topic_id": 1,
+      "label": "Personal lifestyle and community support",
+      "relevance": "low",
+      "theme_summary": "These entries reflect personal milestones, parenting experiences, and mental health reflections, suggesting a user base sharing life updates rather than engaging with the subject's offerings. The tone is intimate and supportive, typical of personal blogs or social circles.",
+      "evidence": ["The JOY in Autism", "mom to the sweetest humans", "ADHD is a part of me"]
+    },
+    {
+      "topic_id": 2,
+      "label": "Cryptocurrency trading and speculative finance",
+      "relevance": "low",
+      "theme_summary": "This segment is dominated by promotional content for crypto tokens and yield farming, indicating that users in this space are focused on digital assets rather than traditional retail or the specific subject. The language is purely transactional and speculative.",
+      "evidence": ["$BTBT NOW 39% SINCE MY BUY SIGNAL", "$CLSK's $100M credit boost", "ETHZilla is positioning itself"]
+    },
+    {
+      "topic_id": 3,
+      "label": "Tech sector earnings and AI market trends",
+      "relevance": "medium",
+      "theme_summary": "While this topic contains the subject name, the discussion is entirely focused on external tech giants like TSMC, Tesla, and Nvidia, treating the subject merely as a keyword in a broader tech earnings narrative. The content is driven by macro-market hype rather than company-specific insights.",
+      "evidence": ["Dan Ives Says Q3 Tech Earnings", "TSMC posts forecast-beating Q3 revenue", "Elon Musk's Tesla Robot Masters"]
+    }
+  ],
+  "quality_flags": [
+    {
+      "flag": "generic_terms",
+      "severity": "high",
+      "explanation": "Over 65% of the text consists of filler words and generic verbs, diluting the signal-to-noise ratio and obscuring any meaningful engagement with the subject."
+    },
+    {
+      "flag": "noise_topics",
+      "severity": "high",
+      "explanation": "Three out of four topics are completely irrelevant to the subject, with only one topic containing the subject name amidst unrelated tech and crypto discussions."
+    },
+    {
+      "flag": "fragmented_chatter",
+      "severity": "medium",
+      "explanation": "The relevant content is scattered across different topics and lacks a cohesive narrative, making it impossible to identify a unified community sentiment."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "The dataset is overwhelmingly dominated by off-topic content, rendering it unsuitable for deriving actionable insights about the subject's audience or market position.",
+    "Any apparent engagement with the subject is incidental, occurring within broader discussions about technology earnings rather than reflecting genuine interest in the company's products or services.",
+    "The presence of crypto and political noise suggests that the data collection method may be capturing adjacent internet culture rather than targeted community feedback."
+  ]
+}

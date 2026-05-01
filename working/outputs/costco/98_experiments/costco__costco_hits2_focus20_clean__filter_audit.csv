@@ -1,0 +1,10 @@
+stage,rows,unique_authors,mean_include_matches,mean_exclude_matches,mean_relevance_score
+baseline,11667,318,,,
+drop_rt_reply_noise,8209,307,,,
+cap_posts_per_user,3270,307,,,
+scored,3270,307,0.04067278287461774,0.11529051987767584,-0.0746177370030581
+subject_link_post_filter,120,103,1.0333333333333334,0.0,1.0333333333333334
+author_focus_filter,12,1,1.0,0.08333333333333333,0.9166666666666666
+drop_direct_subject_posts,0,0,0.0,0.0,0.0
+drop_link_heavy_noise,0,0,0.0,0.0,0.0
+final_variant,0,0,0.0,0.0,0.0

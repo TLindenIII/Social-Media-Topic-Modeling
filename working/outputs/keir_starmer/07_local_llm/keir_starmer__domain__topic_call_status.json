@@ -1,0 +1,38 @@
+[
+  {
+    "topic_id": 0,
+    "label": "tel aviv · muslim · let · britain",
+    "status": "ok",
+    "raw_char_count": 1355
+  },
+  {
+    "topic_id": 1,
+    "label": "not · need · go · no",
+    "status": "ok",
+    "raw_char_count": 1303
+  },
+  {
+    "topic_id": 2,
+    "label": "fan · football · ban · not",
+    "status": "ok",
+    "raw_char_count": 1328
+  },
+  {
+    "topic_id": 3,
+    "label": "not · police · trump · community",
+    "status": "ok",
+    "raw_char_count": 969
+  },
+  {
+    "topic_id": 4,
+    "label": "keir starmer · prime minister · starmer · keir",
+    "status": "ok",
+    "raw_char_count": 1127
+  },
+  {
+    "topic_id": 5,
+    "label": "not · uk · go · british",
+    "status": "ok",
+    "raw_char_count": 1254
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "overview": {
+    "summary": "The dataset reveals a polarized discourse surrounding Keir Starmer, split between political attacks on his leadership and international diplomatic engagements. A significant portion of the noise consists of fragmented, off-topic chatter regarding unrelated global events like the Prince Andrew scandal and China-Britain relations, which are incorrectly tagged under the subject.",
+    "analysis_mode": "domain",
+    "off_topic_risk": "high",
+    "confidence": "medium"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 4,
+      "label": "Political Attacks on Leadership",
+      "relevance": "high",
+      "theme_summary": "This topic captures aggressive political rhetoric where opponents accuse Keir Starmer and the Labour Party of racism and elitism. The discussion is driven by partisan users attempting to frame Starmer's policies as attacks on ordinary voters.",
+      "evidence": ["Keir Starmer accusing Nigel Farage and Reform of racism", "Labour MPs lining up to brand ordinary voters as fa", "Keir Starmer's approval ratings have cratered"]
+    },
+    {
+      "topic_id": 3,
+      "label": "International Diplomacy & Security",
+      "relevance": "medium",
+      "theme_summary": "This topic reflects Starmer's role in high-level international relations, specifically involving NATO, European leaders, and US officials. The content suggests a focus on security alliances and diplomatic coordination rather than domestic policy.",
+      "evidence": ["@Keir_Starmer @EmmanuelMacron @SecGenNATO", "@jame96727 @POTUS @VP @SusieWiles"]
+    },
+    {
+      "topic_id": 2,
+      "label": "Sports & Public Order",
+      "relevance": "low",
+      "theme_summary": "This topic addresses the role of police in managing football crowds and preventing violence. While it mentions Starmer, the core subject is public safety and sports governance, making it a tangential association.",
+      "evidence": ["The role of the police is to ensure all football fans can enjoy the game"]
+    },
+    {
+      "topic_id": 5,
+      "label": "Global Incidents & Misattributed News",
+      "relevance": "low",
+      "theme_summary": "This topic aggregates unrelated global news stories, including the Prince Andrew scandal and China's reaction to a London embassy delay. These posts are likely noise misattributed to Starmer due to keyword overlap or algorithmic error.",
+      "evidence": ["Prince Andrew was born a Prince", "Furious China threatens Britain with 'consequences'", "You are both contributing to the rape, PDFilia & murder"]
+    }
+  ],
+  "quality_flags": [
+    {
+      "flag": "off_topic_spillover",
+      "severity": "high",
+      "explanation": "A large volume of content (Topics 2 and 5) discusses international diplomacy, sports policing, and unrelated global scandals, yet is tagged under the subject 'keir_starmer'. This indicates significant data contamination."
+    },
+    {
+      "flag": "generic_language",
+      "severity": "medium",
+      "explanation": "The text contains a high share of generic verbs and filler tokens ('get', 'go', 'know') rather than specific policy terminology, reducing the signal-to-noise ratio."
+    },
+    {
+      "flag": "polarized_sentiment",
+      "severity": "medium",
+      "explanation": "Sentiment is sharply divided between negative attacks on Starmer's character and neutral reporting on his diplomatic activities, creating a fragmented view of public opinion."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "The dataset is heavily contaminated with off-topic noise; Topics 2 and 5 should be filtered out to accurately assess public sentiment regarding Keir Starmer.",
+    "Genuine political discourse (Topic 4) is dominated by negative framing from opposition figures, suggesting a need to monitor specific anti-Labour narratives.",
+    "Diplomatic engagements (Topic 3) are present but are currently overshadowed by domestic political attacks and irrelevant global news.",
+    "The presence of extreme, unrelated content (e.g., asylum seeker violence, Prince Andrew) indicates potential scraping errors or hashtag hijacking that distorts the subject's profile."
+  ]
+}

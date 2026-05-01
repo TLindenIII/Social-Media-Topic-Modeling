@@ -1,0 +1,462 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "domain",
+  "polar_terms_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__polar_terms.jsonl",
+  "topic_summaries_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__topic_summaries.jsonl",
+  "topic_exemplars_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__topic_exemplars.jsonl",
+  "deterministic_output_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__deterministic_output.json",
+  "prompt_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__domain__prompt.txt",
+  "prompt": "You are an analyst. You receive JSONL files that describe a topic's language landscape.\nThe files are already computed. Use them to produce concise insights with evidence.\nBe conservative. If the evidence looks noisy, generic, or off-topic, say so directly.\nDo not convert weak or off-topic evidence into confident business advice.\n\nReturn valid JSON with:\n{\n  \"overview\": {\n    \"summary\": \"<2-4 sentences>\",\n    \"analysis_mode\": \"domain|codomain_adjacent_interest\",\n    \"off_topic_risk\": \"low|medium|high\",\n    \"confidence\": \"low|medium|high\"\n  },\n  \"topic_interpretations\": [\n    {\n      \"topic_id\": <int>,\n      \"label\": \"<string>\",\n      \"relevance\": \"high|medium|low\",\n      \"theme_summary\": \"<2-3 sentences explaining what the topic is, what kind of posts drive it, and why it matters or why it looks noisy>\",\n      \"evidence\": [\"<short preview 1>\", \"<short preview 2>\"]\n    }\n  ],\n  \"quality_flags\": [\n    {\n      \"flag\": \"<short label>\",\n      \"severity\": \"low|medium|high\",\n      \"explanation\": \"<what looks wrong or uncertain>\"\n    }\n  ],\n  \"strategic_opportunities\": [\n    {\n      \"opportunity\": \"<short headline>\",\n      \"activation_type\": \"offering|message|content|monitoring\",\n      \"evidence_topic_ids\": [<int>, <int>],\n      \"rationale\": \"<1-2 sentences>\",\n      \"confidence\": \"low|medium|high\"\n    }\n  ],\n  \"takeaways\": [\"<short takeaway>\", \"<short takeaway>\"]\n}\n\nTASK CONTEXT\nsubject=keir_starmer\ndataset=domain\nanalysis_goal=Summarize the direct language and themes in the subject conversation.\n\nPOLAR_TERMS_JSONL\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"not\", \"scores\": {\"agg\": 3817.3333106541395, \"iwdf\": 3531.9985811534484, \"agg_norm\": 0.9999999999999998, \"iwdf_norm\": 0.9999999999999998, \"fused_score\": 0.9999999999999998}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"starmer\", \"scores\": {\"agg\": 3045.5685019066063, \"iwdf\": 2916.5346385062653, \"agg_norm\": 0.7978261928049233, \"iwdf_norm\": 0.8257462656040504, \"fused_score\": 0.8117862292044868}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"keir\", \"scores\": {\"agg\": 2557.380336239331, \"iwdf\": 2496.7745382428857, \"agg_norm\": 0.6699389673680596, \"iwdf_norm\": 0.7069013423633683, \"fused_score\": 0.688420154865714}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"no\", \"scores\": {\"agg\": 2610.616162702966, \"iwdf\": 2408.4421249949364, \"agg_norm\": 0.6838847829757914, \"iwdf_norm\": 0.6818921552931112, \"fused_score\": 0.6828884691344512}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"uk\", \"scores\": {\"agg\": 2497.7974915123978, \"iwdf\": 2309.556689426202, \"agg_norm\": 0.6543304679581081, \"iwdf_norm\": 0.6538951351084539, \"fused_score\": 0.654112801533281}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"fan\", \"scores\": {\"agg\": 2541.0620379302263, \"iwdf\": 2226.2226054423663, \"agg_norm\": 0.6656641773559953, \"iwdf_norm\": 0.6303011041174728, \"fused_score\": 0.647982640736734}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"keir starmer\", \"scores\": {\"agg\": 2338.18538164853, \"iwdf\": 2294.205441853357, \"agg_norm\": 0.6125180044201739, \"iwdf_norm\": 0.6495488005275856, \"fused_score\": 0.6310334024738797}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"get\", \"scores\": {\"agg\": 2367.152355763588, \"iwdf\": 2260.741111477602, \"agg_norm\": 0.6201062792072384, \"iwdf_norm\": 0.640074184497353, \"fused_score\": 0.6300902318522956}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"ban\", \"scores\": {\"agg\": 2303.6211291245504, \"iwdf\": 2078.818501987952, \"agg_norm\": 0.6034634499154596, \"iwdf_norm\": 0.588567196227205, \"fused_score\": 0.5960153230713323}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"go\", \"scores\": {\"agg\": 2158.0701627176677, \"iwdf\": 2061.477659002741, \"agg_norm\": 0.5653344853839498, \"iwdf_norm\": 0.5836575558106599, \"fused_score\": 0.5744960205973049}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"football\", \"scores\": {\"agg\": 2085.180212840623, \"iwdf\": 1869.0023473901585, \"agg_norm\": 0.5462400170875582, \"iwdf_norm\": 0.5291628250823918, \"fused_score\": 0.537701421084975}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"negative\", \"term\": \"police\", \"scores\": {\"agg\": 1815.8868190636688, \"iwdf\": 1684.5555318571148, \"agg_norm\": 0.4756951178445818, \"iwdf_norm\": 0.47694116890244825, \"fused_score\": 0.476318143373515}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"starmer\", \"scores\": {\"agg\": 1417.8136829915577, \"iwdf\": 1339.5357421114372, \"agg_norm\": 0.9999999999999993, \"iwdf_norm\": 0.9999999999999993, \"fused_score\": 0.9999999999999993}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"keir\", \"scores\": {\"agg\": 1247.4421150377893, \"iwdf\": 1211.146144361659, \"agg_norm\": 0.8798350093544811, \"iwdf_norm\": 0.9041536603215936, \"fused_score\": 0.8919943348380374}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"keir starmer\", \"scores\": {\"agg\": 1178.3974230459328, \"iwdf\": 1165.469722280672, \"agg_norm\": 0.8311370084675285, \"iwdf_norm\": 0.8700549642995002, \"fused_score\": 0.8505959863835144}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"not\", \"scores\": {\"agg\": 1186.0617744961733, \"iwdf\": 1078.5633251173283, \"agg_norm\": 0.8365427620881797, \"iwdf_norm\": 0.8051769663250993, \"fused_score\": 0.8208598642066395}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"uk\", \"scores\": {\"agg\": 777.8249568483901, \"iwdf\": 733.4164754208397, \"agg_norm\": 0.5486087249540398, \"iwdf_norm\": 0.5475154207268816, \"fused_score\": 0.5480620728404607}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"go\", \"scores\": {\"agg\": 620.5051745327011, \"iwdf\": 596.9386746392829, \"agg_norm\": 0.43764930609461145, \"iwdf_norm\": 0.44563101668221305, \"fused_score\": 0.4416401613884122}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"know\", \"scores\": {\"agg\": 593.2915836984248, \"iwdf\": 555.901719586783, \"agg_norm\": 0.4184552531941936, \"iwdf_norm\": 0.4149958094515231, \"fused_score\": 0.41672553132285833}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"get\", \"scores\": {\"agg\": 577.0714273117186, \"iwdf\": 538.7917624777538, \"agg_norm\": 0.4070149937431196, \"iwdf_norm\": 0.40222275937817475, \"fused_score\": 0.4046188765606472}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"fan\", \"scores\": {\"agg\": 580.9825684605989, \"iwdf\": 519.4519412698854, \"agg_norm\": 0.4097735657584693, \"iwdf_norm\": 0.38778505488110476, \"fused_score\": 0.39877931031978703}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"no\", \"scores\": {\"agg\": 561.1064802719322, \"iwdf\": 532.8093191319142, \"agg_norm\": 0.3957547363261502, \"iwdf_norm\": 0.3977567021034284, \"fused_score\": 0.3967557192147893}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"trump\", \"scores\": {\"agg\": 543.1851563329906, \"iwdf\": 513.2427620240876, \"agg_norm\": 0.38311462419157977, \"iwdf_norm\": 0.3831497330672869, \"fused_score\": 0.38313217862943333}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"neutral\", \"term\": \"without\", \"scores\": {\"agg\": 525.4351174536886, \"iwdf\": 504.044679780264, \"agg_norm\": 0.37059532134365564, \"iwdf_norm\": 0.37628311357020267, \"fused_score\": 0.37343921745692915}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"great\", \"scores\": {\"agg\": 214.97544307383544, \"iwdf\": 199.98928028751112, \"agg_norm\": 0.9999999999999953, \"iwdf_norm\": 0.999999999999995, \"fused_score\": 0.9999999999999951}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"love\", \"scores\": {\"agg\": 207.05139128231943, \"iwdf\": 199.16286673656575, \"agg_norm\": 0.9631397350403629, \"iwdf_norm\": 0.9958677107605053, \"fused_score\": 0.9795037229004341}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"good\", \"scores\": {\"agg\": 190.8942537058826, \"iwdf\": 177.58681579527573, \"agg_norm\": 0.8879816735175524, \"iwdf_norm\": 0.8879816735175518, \"fused_score\": 0.8879816735175521}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"starmer\", \"scores\": {\"agg\": 165.57360267662244, \"iwdf\": 161.35316893615038, \"agg_norm\": 0.7701977505391339, \"iwdf_norm\": 0.8068090884880579, \"fused_score\": 0.7885034195135958}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"keir\", \"scores\": {\"agg\": 164.1625929232439, \"iwdf\": 161.91793373818973, \"agg_norm\": 0.763634164795557, \"iwdf_norm\": 0.8096330638592749, \"fused_score\": 0.786633614327416}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"keir starmer\", \"scores\": {\"agg\": 146.93601083194724, \"iwdf\": 146.9360108319472, \"agg_norm\": 0.6835013745336482, \"iwdf_norm\": 0.7347194340651981, \"fused_score\": 0.7091104042994232}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"well\", \"scores\": {\"agg\": 143.36424411239418, \"iwdf\": 143.36424411239423, \"agg_norm\": 0.6668866083609077, \"iwdf_norm\": 0.716859643208318, \"fused_score\": 0.6918731257846129}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"thank\", \"scores\": {\"agg\": 136.4255594684908, \"iwdf\": 136.4255594684908, \"agg_norm\": 0.6346099699472812, \"iwdf_norm\": 0.6821643603715173, \"fused_score\": 0.6583871651593993}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"uk\", \"scores\": {\"agg\": 118.80340986058594, \"iwdf\": 116.35934465811398, \"agg_norm\": 0.5526371206025666, \"iwdf_norm\": 0.581827908430049, \"fused_score\": 0.5672325145163077}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"go\", \"scores\": {\"agg\": 124.08069587357471, \"iwdf\": 111.23080893899682, \"agg_norm\": 0.5771854408084992, \"iwdf_norm\": 0.5561838553500829, \"fused_score\": 0.5666846480792911}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"get\", \"scores\": {\"agg\": 119.30811377441974, \"iwdf\": 109.21454644819332, \"agg_norm\": 0.5549848488203447, \"iwdf_norm\": 0.5461020025232471, \"fused_score\": 0.5505434256717959}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"sentiment\": \"positive\", \"term\": \"make\", \"scores\": {\"agg\": 105.39807114679553, \"iwdf\": 102.43950230509793, \"agg_norm\": 0.4902795856110646, \"iwdf_norm\": 0.5122249660473154, \"fused_score\": 0.50125227582919}}\n\nTOPIC_SUMMARIES_JSONL\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 0, \"label\": \"tel aviv · muslim · let · britain\", \"top_words\": \"muslim, let, britain, get, maccabi, tel, aviv, tel aviv, not, jew, fan, want\", \"exemplars\": [\"Hear the threats do you @Keir_Starmer We know who are the real problem in English society, an ideology that can do this in a heartbeat, so stop the Islamic Musl\", \"Emily Damari ‘shocked to my core’ over ‘disgusting’ decision to ban Maccabi Tel Aviv fans from Aston Villa match . @Keir_Starmer @10DowningStreet has lost contr\", \"@Keir_Starmer @ShabanaMahmood We know who are the real problem in English society, an ideology that can do this in a heartbeat so stop the Islamic Mafia running\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 1, \"label\": \"not · need · go · no\", \"top_words\": \"not, need, go, no, get, build, uk, know, even, make, one, keep\", \"exemplars\": [\"UK hate crime levels are up. 45% of victims are muslims and 29% are Jewish . ( UK Home office figures) Hate towards two faith groups is glaring obvious yet one \", \"@Keir_Starmer Building 🤣 there are construction company’s going bust left right and centre and now you want to get building . MJL went for £280 million just to \", \"@shyisc @AnomiePhoenix @TRobinsonNewEra @Keir_Starmer @AmichaiChikli @OzraeliAvi You said it right, ‘the ideas’.. \\n\\nThey tricked billions for ages with the idea\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 2, \"label\": \"fan · football · ban · not\", \"top_words\": \"fan, football, ban, not, israeli, antisemitism, no, anti, jew, racist, jewish, game\", \"exemplars\": [\"I know nothing about football.\\n\\nFrom what I have read on Twitter (notoriously unreliable) is NOT that Israeli football fans would be unsafe from British footbal\", \"If Italy isn't safe for Germans to go and watch the football, then what a failure of a place Napoli is.\\n\\n@Keir_Starmer @Nigel_Farage @KemiBadenoch @EdwardJDavey\", \"@novaramedia What is wrong with @Keir_Starmer \\\"The role of the police is to ensure all football fans can enjoy the game, without fear of violence or intimidatio\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 3, \"label\": \"not · police · trump · community\", \"top_words\": \"not, police, trump, community, security, ukraine, without, war, russia, uk, peace, jewish\", \"exemplars\": [\"@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA\", \"@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA\", \"@jame96727 @WarMonitor3 @Keir_Starmer @EmmanuelMacron @SecGenNATO @kajakallas @bundeskanzler @GermanyDiplo @JohnHealey_MP @DefenceHQ @BelgiumNATO @esa @EU_Commi\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 4, \"label\": \"keir starmer · prime minister · starmer · keir\", \"top_words\": \"starmer, keir, keir starmer, labour, decision, wrong, uk, right, israel, minister, prime, prime minister\", \"exemplars\": [\"@DaveLewis12 @LlyrPowell @Mike1222 Vote Liebor get the Fabian , WEF Globalists.\\n\\nWe’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of \", \"@LlyrPowell @Mike1222 We’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of racism, Labour MPs lining up to brand ordinary voters as fa\", \"@LawrenceCaswell Keir Starmer's approval ratings have cratered to historic lows, with recent polls showing Labour at its weakest share ever and Reform UK surgin\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 5, \"label\": \"not · uk · go · british\", \"top_words\": \"not, uk, go, british, start, get, no, one, something, stop, minister, good\", \"exemplars\": [\"This is all bullshit. \\n\\nPrince Andrew was born a Prince- same as every Prince from a noble family in Europe and beyond. In Italy, many prince's we have (includi\", \"Furious China threatens Britain with 'consequences' after Labour delays approval of new London 'super-embassy' - as PM gets fresh warning Beijing will use build\", \"@Keir_Starmer @ShabanaMahmood You are both contributing to the rape, PDFilia &amp; murder of our citizens. An asylum seeker laughing after murdering an asylum s\"]}\n\nTOPIC_EXEMPLARS_JSONL\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 0, \"rank\": 1, \"score\": 0.97785778172466, \"doc_idx\": 3236, \"sentiment\": \"negative\", \"preview\": \"Hear the threats do you @Keir_Starmer We know who are the real problem in English society, an ideology that can do this in a heartbeat, so stop the Islamic Musl\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 0, \"rank\": 2, \"score\": 0.9729669351587348, \"doc_idx\": 3998, \"sentiment\": \"negative\", \"preview\": \"Emily Damari ‘shocked to my core’ over ‘disgusting’ decision to ban Maccabi Tel Aviv fans from Aston Villa match . @Keir_Starmer @10DowningStreet has lost contr\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 0, \"rank\": 3, \"score\": 0.9719196623640995, \"doc_idx\": 3379, \"sentiment\": \"negative\", \"preview\": \"@Keir_Starmer @ShabanaMahmood We know who are the real problem in English society, an ideology that can do this in a heartbeat so stop the Islamic Mafia running\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 1, \"rank\": 1, \"score\": 0.9688744200551304, \"doc_idx\": 9188, \"sentiment\": \"negative\", \"preview\": \"UK hate crime levels are up. 45% of victims are muslims and 29% are Jewish . ( UK Home office figures) Hate towards two faith groups is glaring obvious yet one \"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 1, \"rank\": 2, \"score\": 0.9665121883644696, \"doc_idx\": 10471, \"sentiment\": \"negative\", \"preview\": \"@Keir_Starmer Building 🤣 there are construction company’s going bust left right and centre and now you want to get building . MJL went for £280 million just to \"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 1, \"rank\": 3, \"score\": 0.966383716743185, \"doc_idx\": 8768, \"sentiment\": \"neutral\", \"preview\": \"@shyisc @AnomiePhoenix @TRobinsonNewEra @Keir_Starmer @AmichaiChikli @OzraeliAvi You said it right, ‘the ideas’.. \\n\\nThey tricked billions for ages with the idea\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 2, \"rank\": 1, \"score\": 0.9754029267848852, \"doc_idx\": 4836, \"sentiment\": \"negative\", \"preview\": \"I know nothing about football.\\n\\nFrom what I have read on Twitter (notoriously unreliable) is NOT that Israeli football fans would be unsafe from British footbal\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 2, \"rank\": 2, \"score\": 0.975291592306474, \"doc_idx\": 114, \"sentiment\": \"negative\", \"preview\": \"If Italy isn't safe for Germans to go and watch the football, then what a failure of a place Napoli is.\\n\\n@Keir_Starmer @Nigel_Farage @KemiBadenoch @EdwardJDavey\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 2, \"rank\": 3, \"score\": 0.9738849008475784, \"doc_idx\": 4114, \"sentiment\": \"negative\", \"preview\": \"@novaramedia What is wrong with @Keir_Starmer \\\"The role of the police is to ensure all football fans can enjoy the game, without fear of violence or intimidatio\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 3, \"rank\": 1, \"score\": 0.9836085361011144, \"doc_idx\": 2243, \"sentiment\": \"neutral\", \"preview\": \"@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 3, \"rank\": 2, \"score\": 0.9832937928468708, \"doc_idx\": 2213, \"sentiment\": \"neutral\", \"preview\": \"@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 3, \"rank\": 3, \"score\": 0.9822060318974992, \"doc_idx\": 2231, \"sentiment\": \"neutral\", \"preview\": \"@jame96727 @WarMonitor3 @Keir_Starmer @EmmanuelMacron @SecGenNATO @kajakallas @bundeskanzler @GermanyDiplo @JohnHealey_MP @DefenceHQ @BelgiumNATO @esa @EU_Commi\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 4, \"rank\": 1, \"score\": 0.9849744688540728, \"doc_idx\": 5968, \"sentiment\": \"negative\", \"preview\": \"@DaveLewis12 @LlyrPowell @Mike1222 Vote Liebor get the Fabian , WEF Globalists.\\n\\nWe’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of \"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 4, \"rank\": 2, \"score\": 0.9835231049984262, \"doc_idx\": 6497, \"sentiment\": \"negative\", \"preview\": \"@LlyrPowell @Mike1222 We’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of racism, Labour MPs lining up to brand ordinary voters as fa\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 4, \"rank\": 3, \"score\": 0.9820872117860182, \"doc_idx\": 1108, \"sentiment\": \"negative\", \"preview\": \"@LawrenceCaswell Keir Starmer's approval ratings have cratered to historic lows, with recent polls showing Labour at its weakest share ever and Reform UK surgin\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 5, \"rank\": 1, \"score\": 0.9709185267258352, \"doc_idx\": 3614, \"sentiment\": \"negative\", \"preview\": \"This is all bullshit. \\n\\nPrince Andrew was born a Prince- same as every Prince from a noble family in Europe and beyond. In Italy, many prince's we have (includi\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 5, \"rank\": 2, \"score\": 0.968928692536706, \"doc_idx\": 9794, \"sentiment\": \"negative\", \"preview\": \"Furious China threatens Britain with 'consequences' after Labour delays approval of new London 'super-embassy' - as PM gets fresh warning Beijing will use build\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"domain\", \"topic_id\": 5, \"rank\": 3, \"score\": 0.9651714163907492, \"doc_idx\": 11107, \"sentiment\": \"negative\", \"preview\": \"@Keir_Starmer @ShabanaMahmood You are both contributing to the rape, PDFilia &amp; murder of our citizens. An asylum seeker laughing after murdering an asylum s\"}\n\nDIAGNOSTICS_JSON\n{\"analysis_mode\": \"domain\", \"off_topic_risk\": \"medium\", \"confidence\": \"medium\", \"generic_terms\": [\"get\", \"go\", \"know\", \"great\", \"good\", \"well\", \"make\"], \"generic_term_share\": 0.3333, \"subject_topic_share\": 0.5, \"noise_topic_share\": 0.0, \"topic_diagnostics\": [{\"topic_id\": 0, \"label\": \"tel aviv · muslim · let · britain\", \"matched_subject_terms\": [\"britain\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 1, \"label\": \"not · need · go · no\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": []}, {\"topic_id\": 2, \"label\": \"fan · football · ban · not\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": []}, {\"topic_id\": 3, \"label\": \"not · police · trump · community\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": []}, {\"topic_id\": 4, \"label\": \"keir starmer · prime minister · starmer · keir\", \"matched_subject_terms\": [\"keir\", \"starmer\", \"labour\", \"prime minister\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 5, \"label\": \"not · uk · go · british\", \"matched_subject_terms\": [\"labour\", \"pm\", \"britain\"], \"matched_off_topic_terms\": []}], \"quality_flags\": [{\"flag\": \"generic_terms\", \"severity\": \"medium\", \"explanation\": \"Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language.\"}]}\n\nEND_INPUT_DATA\nDo not continue, copy, or transform any single input JSON row.\nSynthesize across all of the supplied records.\nReturn exactly one JSON object matching the schema above.\nDo not return subject, dataset, sentiment_terms, or diagnostics. Those fields are merged deterministically in code.\nUse only topic_id values that appear in TOPIC_SUMMARIES_JSONL.\nThe diagnostics are heuristics, not truth, but you should respect them when judging off-topic risk and confidence.\nInclude one topic_interpretation for every topic_id in TOPIC_SUMMARIES_JSONL.\nEach topic_interpretation label must be a short human-readable caption, not a bag-of-words list.\nEach topic_interpretation theme_summary must be 2 to 3 sentences.\nSentence 1 should explain the shared theme in plain English.\nSentence 2 should explain what the exemplar posts suggest about the kind of discussion, audience, or behavior driving the topic.\nSentence 3, when useful, should explain why the topic matters for the subject or why it should be treated as noise, off-topic spillover, or low-signal chatter.\nDo not simply restate the top words; translate them into a readable interpretation.\nEven when a topic is weak or messy, still provide a concrete interpretation rather than omitting it.\nInclude 1 to 4 quality_flags, 1 to 4 strategic_opportunities, and 2 to 5 takeaways.\nUse short evidence snippets drawn from the exemplar previews.\nFor codomain, the strategic opportunities should reflect adjacent interests of subject-linked users, not generic campaign or product advice.\nFor codomain, only include a strategic opportunity when it is supported by repeated evidence across multiple topics or exemplars. Do not turn single-account meme streams or fragmented chatter into an opportunity.\nIf the codomain evidence is too fragmented for a real opportunity, return an empty strategic_opportunities list.\nEvery strategic_opportunity must include an activation_type and evidence_topic_ids.\nDo not write generic audience recommendations. Focus on interpretation, quality, opportunities, and presentation-ready takeaways.\nReturn JSON only.\n\nOUTPUT_JSON\n",
+  "deterministic_output": {
+    "subject": "keir_starmer",
+    "dataset": "domain",
+    "sentiment_terms": {
+      "negative": [
+        {
+          "term": "not",
+          "score": 1.0
+        },
+        {
+          "term": "starmer",
+          "score": 0.811786
+        },
+        {
+          "term": "keir",
+          "score": 0.68842
+        },
+        {
+          "term": "no",
+          "score": 0.682888
+        },
+        {
+          "term": "uk",
+          "score": 0.654113
+        },
+        {
+          "term": "fan",
+          "score": 0.647983
+        }
+      ],
+      "neutral": [
+        {
+          "term": "starmer",
+          "score": 1.0
+        },
+        {
+          "term": "keir",
+          "score": 0.891994
+        },
+        {
+          "term": "keir starmer",
+          "score": 0.850596
+        },
+        {
+          "term": "not",
+          "score": 0.82086
+        },
+        {
+          "term": "uk",
+          "score": 0.548062
+        },
+        {
+          "term": "go",
+          "score": 0.44164
+        }
+      ],
+      "positive": [
+        {
+          "term": "great",
+          "score": 1.0
+        },
+        {
+          "term": "love",
+          "score": 0.979504
+        },
+        {
+          "term": "good",
+          "score": 0.887982
+        },
+        {
+          "term": "starmer",
+          "score": 0.788503
+        },
+        {
+          "term": "keir",
+          "score": 0.786634
+        },
+        {
+          "term": "keir starmer",
+          "score": 0.70911
+        }
+      ]
+    },
+    "diagnostics": {
+      "analysis_mode": "domain",
+      "off_topic_risk": "medium",
+      "confidence": "medium",
+      "generic_terms": [
+        "get",
+        "go",
+        "know",
+        "great",
+        "good",
+        "well",
+        "make"
+      ],
+      "generic_term_share": 0.3333,
+      "subject_topic_share": 0.5,
+      "noise_topic_share": 0.0,
+      "topic_diagnostics": [
+        {
+          "topic_id": 0,
+          "label": "tel aviv · muslim · let · britain",
+          "matched_subject_terms": [
+            "britain"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 1,
+          "label": "not · need · go · no",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 2,
+          "label": "fan · football · ban · not",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 3,
+          "label": "not · police · trump · community",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 4,
+          "label": "keir starmer · prime minister · starmer · keir",
+          "matched_subject_terms": [
+            "keir",
+            "starmer",
+            "labour",
+            "prime minister"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 5,
+          "label": "not · uk · go · british",
+          "matched_subject_terms": [
+            "labour",
+            "pm",
+            "britain"
+          ],
+          "matched_off_topic_terms": []
+        }
+      ],
+      "quality_flags": [
+        {
+          "flag": "generic_terms",
+          "severity": "medium",
+          "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+        }
+      ]
+    }
+  },
+  "topic_summary_rows": [
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 0,
+      "label": "tel aviv · muslim · let · britain",
+      "top_words": "muslim, let, britain, get, maccabi, tel, aviv, tel aviv, not, jew, fan, want",
+      "exemplars": [
+        "Hear the threats do you @Keir_Starmer We know who are the real problem in English society, an ideology that can do this in a heartbeat, so stop the Islamic Musl",
+        "Emily Damari ‘shocked to my core’ over ‘disgusting’ decision to ban Maccabi Tel Aviv fans from Aston Villa match . @Keir_Starmer @10DowningStreet has lost contr",
+        "@Keir_Starmer @ShabanaMahmood We know who are the real problem in English society, an ideology that can do this in a heartbeat so stop the Islamic Mafia running"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 1,
+      "label": "not · need · go · no",
+      "top_words": "not, need, go, no, get, build, uk, know, even, make, one, keep",
+      "exemplars": [
+        "UK hate crime levels are up. 45% of victims are muslims and 29% are Jewish . ( UK Home office figures) Hate towards two faith groups is glaring obvious yet one ",
+        "@Keir_Starmer Building 🤣 there are construction company’s going bust left right and centre and now you want to get building . MJL went for £280 million just to ",
+        "@shyisc @AnomiePhoenix @TRobinsonNewEra @Keir_Starmer @AmichaiChikli @OzraeliAvi You said it right, ‘the ideas’.. \n\nThey tricked billions for ages with the idea"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 2,
+      "label": "fan · football · ban · not",
+      "top_words": "fan, football, ban, not, israeli, antisemitism, no, anti, jew, racist, jewish, game",
+      "exemplars": [
+        "I know nothing about football.\n\nFrom what I have read on Twitter (notoriously unreliable) is NOT that Israeli football fans would be unsafe from British footbal",
+        "If Italy isn't safe for Germans to go and watch the football, then what a failure of a place Napoli is.\n\n@Keir_Starmer @Nigel_Farage @KemiBadenoch @EdwardJDavey",
+        "@novaramedia What is wrong with @Keir_Starmer \"The role of the police is to ensure all football fans can enjoy the game, without fear of violence or intimidatio"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 3,
+      "label": "not · police · trump · community",
+      "top_words": "not, police, trump, community, security, ukraine, without, war, russia, uk, peace, jewish",
+      "exemplars": [
+        "@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA",
+        "@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA",
+        "@jame96727 @WarMonitor3 @Keir_Starmer @EmmanuelMacron @SecGenNATO @kajakallas @bundeskanzler @GermanyDiplo @JohnHealey_MP @DefenceHQ @BelgiumNATO @esa @EU_Commi"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 4,
+      "label": "keir starmer · prime minister · starmer · keir",
+      "top_words": "starmer, keir, keir starmer, labour, decision, wrong, uk, right, israel, minister, prime, prime minister",
+      "exemplars": [
+        "@DaveLewis12 @LlyrPowell @Mike1222 Vote Liebor get the Fabian , WEF Globalists.\n\nWe’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of ",
+        "@LlyrPowell @Mike1222 We’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of racism, Labour MPs lining up to brand ordinary voters as fa",
+        "@LawrenceCaswell Keir Starmer's approval ratings have cratered to historic lows, with recent polls showing Labour at its weakest share ever and Reform UK surgin"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 5,
+      "label": "not · uk · go · british",
+      "top_words": "not, uk, go, british, start, get, no, one, something, stop, minister, good",
+      "exemplars": [
+        "This is all bullshit. \n\nPrince Andrew was born a Prince- same as every Prince from a noble family in Europe and beyond. In Italy, many prince's we have (includi",
+        "Furious China threatens Britain with 'consequences' after Labour delays approval of new London 'super-embassy' - as PM gets fresh warning Beijing will use build",
+        "@Keir_Starmer @ShabanaMahmood You are both contributing to the rape, PDFilia &amp; murder of our citizens. An asylum seeker laughing after murdering an asylum s"
+      ]
+    }
+  ],
+  "topic_exemplar_rows": [
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 0,
+      "rank": 1,
+      "score": 0.97785778172466,
+      "doc_idx": 3236,
+      "sentiment": "negative",
+      "preview": "Hear the threats do you @Keir_Starmer We know who are the real problem in English society, an ideology that can do this in a heartbeat, so stop the Islamic Musl"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 0,
+      "rank": 2,
+      "score": 0.9729669351587348,
+      "doc_idx": 3998,
+      "sentiment": "negative",
+      "preview": "Emily Damari ‘shocked to my core’ over ‘disgusting’ decision to ban Maccabi Tel Aviv fans from Aston Villa match . @Keir_Starmer @10DowningStreet has lost contr"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 0,
+      "rank": 3,
+      "score": 0.9719196623640995,
+      "doc_idx": 3379,
+      "sentiment": "negative",
+      "preview": "@Keir_Starmer @ShabanaMahmood We know who are the real problem in English society, an ideology that can do this in a heartbeat so stop the Islamic Mafia running"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 1,
+      "rank": 1,
+      "score": 0.9688744200551304,
+      "doc_idx": 9188,
+      "sentiment": "negative",
+      "preview": "UK hate crime levels are up. 45% of victims are muslims and 29% are Jewish . ( UK Home office figures) Hate towards two faith groups is glaring obvious yet one "
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 1,
+      "rank": 2,
+      "score": 0.9665121883644696,
+      "doc_idx": 10471,
+      "sentiment": "negative",
+      "preview": "@Keir_Starmer Building 🤣 there are construction company’s going bust left right and centre and now you want to get building . MJL went for £280 million just to "
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 1,
+      "rank": 3,
+      "score": 0.966383716743185,
+      "doc_idx": 8768,
+      "sentiment": "neutral",
+      "preview": "@shyisc @AnomiePhoenix @TRobinsonNewEra @Keir_Starmer @AmichaiChikli @OzraeliAvi You said it right, ‘the ideas’.. \n\nThey tricked billions for ages with the idea"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 2,
+      "rank": 1,
+      "score": 0.9754029267848852,
+      "doc_idx": 4836,
+      "sentiment": "negative",
+      "preview": "I know nothing about football.\n\nFrom what I have read on Twitter (notoriously unreliable) is NOT that Israeli football fans would be unsafe from British footbal"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 2,
+      "rank": 2,
+      "score": 0.975291592306474,
+      "doc_idx": 114,
+      "sentiment": "negative",
+      "preview": "If Italy isn't safe for Germans to go and watch the football, then what a failure of a place Napoli is.\n\n@Keir_Starmer @Nigel_Farage @KemiBadenoch @EdwardJDavey"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 2,
+      "rank": 3,
+      "score": 0.9738849008475784,
+      "doc_idx": 4114,
+      "sentiment": "negative",
+      "preview": "@novaramedia What is wrong with @Keir_Starmer \"The role of the police is to ensure all football fans can enjoy the game, without fear of violence or intimidatio"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 3,
+      "rank": 1,
+      "score": 0.9836085361011144,
+      "doc_idx": 2243,
+      "sentiment": "neutral",
+      "preview": "@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 3,
+      "rank": 2,
+      "score": 0.9832937928468708,
+      "doc_idx": 2213,
+      "sentiment": "neutral",
+      "preview": "@jame96727 @HelsinkiComm @POTUS @VP @SusieWiles @_HenryBolton @timkaine @SecRubio @SteveWitkoff @generalkellogg @LindseyGrahamSC @SenBlumenthal @RepMcCaul @SenA"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 3,
+      "rank": 3,
+      "score": 0.9822060318974992,
+      "doc_idx": 2231,
+      "sentiment": "neutral",
+      "preview": "@jame96727 @WarMonitor3 @Keir_Starmer @EmmanuelMacron @SecGenNATO @kajakallas @bundeskanzler @GermanyDiplo @JohnHealey_MP @DefenceHQ @BelgiumNATO @esa @EU_Commi"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 4,
+      "rank": 1,
+      "score": 0.9849744688540728,
+      "doc_idx": 5968,
+      "sentiment": "negative",
+      "preview": "@DaveLewis12 @LlyrPowell @Mike1222 Vote Liebor get the Fabian , WEF Globalists.\n\nWe’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of "
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 4,
+      "rank": 2,
+      "score": 0.9835231049984262,
+      "doc_idx": 6497,
+      "sentiment": "negative",
+      "preview": "@LlyrPowell @Mike1222 We’ve all seen the headlines: Keir Starmer accusing Nigel Farage and Reform of racism, Labour MPs lining up to brand ordinary voters as fa"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 4,
+      "rank": 3,
+      "score": 0.9820872117860182,
+      "doc_idx": 1108,
+      "sentiment": "negative",
+      "preview": "@LawrenceCaswell Keir Starmer's approval ratings have cratered to historic lows, with recent polls showing Labour at its weakest share ever and Reform UK surgin"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 5,
+      "rank": 1,
+      "score": 0.9709185267258352,
+      "doc_idx": 3614,
+      "sentiment": "negative",
+      "preview": "This is all bullshit. \n\nPrince Andrew was born a Prince- same as every Prince from a noble family in Europe and beyond. In Italy, many prince's we have (includi"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 5,
+      "rank": 2,
+      "score": 0.968928692536706,
+      "doc_idx": 9794,
+      "sentiment": "negative",
+      "preview": "Furious China threatens Britain with 'consequences' after Labour delays approval of new London 'super-embassy' - as PM gets fresh warning Beijing will use build"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "domain",
+      "topic_id": 5,
+      "rank": 3,
+      "score": 0.9651714163907492,
+      "doc_idx": 11107,
+      "sentiment": "negative",
+      "preview": "@Keir_Starmer @ShabanaMahmood You are both contributing to the rape, PDFilia &amp; murder of our citizens. An asylum seeker laughing after murdering an asylum s"
+    }
+  ],
+  "available_backends": [
+    "prompt_only",
+    "ollama"
+  ],
+  "model_options": [
+    {
+      "backend": "ollama",
+      "recommended_models": [
+        "isotnek/qwen3.5:9B-Unsloth-UD-Q4_K_XL",
+        "qwen2.5:7b-instruct",
+        "qwen2.5:14b-instruct",
+        "llama3.1:8b-instruct",
+        "mistral-small:24b-instruct-2501"
+      ],
+      "notes": "Simplest cross-platform path. The default here is an Ollama community build of Qwen3.5-9B; qwen2.5:7b-instruct remains the smaller fallback."
+    },
+    {
+      "backend": "mlx_lm",
+      "recommended_models": [
+        "mlx-community/Qwen2.5-7B-Instruct-4bit",
+        "mlx-community/Llama-3.1-8B-Instruct-4bit",
+        "mlx-community/Mistral-Small-24B-Instruct-2501-4bit"
+      ],
+      "notes": "Best local performance path on Apple Silicon if you want an MLX-native stack."
+    },
+    {
+      "backend": "llama_cpp",
+      "recommended_models": [
+        "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+      ],
+      "notes": "Good when you want GGUF portability and fine-grained runtime control."
+    },
+    {
+      "backend": "prompt_only",
+      "recommended_models": [],
+      "notes": "Write the prompt bundle only. Useful when the prompt is ready but the local runtime is not."
+    }
+  ]
+}

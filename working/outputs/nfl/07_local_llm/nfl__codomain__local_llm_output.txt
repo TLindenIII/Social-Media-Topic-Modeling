@@ -1,0 +1,61 @@
+{
+  "overview": {
+    "summary": "The dataset exhibits a significant disconnect between the declared 'nfl' subject and the actual content, which is dominated by MMA events, fantasy football trade mechanics, and cryptocurrency updates. While generic terms like 'get' and 'trade' appear frequently, they drive discussions unrelated to standard NFL analysis, suggesting a fragmented user base or cross-sport spillover.",
+    "analysis_mode": "codomain_adjacent_interest",
+    "off_topic_risk": "high",
+    "confidence": "high"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": 0,
+      "label": "Combat Sports & Live Event Hype",
+      "relevance": "low",
+      "theme_summary": "This topic captures excitement surrounding non-NFL combat sports, specifically MMA events in Toronto, rather than football. The discussion focuses on live-night rewards and fight night logistics, indicating an audience interested in broader combat sports entertainment.",
+      "evidence": ["Toronto, 7 days to fight night — Sept 26!", "MMA 63 x 247iBET"]
+    },
+    {
+      "topic_id": 1,
+      "label": "Fantasy Football Trade Mechanics",
+      "relevance": "medium",
+      "theme_summary": "Discussions here center on the technicalities of player trading within fantasy leagues, such as swapping draft picks and managing roster depth. This reflects a specific subset of NFL fans deeply engaged in competitive league management rather than team performance analysis.",
+      "evidence": ["Trade Ridley for a 3rd", "Trade Simmons for a 2nd and 3rd"]
+    },
+    {
+      "topic_id": 2,
+      "label": "Crypto & Mobile App Launches",
+      "relevance": "low",
+      "theme_summary": "This cluster is entirely off-topic, featuring announcements for cryptocurrency exchanges and mobile app releases. The content shares no thematic link to the NFL, representing pure noise or account fragmentation unrelated to the subject domain.",
+      "evidence": ["Update on SolCex", "release its highly anticipated Mobile App!"]
+    },
+    {
+      "topic_id": 3,
+      "label": "Sports Betting & Arbitrage",
+      "relevance": "medium",
+      "theme_summary": "Posts in this topic discuss biased umpires and betting strategies across MLB and NFL games, focusing on arbitrage opportunities rather than team news. This suggests an audience driven by gambling mechanics and cross-sport wagering.",
+      "evidence": ["favorite bet from these games!", "Cowboys at Eagles | Thursday"]
+    }
+  ],
+  "quality_flags": [
+    {
+      "flag": "subject_mismatch",
+      "severity": "high",
+      "explanation": "Multiple topics (0 and 2) contain zero NFL-specific content, discussing MMA and crypto instead, which invalidates the 'nfl' subject label for the dataset."
+    },
+    {
+      "flag": "generic_terms",
+      "severity": "medium",
+      "explanation": "High reliance on filler words like 'get', 'go', and 'back' masks the true intent of the posts, making semantic clustering difficult."
+    },
+    {
+      "flag": "codomain_collapse",
+      "severity": "high",
+      "explanation": "The 'codomain' of adjacent interests has collapsed into unrelated domains (crypto, MMA) rather than revealing nuanced NFL fan behaviors."
+    }
+  ],
+  "strategic_opportunities": [],
+  "takeaways": [
+    "The dataset is not suitable for standard NFL engagement strategies due to the presence of unrelated crypto and MMA content.",
+    "If targeting NFL fans, focus on Topic 1 (Fantasy Trades) and Topic 3 (Betting) as these represent genuine adjacent interests, while filtering out Topic 0 and 2.",
+    "Content quality is low due to fragmented chatter and a lack of cohesive narrative around the primary subject."
+  ]
+}

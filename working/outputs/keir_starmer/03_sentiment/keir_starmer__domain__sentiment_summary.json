@@ -1,0 +1,11 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "domain",
+  "model_name": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+  "rows": 11215,
+  "label_counts": {
+    "negative": 7667,
+    "neutral": 3037,
+    "positive": 511
+  }
+}

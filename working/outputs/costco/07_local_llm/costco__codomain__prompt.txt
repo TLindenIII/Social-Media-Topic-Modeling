@@ -1,0 +1,133 @@
+You are an analyst. You receive JSONL files that describe a topic's language landscape.
+The files are already computed. Use them to produce concise insights with evidence.
+Be conservative. If the evidence looks noisy, generic, or off-topic, say so directly.
+Do not convert weak or off-topic evidence into confident business advice.
+
+Return valid JSON with:
+{
+  "overview": {
+    "summary": "<2-4 sentences>",
+    "analysis_mode": "domain|codomain_adjacent_interest",
+    "off_topic_risk": "low|medium|high",
+    "confidence": "low|medium|high"
+  },
+  "topic_interpretations": [
+    {
+      "topic_id": <int>,
+      "label": "<string>",
+      "relevance": "high|medium|low",
+      "theme_summary": "<2-3 sentences explaining what the topic is, what kind of posts drive it, and why it matters or why it looks noisy>",
+      "evidence": ["<short preview 1>", "<short preview 2>"]
+    }
+  ],
+  "quality_flags": [
+    {
+      "flag": "<short label>",
+      "severity": "low|medium|high",
+      "explanation": "<what looks wrong or uncertain>"
+    }
+  ],
+  "strategic_opportunities": [
+    {
+      "opportunity": "<short headline>",
+      "activation_type": "offering|message|content|monitoring",
+      "evidence_topic_ids": [<int>, <int>],
+      "rationale": "<1-2 sentences>",
+      "confidence": "low|medium|high"
+    }
+  ],
+  "takeaways": ["<short takeaway>", "<short takeaway>"]
+}
+
+TASK CONTEXT
+subject=costco
+dataset=codomain
+analysis_goal=Summarize the adjacent interests of users who also talk about the subject. Codomain topics do not need to mention the subject directly. Focus on what these users care about besides the subject, and what that suggests for offerings, positioning, or talking points. Only treat content as low-quality when it looks spammy, generic, or dominated by excluded/noise terms.
+
+POLAR_TERMS_JSONL
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "not", "scores": {"agg": 1576.9062299634536, "iwdf": 1450.9597972175313, "agg_norm": 0.9999999999999994, "iwdf_norm": 0.9999999999999993, "fused_score": 0.9999999999999993}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "get", "scores": {"agg": 1309.8760686664416, "iwdf": 1223.2796607902058, "agg_norm": 0.8306619910410263, "iwdf_norm": 0.8430830841323497, "fused_score": 0.836872537586688}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "go", "scores": {"agg": 919.4097607706648, "iwdf": 865.0427062759004, "agg_norm": 0.5830465650401879, "iwdf_norm": 0.5961865435105578, "fused_score": 0.5896165542753729}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "no", "scores": {"agg": 929.2295886135394, "iwdf": 854.2472450021568, "agg_norm": 0.5892738394692465, "iwdf_norm": 0.5887463227033061, "fused_score": 0.5890100810862763}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "want", "scores": {"agg": 781.9767524865626, "iwdf": 722.2294587630556, "agg_norm": 0.4958929945407631, "iwdf_norm": 0.49775980020125726, "fused_score": 0.4968263973710102}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "know", "scores": {"agg": 736.9847819835502, "iwdf": 682.3239161076608, "agg_norm": 0.4673611962333551, "iwdf_norm": 0.4702569412440893, "fused_score": 0.4688090687387222}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "one", "scores": {"agg": 724.3147673788302, "iwdf": 691.1867024008205, "agg_norm": 0.4593264669869536, "iwdf_norm": 0.4763651644423858, "fused_score": 0.4678458157146697}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "bad", "scores": {"agg": 649.8530074920016, "iwdf": 618.9626861557903, "agg_norm": 0.41210630990218244, "iwdf_norm": 0.4265884467252358, "fused_score": 0.41934737831370916}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "even", "scores": {"agg": 625.606737493182, "iwdf": 612.7365373925851, "agg_norm": 0.3967304622213844, "iwdf_norm": 0.4222973914009292, "fused_score": 0.40951392681115684}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "make", "scores": {"agg": 615.8023892843707, "iwdf": 574.7000481251968, "agg_norm": 0.3905130042505078, "iwdf_norm": 0.39608268211654385, "fused_score": 0.3932978431835258}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "would", "scores": {"agg": 618.1743764980804, "iwdf": 555.3430120289886, "agg_norm": 0.39201720733413986, "iwdf_norm": 0.3827418327468172, "fused_score": 0.38737952004047854}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "negative", "term": "need", "scores": {"agg": 599.0780116417442, "iwdf": 571.8462371169873, "agg_norm": 0.37990718804860585, "iwdf_norm": 0.3941158385046932, "fused_score": 0.3870115132766495}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "get", "scores": {"agg": 810.9224749970786, "iwdf": 749.8635208798719, "agg_norm": 0.9999999999999988, "iwdf_norm": 0.9999999999999987, "fused_score": 0.9999999999999987}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "not", "scores": {"agg": 773.1773273513081, "iwdf": 695.4722142380867, "agg_norm": 0.9534540615045756, "iwdf_norm": 0.927465058470954, "fused_score": 0.9404595599877648}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "one", "scores": {"agg": 720.101686271563, "iwdf": 647.9875335007692, "agg_norm": 0.8880031180220481, "iwdf_norm": 0.8641406275377089, "fused_score": 0.8760718727798785}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "go", "scores": {"agg": 689.7321199213505, "iwdf": 627.7301054391489, "agg_norm": 0.8505524771943638, "iwdf_norm": 0.8371258075103915, "fused_score": 0.8438391423523777}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "make", "scores": {"agg": 605.342487973323, "iwdf": 574.7000481251968, "agg_norm": 0.7464862630370469, "iwdf_norm": 0.7664061954245444, "fused_score": 0.7564462292307956}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "no", "scores": {"agg": 614.1289437992302, "iwdf": 538.0114860350122, "agg_norm": 0.7573213996830486, "iwdf_norm": 0.7174792092882738, "fused_score": 0.7374003044856612}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "new", "scores": {"agg": 577.4537681247203, "iwdf": 547.7897878891788, "agg_norm": 0.7120949115719107, "iwdf_norm": 0.7305193180305859, "fused_score": 0.7213071148012483}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "see", "scores": {"agg": 527.3960791252563, "iwdf": 485.8149827979946, "agg_norm": 0.6503655964488536, "iwdf_norm": 0.6478712049199971, "fused_score": 0.6491184006844253}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "know", "scores": {"agg": 522.5787087637751, "iwdf": 486.15579022670835, "agg_norm": 0.6444249911382184, "iwdf_norm": 0.6483256975299507, "fused_score": 0.6463753443340845}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "need", "scores": {"agg": 507.4730594032854, "iwdf": 471.44575273766884, "agg_norm": 0.6257972556564214, "iwdf_norm": 0.6287087444719074, "fused_score": 0.6272530000641644}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "trump", "scores": {"agg": 490.47632214677185, "iwdf": 459.9201916718071, "agg_norm": 0.6048374996001168, "iwdf_norm": 0.613338532766799, "fused_score": 0.6090880161834579}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "neutral", "term": "take", "scores": {"agg": 489.0015026622353, "iwdf": 459.64134831293563, "agg_norm": 0.6030188060381436, "iwdf_norm": 0.6129666739536854, "fused_score": 0.6079927399959145}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "good", "scores": {"agg": 757.3956764014958, "iwdf": 736.6161199656552, "agg_norm": 0.9999999999999987, "iwdf_norm": 0.9999999999999986, "fused_score": 0.9999999999999987}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "stock", "scores": {"agg": 751.7884726895105, "iwdf": 694.9388931023867, "agg_norm": 0.9925967312902721, "iwdf_norm": 0.943420696705344, "fused_score": 0.9680087139978081}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "love", "scores": {"agg": 736.0808973720958, "iwdf": 706.3093629673948, "agg_norm": 0.9718578020795275, "iwdf_norm": 0.9588567828251241, "fused_score": 0.9653572924523258}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "day", "scores": {"agg": 671.0009318383526, "iwdf": 614.9239360801116, "agg_norm": 0.8859318223552332, "iwdf_norm": 0.8347956546332188, "fused_score": 0.860363738494226}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "get", "scores": {"agg": 642.8441191175416, "iwdf": 615.0954226572221, "agg_norm": 0.8487559926032225, "iwdf_norm": 0.8350284578158568, "fused_score": 0.8418922252095397}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "new", "scores": {"agg": 604.057501532119, "iwdf": 569.1878264785998, "agg_norm": 0.7975454842864814, "iwdf_norm": 0.7727061776833467, "fused_score": 0.7851258309849141}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "make", "scores": {"agg": 592.1296834610267, "iwdf": 562.6434037589339, "agg_norm": 0.7817970209102932, "iwdf_norm": 0.763821736327419, "fused_score": 0.7728093786188561}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "best", "scores": {"agg": 532.9334172731858, "iwdf": 522.3870737585246, "agg_norm": 0.7036393709101091, "iwdf_norm": 0.7091713846594617, "fused_score": 0.7064053777847854}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "one", "scores": {"agg": 505.7153463553529, "iwdf": 494.8268437642238, "agg_norm": 0.6677029749603063, "iwdf_norm": 0.6717567405221793, "fused_score": 0.6697298577412427}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "go", "scores": {"agg": 508.81150495554897, "iwdf": 482.28044686178515, "agg_norm": 0.6717908760358794, "iwdf_norm": 0.6547242638190851, "fused_score": 0.6632575699274823}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "costco", "scores": {"agg": 538.344636953214, "iwdf": 443.53538926525147, "agg_norm": 0.7107838791884475, "iwdf_norm": 0.6021255539261491, "fused_score": 0.6564547165572983}}
+{"subject": "costco", "dataset": "codomain", "sentiment": "positive", "term": "market", "scores": {"agg": 508.9428561811984, "iwdf": 457.24474575745984, "agg_norm": 0.6719643008780616, "iwdf_norm": 0.6207368171345181, "fused_score": 0.6463505590062899}}
+
+TOPIC_SUMMARIES_JSONL
+{"subject": "costco", "dataset": "codomain", "topic_id": 0, "label": "not · trump · no · go", "top_words": "not, trump, no, go, see, liberal, want, new, president, right, democrat, work", "exemplars": ["it’s time to bring in the national guard\n\nAnd maybe the Marines\n\nI’ve been saying for two years\n\nDemocrats will not be happy until we have a 10/7 event in the U", "Great commentary!\n\nNOW LET’S TALK ABOUT THE DEMOCRAT PARTY AND THE SPLC\n\nKNOWING SINCE THE DAYS OF TONY LA RAZA VILARIAGOSA\n\nWhen they interviewed vicious south", "I know Democrats don’t care\n\nI hope this will inspire more conservative Californians to become more outspoken, more active\n\nDo you recognize that that liberal m"]}
+{"subject": "costco", "dataset": "codomain", "topic_id": 1, "label": "get · one · not · go", "top_words": "get, one, not, go, make, day, no, good, want, need, know, every", "exemplars": ["The JOY in Autism. Here’s a little inside look at the absolute wonder of being a mom to the sweetest humans imaginable! \n\nToday is Dinkle’s birthday. Do you kno", "Welcome to the dark side! \n\nSometimes, the only way out is through. Life has been pure chaos and after the last two years, I felt like something needed to be in", "In a funk? Break away from it by a quick project that checks something off your list! What’s one of your funk-breaking tips??\n\nADHD is a part of me- I don’t see"]}
+{"subject": "costco", "dataset": "codomain", "topic_id": 2, "label": "morning · team · buy · million", "top_words": "morning, team, buy, million, good, since, life, nasdaq, free, shutdown, would, signal", "exemplars": ["$BTBT NOW 39% SINCE MY BUY SIGNAL 🚀🚀🚀\n 3.37% yield on 99,936 ETH staked generates 291 ETH rewards. This income stream powers growth, with resistance at 4.10 USD", "$CLSK NOW 34% SINCE MY BUY SIGNAL 🚀🚀🚀\n$CLSK’s $100M credit boost adds firepower to its $400M total. This flexibility fuels growth, with resistance at 25.00 USD ", "$ETHZ NOW 60 PERCENT SINCE MY BUY SIGNAL 🚀🚀🚀\n\nWith 47 million dollars already deployed and 150 million more planned, ETHZilla is positioning itself as a key pla"]}
+{"subject": "costco", "dataset": "codomain", "topic_id": 3, "label": "stock · ai · market · new", "top_words": "stock, ai, market, new, costco, deal, high, company, price, day, strong, increase", "exemplars": ["Dan Ives Says Q3 Tech Earnings Will 'Exceed The AI Hype,' Expert Adds Tariff Impact On Other Firms Will Be 'Much Less Than Anticipated'\n\nhttps://t.co/n27wofkhHh", "TSMC posts forecast-beating Q3 revenue surge on AI boom\n\nhttps://t.co/v3DFxnnFIE\n\n$TSM, the world's largest contract chipmaker, reported a 30% year-on-year incr", "Elon Musk's Tesla Robot Masters Kung Fu Without Human Control — Jim Cramer Says Nvidia Tech Made It Possible\n\nhttps://t.co/5fCuiybX0Q\n\n$TSLA CEO Elon Musk showc"]}
+
+TOPIC_EXEMPLARS_JSONL
+{"subject": "costco", "dataset": "codomain", "topic_id": 0, "rank": 1, "score": 0.9912755790537566, "doc_idx": 5800, "sentiment": "negative", "preview": "it’s time to bring in the national guard\n\nAnd maybe the Marines\n\nI’ve been saying for two years\n\nDemocrats will not be happy until we have a 10/7 event in the U"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 0, "rank": 2, "score": 0.9886063463860978, "doc_idx": 5802, "sentiment": "neutral", "preview": "Great commentary!\n\nNOW LET’S TALK ABOUT THE DEMOCRAT PARTY AND THE SPLC\n\nKNOWING SINCE THE DAYS OF TONY LA RAZA VILARIAGOSA\n\nWhen they interviewed vicious south"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 0, "rank": 3, "score": 0.9874259170650144, "doc_idx": 5819, "sentiment": "neutral", "preview": "I know Democrats don’t care\n\nI hope this will inspire more conservative Californians to become more outspoken, more active\n\nDo you recognize that that liberal m"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 1, "rank": 1, "score": 0.993968154999018, "doc_idx": 4311, "sentiment": "positive", "preview": "The JOY in Autism. Here’s a little inside look at the absolute wonder of being a mom to the sweetest humans imaginable! \n\nToday is Dinkle’s birthday. Do you kno"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 1, "rank": 2, "score": 0.98979997445324, "doc_idx": 4290, "sentiment": "neutral", "preview": "Welcome to the dark side! \n\nSometimes, the only way out is through. Life has been pure chaos and after the last two years, I felt like something needed to be in"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 1, "rank": 3, "score": 0.9884922493885137, "doc_idx": 4291, "sentiment": "neutral", "preview": "In a funk? Break away from it by a quick project that checks something off your list! What’s one of your funk-breaking tips??\n\nADHD is a part of me- I don’t see"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 2, "rank": 1, "score": 0.9741147625611866, "doc_idx": 1080, "sentiment": "positive", "preview": "$BTBT NOW 39% SINCE MY BUY SIGNAL 🚀🚀🚀\n 3.37% yield on 99,936 ETH staked generates 291 ETH rewards. This income stream powers growth, with resistance at 4.10 USD"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 2, "rank": 2, "score": 0.9721443915318332, "doc_idx": 1079, "sentiment": "positive", "preview": "$CLSK NOW 34% SINCE MY BUY SIGNAL 🚀🚀🚀\n$CLSK’s $100M credit boost adds firepower to its $400M total. This flexibility fuels growth, with resistance at 25.00 USD "}
+{"subject": "costco", "dataset": "codomain", "topic_id": 2, "rank": 3, "score": 0.9717811014168244, "doc_idx": 1102, "sentiment": "positive", "preview": "$ETHZ NOW 60 PERCENT SINCE MY BUY SIGNAL 🚀🚀🚀\n\nWith 47 million dollars already deployed and 150 million more planned, ETHZilla is positioning itself as a key pla"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 3, "rank": 1, "score": 0.9905569146383716, "doc_idx": 1925, "sentiment": "neutral", "preview": "Dan Ives Says Q3 Tech Earnings Will 'Exceed The AI Hype,' Expert Adds Tariff Impact On Other Firms Will Be 'Much Less Than Anticipated'\n\nhttps://t.co/n27wofkhHh"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 3, "rank": 2, "score": 0.9895861013221758, "doc_idx": 1932, "sentiment": "positive", "preview": "TSMC posts forecast-beating Q3 revenue surge on AI boom\n\nhttps://t.co/v3DFxnnFIE\n\n$TSM, the world's largest contract chipmaker, reported a 30% year-on-year incr"}
+{"subject": "costco", "dataset": "codomain", "topic_id": 3, "rank": 3, "score": 0.9879702913865424, "doc_idx": 1930, "sentiment": "positive", "preview": "Elon Musk's Tesla Robot Masters Kung Fu Without Human Control — Jim Cramer Says Nvidia Tech Made It Possible\n\nhttps://t.co/5fCuiybX0Q\n\n$TSLA CEO Elon Musk showc"}
+
+DIAGNOSTICS_JSON
+{"analysis_mode": "codomain_adjacent_interest", "off_topic_risk": "high", "confidence": "low", "generic_terms": ["get", "go", "want", "know", "one", "even", "make", "would", "need", "new"], "generic_term_share": 0.6522, "subject_topic_share": 0.25, "noise_topic_share": 0.75, "topic_diagnostics": [{"topic_id": 0, "label": "not · trump · no · go", "matched_subject_terms": [], "matched_off_topic_terms": ["trump", "democrat"]}, {"topic_id": 1, "label": "get · one · not · go", "matched_subject_terms": [], "matched_off_topic_terms": []}, {"topic_id": 2, "label": "morning · team · buy · million", "matched_subject_terms": [], "matched_off_topic_terms": ["eth", "nasdaq"]}, {"topic_id": 3, "label": "stock · ai · market · new", "matched_subject_terms": ["costco"], "matched_off_topic_terms": ["stock", "market", "earnings", "tesla", "ai"]}], "quality_flags": [{"flag": "generic_terms", "severity": "high", "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."}, {"flag": "noise_topics", "severity": "high", "explanation": "Several topic summaries contain excluded terms or look like noisy, low-signal content."}]}
+
+END_INPUT_DATA
+Do not continue, copy, or transform any single input JSON row.
+Synthesize across all of the supplied records.
+Return exactly one JSON object matching the schema above.
+Do not return subject, dataset, sentiment_terms, or diagnostics. Those fields are merged deterministically in code.
+Use only topic_id values that appear in TOPIC_SUMMARIES_JSONL.
+The diagnostics are heuristics, not truth, but you should respect them when judging off-topic risk and confidence.
+Include one topic_interpretation for every topic_id in TOPIC_SUMMARIES_JSONL.
+Each topic_interpretation label must be a short human-readable caption, not a bag-of-words list.
+Each topic_interpretation theme_summary must be 2 to 3 sentences.
+Sentence 1 should explain the shared theme in plain English.
+Sentence 2 should explain what the exemplar posts suggest about the kind of discussion, audience, or behavior driving the topic.
+Sentence 3, when useful, should explain why the topic matters for the subject or why it should be treated as noise, off-topic spillover, or low-signal chatter.
+Do not simply restate the top words; translate them into a readable interpretation.
+Even when a topic is weak or messy, still provide a concrete interpretation rather than omitting it.
+Include 1 to 4 quality_flags, 1 to 4 strategic_opportunities, and 2 to 5 takeaways.
+Use short evidence snippets drawn from the exemplar previews.
+For codomain, the strategic opportunities should reflect adjacent interests of subject-linked users, not generic campaign or product advice.
+For codomain, only include a strategic opportunity when it is supported by repeated evidence across multiple topics or exemplars. Do not turn single-account meme streams or fragmented chatter into an opportunity.
+If the codomain evidence is too fragmented for a real opportunity, return an empty strategic_opportunities list.
+Every strategic_opportunity must include an activation_type and evidence_topic_ids.
+Do not write generic audience recommendations. Focus on interpretation, quality, opportunities, and presentation-ready takeaways.
+Return JSON only.
+
+OUTPUT_JSON
+

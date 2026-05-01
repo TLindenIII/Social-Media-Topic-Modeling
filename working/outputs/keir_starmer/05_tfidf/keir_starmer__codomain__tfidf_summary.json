@@ -1,0 +1,14 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "codomain",
+  "rows": 12069,
+  "tidy_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/keir_starmer__codomain__tfidf_metrics_tidy.parquet",
+  "wide_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/keir_starmer__codomain__weighted_idf_wide.parquet",
+  "top_terms_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/keir_starmer__codomain__top_terms.csv",
+  "figures": [
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/figures/keir_starmer__codomain__top_weighted_idf_negative.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/figures/keir_starmer__codomain__top_weighted_idf_neutral.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/figures/keir_starmer__codomain__top_weighted_idf_positive.png",
+    "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/05_tfidf/figures/keir_starmer__codomain__term_polarity.png"
+  ]
+}

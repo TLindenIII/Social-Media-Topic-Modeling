@@ -1,0 +1,363 @@
+{
+  "subject": "keir_starmer",
+  "dataset": "codomain",
+  "polar_terms_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__polar_terms.jsonl",
+  "topic_summaries_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__topic_summaries.jsonl",
+  "topic_exemplars_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__topic_exemplars.jsonl",
+  "deterministic_output_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__deterministic_output.json",
+  "prompt_path": "/Users/thomas/Documents/Projects/X Sentiment/working/outputs/keir_starmer/07_local_llm/keir_starmer__codomain__prompt.txt",
+  "prompt": "You are an analyst. You receive JSONL files that describe a topic's language landscape.\nThe files are already computed. Use them to produce concise insights with evidence.\nBe conservative. If the evidence looks noisy, generic, or off-topic, say so directly.\nDo not convert weak or off-topic evidence into confident business advice.\n\nReturn valid JSON with:\n{\n  \"overview\": {\n    \"summary\": \"<2-4 sentences>\",\n    \"analysis_mode\": \"domain|codomain_adjacent_interest\",\n    \"off_topic_risk\": \"low|medium|high\",\n    \"confidence\": \"low|medium|high\"\n  },\n  \"topic_interpretations\": [\n    {\n      \"topic_id\": <int>,\n      \"label\": \"<string>\",\n      \"relevance\": \"high|medium|low\",\n      \"theme_summary\": \"<2-3 sentences explaining what the topic is, what kind of posts drive it, and why it matters or why it looks noisy>\",\n      \"evidence\": [\"<short preview 1>\", \"<short preview 2>\"]\n    }\n  ],\n  \"quality_flags\": [\n    {\n      \"flag\": \"<short label>\",\n      \"severity\": \"low|medium|high\",\n      \"explanation\": \"<what looks wrong or uncertain>\"\n    }\n  ],\n  \"strategic_opportunities\": [\n    {\n      \"opportunity\": \"<short headline>\",\n      \"activation_type\": \"offering|message|content|monitoring\",\n      \"evidence_topic_ids\": [<int>, <int>],\n      \"rationale\": \"<1-2 sentences>\",\n      \"confidence\": \"low|medium|high\"\n    }\n  ],\n  \"takeaways\": [\"<short takeaway>\", \"<short takeaway>\"]\n}\n\nTASK CONTEXT\nsubject=keir_starmer\ndataset=codomain\nanalysis_goal=Summarize the adjacent interests of users who also talk about the subject. Codomain topics do not need to mention the subject directly. Focus on what these users care about besides the subject, and what that suggests for offerings, positioning, or talking points. Only treat content as low-quality when it looks spammy, generic, or dominated by excluded/noise terms.\n\nPOLAR_TERMS_JSONL\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"not\", \"scores\": {\"agg\": 1741.881974248002, \"iwdf\": 1606.3840827348333, \"agg_norm\": 0.9999999999999994, \"iwdf_norm\": 0.9999999999999994, \"fused_score\": 0.9999999999999994}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"no\", \"scores\": {\"agg\": 1126.7786968559274, \"iwdf\": 1022.0832795973166, \"agg_norm\": 0.6468743080841485, \"iwdf_norm\": 0.636263326176167, \"fused_score\": 0.6415688171301577}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"get\", \"scores\": {\"agg\": 1052.1251081705982, \"iwdf\": 1000.0670847585369, \"agg_norm\": 0.6040163017501898, \"iwdf_norm\": 0.6225578898017616, \"fused_score\": 0.6132870957759757}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"go\", \"scores\": {\"agg\": 1022.514850506073, \"iwdf\": 960.0517685413442, \"agg_norm\": 0.5870172983146624, \"iwdf_norm\": 0.5976477100712283, \"fused_score\": 0.5923325041929454}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"uk\", \"scores\": {\"agg\": 805.3190155802121, \"iwdf\": 750.9072134120065, \"agg_norm\": 0.46232697018859764, \"iwdf_norm\": 0.46745185132412614, \"fused_score\": 0.4648894107563619}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"want\", \"scores\": {\"agg\": 763.9003673783054, \"iwdf\": 702.3839433072543, \"agg_norm\": 0.4385488676453483, \"iwdf_norm\": 0.43724533307841346, \"fused_score\": 0.4378971003618809}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"one\", \"scores\": {\"agg\": 736.6454781648181, \"iwdf\": 703.9695548953755, \"agg_norm\": 0.42290206170991534, \"iwdf_norm\": 0.4382324018654882, \"fused_score\": 0.43056723178770173}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"attack\", \"scores\": {\"agg\": 739.7354033763417, \"iwdf\": 695.6767670186013, \"agg_norm\": 0.4246759621562171, \"iwdf_norm\": 0.43307000766231857, \"fused_score\": 0.42887298490926784}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"starmer\", \"scores\": {\"agg\": 666.4108497275165, \"iwdf\": 651.3612101820557, \"agg_norm\": 0.3825809438180886, \"iwdf_norm\": 0.4054828587899896, \"fused_score\": 0.3940319013040391}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"right\", \"scores\": {\"agg\": 653.6735020920506, \"iwdf\": 637.882555838209, \"agg_norm\": 0.37526853814205835, \"iwdf_norm\": 0.3970921790710399, \"fused_score\": 0.3861803586065491}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"need\", \"scores\": {\"agg\": 648.0506589688741, \"iwdf\": 629.4836456005103, \"agg_norm\": 0.3720405105223317, \"iwdf_norm\": 0.3918637219866048, \"fused_score\": 0.38195211625446823}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"negative\", \"term\": \"labour\", \"scores\": {\"agg\": 649.2945248512941, \"iwdf\": 626.2740648793063, \"agg_norm\": 0.37275460361291385, \"iwdf_norm\": 0.38986570622206873, \"fused_score\": 0.3813101549174913}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"not\", \"scores\": {\"agg\": 804.9296634453796, \"iwdf\": 725.572642411742, \"agg_norm\": 0.9999999999999988, \"iwdf_norm\": 0.9999999999999986, \"fused_score\": 0.9999999999999987}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"india\", \"scores\": {\"agg\": 783.1444653444554, \"iwdf\": 714.956644526082, \"agg_norm\": 0.972935277341281, \"iwdf_norm\": 0.9853688007717955, \"fused_score\": 0.9791520390565382}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"uk\", \"scores\": {\"agg\": 564.3172596089903, \"iwdf\": 531.7234862539073, \"agg_norm\": 0.7010764856068479, \"iwdf_norm\": 0.7328328759564344, \"fused_score\": 0.7169546807816412}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"new\", \"scores\": {\"agg\": 534.2349968901102, \"iwdf\": 531.2412701534927, \"agg_norm\": 0.663703949738164, \"iwdf_norm\": 0.7321682752366337, \"fused_score\": 0.6979361124873988}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"break\", \"scores\": {\"agg\": 521.1656291415762, \"iwdf\": 511.32061681089067, \"agg_norm\": 0.647467291627451, \"iwdf_norm\": 0.7047131974426483, \"fused_score\": 0.6760902445350496}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"digital\", \"scores\": {\"agg\": 542.0399256384028, \"iwdf\": 488.55136770971706, \"agg_norm\": 0.6734003606206811, \"iwdf_norm\": 0.6733321230053727, \"fused_score\": 0.6733662418130268}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"no\", \"scores\": {\"agg\": 496.73638503520914, \"iwdf\": 467.1239988784611, \"agg_norm\": 0.6171177527599164, \"iwdf_norm\": 0.6438004571475847, \"fused_score\": 0.6304591049537506}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"trump\", \"scores\": {\"agg\": 502.1676281545008, \"iwdf\": 461.03544548799937, \"agg_norm\": 0.62386522818037, \"iwdf_norm\": 0.6354090804134456, \"fused_score\": 0.6296371542969078}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"one\", \"scores\": {\"agg\": 494.24957045691684, \"iwdf\": 467.95664053738835, \"agg_norm\": 0.614028272161515, \"iwdf_norm\": 0.6449480219953435, \"fused_score\": 0.6294881470784293}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"id\", \"scores\": {\"agg\": 500.08282447987335, \"iwdf\": 445.77511790545833, \"agg_norm\": 0.6212751836469088, \"iwdf_norm\": 0.614376964963479, \"fused_score\": 0.617826074305194}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"go\", \"scores\": {\"agg\": 458.93939081644345, \"iwdf\": 447.7552365886101, \"agg_norm\": 0.5701608620708825, \"iwdf_norm\": 0.6171060076084305, \"fused_score\": 0.5936334348396565}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"neutral\", \"term\": \"get\", \"scores\": {\"agg\": 454.38084580508746, \"iwdf\": 430.8589416548637, \"agg_norm\": 0.5644975784097439, \"iwdf_norm\": 0.5938191663659265, \"fused_score\": 0.5791583723878352}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"india\", \"scores\": {\"agg\": 847.261465803413, \"iwdf\": 702.9068134385637, \"agg_norm\": 0.9999999999999988, \"iwdf_norm\": 0.9999999999999986, \"fused_score\": 0.9999999999999987}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"love\", \"scores\": {\"agg\": 574.4146333653288, \"iwdf\": 554.0241752227935, \"agg_norm\": 0.6779661964452038, \"iwdf_norm\": 0.7881900767365604, \"fused_score\": 0.7330781365908821}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"life\", \"scores\": {\"agg\": 500.7501965890593, \"iwdf\": 484.7500476000012, \"agg_norm\": 0.5910220360537983, \"iwdf_norm\": 0.689636290803104, \"fused_score\": 0.6403291634284511}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"new\", \"scores\": {\"agg\": 506.3563941827108, \"iwdf\": 479.41285355315193, \"agg_norm\": 0.5976388808176935, \"iwdf_norm\": 0.682043258633249, \"fused_score\": 0.6398410697254713}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"great\", \"scores\": {\"agg\": 482.7126641148268, \"iwdf\": 472.15546320809494, \"agg_norm\": 0.5697328199118503, \"iwdf_norm\": 0.6717184329148093, \"fused_score\": 0.6207256264133298}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"good\", \"scores\": {\"agg\": 476.8717472058555, \"iwdf\": 463.88033915720933, \"agg_norm\": 0.562838942230971, \"iwdf_norm\": 0.6599457144083485, \"fused_score\": 0.6113923283196597}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"day\", \"scores\": {\"agg\": 449.5800024464303, \"iwdf\": 411.0264656709216, \"agg_norm\": 0.5306272273578699, \"iwdf_norm\": 0.5847524277936822, \"fused_score\": 0.557689827575776}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"make\", \"scores\": {\"agg\": 425.7871469354788, \"iwdf\": 413.95491268369994, \"agg_norm\": 0.5025451576883967, \"iwdf_norm\": 0.5889186230229654, \"fused_score\": 0.545731890355681}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"one\", \"scores\": {\"agg\": 432.7830160133224, \"iwdf\": 406.9188178585986, \"agg_norm\": 0.5108021944594597, \"iwdf_norm\": 0.5789086264052326, \"fused_score\": 0.5448554104323462}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"world\", \"scores\": {\"agg\": 399.76940387155855, \"iwdf\": 375.402990475621, \"agg_norm\": 0.47183711287102853, \"iwdf_norm\": 0.5340722031689793, \"fused_score\": 0.5029546580200039}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"see\", \"scores\": {\"agg\": 396.0726791805842, \"iwdf\": 377.30957371226276, \"agg_norm\": 0.4674739677969528, \"iwdf_norm\": 0.5367846299091825, \"fused_score\": 0.5021292988530677}}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"sentiment\": \"positive\", \"term\": \"first\", \"scores\": {\"agg\": 352.9790759195505, \"iwdf\": 333.183757454848, \"agg_norm\": 0.41661174285182295, \"iwdf_norm\": 0.474008433386695, \"fused_score\": 0.445310088119259}}\n\nTOPIC_SUMMARIES_JSONL\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 0, \"label\": \"digital id · keir starmer · starmer · uk\", \"top_words\": \"starmer, uk, india, digital, id, digital id, keir, minister, not, pm, keir starmer, labour\", \"exemplars\": [\"The teaching profession in Nigeria, unfortunately, has not received the due attention it deserves, as a critical contributor to national development. The severe\", \"Pujya Gurudevshri Rakeshji showers blessings and extends warm felicitations to Shri C. P. Radhakrishnan ji on being elected as the Hon’ble Vice President of Ind\", \"Global Fintech Festival 2025 kicks off in Mumbai with PM Narendra Modi & UK PM Keir Starmer. Modi highlights India's digital ecosystem as a global standard for \"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 1, \"label\": \"india · make · new · life\", \"top_words\": \"india, make, new, life, no, not, pay, get, need, go, come, one\", \"exemplars\": [\"Fast & Fabulous – The Super Catwalk was another special moment in an already memorable year for us.\\n\\nThe Chairman’s Collection was showcased once again, paying \", \"Among all the threads that define Raymond’s legacy, education is the one closest to my heart.\\nIt shapes character, builds communities and empowers generations t\", \"100 years of Raymond is more than a milestone. It is a century of dressing India’s dreams, moments and milestones.\\nThe centenary celebration brought together fa\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 2, \"label\": \"not · no · see · attack\", \"top_words\": \"not, no, see, attack, get, day, go, call, police, break, jewish, trump\", \"exemplars\": [\"🚨Breaking 🚨 \\n\\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\\n\\nHowever\", \"🚨Breaking 🚨 \\n\\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\\n\\nHowever\", \"🚨 Manchester terror attack update 🚨 \\n\\nManchester police have released a full statement responding to the terror attack that occurred today at a synagogue near h\"]}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 3, \"label\": \"not · right · israel · gaza\", \"top_words\": \"not, right, israel, gaza, trump, hamas, get, one, know, woman, love, go\", \"exemplars\": [\"🇹🇭🇰🇭\\nEscalation at the Thailand-Cambodia border📝\\nWhat is known as of the end of July 26?\\n\\nThe conflict at the Thailand-Cambodia border has been ongoing for the \", \"Israel and Hamas have reached a long-awaited agreement on a ceasefire and hostage exchange — marking the first phase of U.S. President Donald Trump’s peace plan\", \"🇷🇺🇺🇦\\nRussia is unlikely to show forgiveness to Ukraine!\\n\\nA compromise between Russia and Ukraine on peace in the evening negotiations is unlikely, — The New Yor\"]}\n\nTOPIC_EXEMPLARS_JSONL\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 0, \"rank\": 1, \"score\": 0.9876682340417708, \"doc_idx\": 830, \"sentiment\": \"negative\", \"preview\": \"The teaching profession in Nigeria, unfortunately, has not received the due attention it deserves, as a critical contributor to national development. The severe\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 0, \"rank\": 2, \"score\": 0.980797360656004, \"doc_idx\": 1848, \"sentiment\": \"positive\", \"preview\": \"Pujya Gurudevshri Rakeshji showers blessings and extends warm felicitations to Shri C. P. Radhakrishnan ji on being elected as the Hon’ble Vice President of Ind\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 0, \"rank\": 3, \"score\": 0.980724132719979, \"doc_idx\": 2833, \"sentiment\": \"positive\", \"preview\": \"Global Fintech Festival 2025 kicks off in Mumbai with PM Narendra Modi & UK PM Keir Starmer. Modi highlights India's digital ecosystem as a global standard for \"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 1, \"rank\": 1, \"score\": 0.9798318739841454, \"doc_idx\": 1975, \"sentiment\": \"positive\", \"preview\": \"Fast & Fabulous – The Super Catwalk was another special moment in an already memorable year for us.\\n\\nThe Chairman’s Collection was showcased once again, paying \"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 1, \"rank\": 2, \"score\": 0.975939292739315, \"doc_idx\": 1961, \"sentiment\": \"positive\", \"preview\": \"Among all the threads that define Raymond’s legacy, education is the one closest to my heart.\\nIt shapes character, builds communities and empowers generations t\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 1, \"rank\": 3, \"score\": 0.9752414274207242, \"doc_idx\": 1955, \"sentiment\": \"positive\", \"preview\": \"100 years of Raymond is more than a milestone. It is a century of dressing India’s dreams, moments and milestones.\\nThe centenary celebration brought together fa\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 2, \"rank\": 1, \"score\": 0.9842665503342664, \"doc_idx\": 7602, \"sentiment\": \"negative\", \"preview\": \"🚨Breaking 🚨 \\n\\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\\n\\nHowever\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 2, \"rank\": 2, \"score\": 0.9839521823075976, \"doc_idx\": 7603, \"sentiment\": \"negative\", \"preview\": \"🚨Breaking 🚨 \\n\\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\\n\\nHowever\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 2, \"rank\": 3, \"score\": 0.979692468438982, \"doc_idx\": 8244, \"sentiment\": \"negative\", \"preview\": \"🚨 Manchester terror attack update 🚨 \\n\\nManchester police have released a full statement responding to the terror attack that occurred today at a synagogue near h\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 3, \"rank\": 1, \"score\": 0.9911105781567346, \"doc_idx\": 8017, \"sentiment\": \"neutral\", \"preview\": \"🇹🇭🇰🇭\\nEscalation at the Thailand-Cambodia border📝\\nWhat is known as of the end of July 26?\\n\\nThe conflict at the Thailand-Cambodia border has been ongoing for the \"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 3, \"rank\": 2, \"score\": 0.990383622762358, \"doc_idx\": 1105, \"sentiment\": \"neutral\", \"preview\": \"Israel and Hamas have reached a long-awaited agreement on a ceasefire and hostage exchange — marking the first phase of U.S. President Donald Trump’s peace plan\"}\n{\"subject\": \"keir_starmer\", \"dataset\": \"codomain\", \"topic_id\": 3, \"rank\": 3, \"score\": 0.9863228827886316, \"doc_idx\": 8039, \"sentiment\": \"negative\", \"preview\": \"🇷🇺🇺🇦\\nRussia is unlikely to show forgiveness to Ukraine!\\n\\nA compromise between Russia and Ukraine on peace in the evening negotiations is unlikely, — The New Yor\"}\n\nDIAGNOSTICS_JSON\n{\"analysis_mode\": \"codomain_adjacent_interest\", \"off_topic_risk\": \"low\", \"confidence\": \"high\", \"generic_terms\": [\"get\", \"go\", \"want\", \"one\", \"right\", \"need\", \"new\", \"great\", \"good\", \"day\"], \"generic_term_share\": 0.4444, \"subject_topic_share\": 0.25, \"noise_topic_share\": 0.0, \"topic_diagnostics\": [{\"topic_id\": 0, \"label\": \"digital id · keir starmer · starmer · uk\", \"matched_subject_terms\": [\"keir\", \"starmer\", \"labour\", \"pm\"], \"matched_off_topic_terms\": []}, {\"topic_id\": 1, \"label\": \"india · make · new · life\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": []}, {\"topic_id\": 2, \"label\": \"not · no · see · attack\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": []}, {\"topic_id\": 3, \"label\": \"not · right · israel · gaza\", \"matched_subject_terms\": [], \"matched_off_topic_terms\": []}], \"quality_flags\": [{\"flag\": \"generic_terms\", \"severity\": \"medium\", \"explanation\": \"Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language.\"}]}\n\nEND_INPUT_DATA\nDo not continue, copy, or transform any single input JSON row.\nSynthesize across all of the supplied records.\nReturn exactly one JSON object matching the schema above.\nDo not return subject, dataset, sentiment_terms, or diagnostics. Those fields are merged deterministically in code.\nUse only topic_id values that appear in TOPIC_SUMMARIES_JSONL.\nThe diagnostics are heuristics, not truth, but you should respect them when judging off-topic risk and confidence.\nInclude one topic_interpretation for every topic_id in TOPIC_SUMMARIES_JSONL.\nEach topic_interpretation label must be a short human-readable caption, not a bag-of-words list.\nEach topic_interpretation theme_summary must be 2 to 3 sentences.\nSentence 1 should explain the shared theme in plain English.\nSentence 2 should explain what the exemplar posts suggest about the kind of discussion, audience, or behavior driving the topic.\nSentence 3, when useful, should explain why the topic matters for the subject or why it should be treated as noise, off-topic spillover, or low-signal chatter.\nDo not simply restate the top words; translate them into a readable interpretation.\nEven when a topic is weak or messy, still provide a concrete interpretation rather than omitting it.\nInclude 1 to 4 quality_flags, 1 to 4 strategic_opportunities, and 2 to 5 takeaways.\nUse short evidence snippets drawn from the exemplar previews.\nFor codomain, the strategic opportunities should reflect adjacent interests of subject-linked users, not generic campaign or product advice.\nFor codomain, only include a strategic opportunity when it is supported by repeated evidence across multiple topics or exemplars. Do not turn single-account meme streams or fragmented chatter into an opportunity.\nIf the codomain evidence is too fragmented for a real opportunity, return an empty strategic_opportunities list.\nEvery strategic_opportunity must include an activation_type and evidence_topic_ids.\nDo not write generic audience recommendations. Focus on interpretation, quality, opportunities, and presentation-ready takeaways.\nReturn JSON only.\n\nOUTPUT_JSON\n",
+  "deterministic_output": {
+    "subject": "keir_starmer",
+    "dataset": "codomain",
+    "sentiment_terms": {
+      "negative": [
+        {
+          "term": "not",
+          "score": 1.0
+        },
+        {
+          "term": "no",
+          "score": 0.641569
+        },
+        {
+          "term": "get",
+          "score": 0.613287
+        },
+        {
+          "term": "go",
+          "score": 0.592333
+        },
+        {
+          "term": "uk",
+          "score": 0.464889
+        },
+        {
+          "term": "want",
+          "score": 0.437897
+        }
+      ],
+      "neutral": [
+        {
+          "term": "not",
+          "score": 1.0
+        },
+        {
+          "term": "india",
+          "score": 0.979152
+        },
+        {
+          "term": "uk",
+          "score": 0.716955
+        },
+        {
+          "term": "new",
+          "score": 0.697936
+        },
+        {
+          "term": "break",
+          "score": 0.67609
+        },
+        {
+          "term": "digital",
+          "score": 0.673366
+        }
+      ],
+      "positive": [
+        {
+          "term": "india",
+          "score": 1.0
+        },
+        {
+          "term": "love",
+          "score": 0.733078
+        },
+        {
+          "term": "life",
+          "score": 0.640329
+        },
+        {
+          "term": "new",
+          "score": 0.639841
+        },
+        {
+          "term": "great",
+          "score": 0.620726
+        },
+        {
+          "term": "good",
+          "score": 0.611392
+        }
+      ]
+    },
+    "diagnostics": {
+      "analysis_mode": "codomain_adjacent_interest",
+      "off_topic_risk": "low",
+      "confidence": "high",
+      "generic_terms": [
+        "get",
+        "go",
+        "want",
+        "one",
+        "right",
+        "need",
+        "new",
+        "great",
+        "good",
+        "day"
+      ],
+      "generic_term_share": 0.4444,
+      "subject_topic_share": 0.25,
+      "noise_topic_share": 0.0,
+      "topic_diagnostics": [
+        {
+          "topic_id": 0,
+          "label": "digital id · keir starmer · starmer · uk",
+          "matched_subject_terms": [
+            "keir",
+            "starmer",
+            "labour",
+            "pm"
+          ],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 1,
+          "label": "india · make · new · life",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 2,
+          "label": "not · no · see · attack",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": []
+        },
+        {
+          "topic_id": 3,
+          "label": "not · right · israel · gaza",
+          "matched_subject_terms": [],
+          "matched_off_topic_terms": []
+        }
+      ],
+      "quality_flags": [
+        {
+          "flag": "generic_terms",
+          "severity": "medium",
+          "explanation": "Many top sentiment terms are generic verbs or filler tokens instead of subject-specific language."
+        }
+      ]
+    }
+  },
+  "topic_summary_rows": [
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 0,
+      "label": "digital id · keir starmer · starmer · uk",
+      "top_words": "starmer, uk, india, digital, id, digital id, keir, minister, not, pm, keir starmer, labour",
+      "exemplars": [
+        "The teaching profession in Nigeria, unfortunately, has not received the due attention it deserves, as a critical contributor to national development. The severe",
+        "Pujya Gurudevshri Rakeshji showers blessings and extends warm felicitations to Shri C. P. Radhakrishnan ji on being elected as the Hon’ble Vice President of Ind",
+        "Global Fintech Festival 2025 kicks off in Mumbai with PM Narendra Modi & UK PM Keir Starmer. Modi highlights India's digital ecosystem as a global standard for "
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 1,
+      "label": "india · make · new · life",
+      "top_words": "india, make, new, life, no, not, pay, get, need, go, come, one",
+      "exemplars": [
+        "Fast & Fabulous – The Super Catwalk was another special moment in an already memorable year for us.\n\nThe Chairman’s Collection was showcased once again, paying ",
+        "Among all the threads that define Raymond’s legacy, education is the one closest to my heart.\nIt shapes character, builds communities and empowers generations t",
+        "100 years of Raymond is more than a milestone. It is a century of dressing India’s dreams, moments and milestones.\nThe centenary celebration brought together fa"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 2,
+      "label": "not · no · see · attack",
+      "top_words": "not, no, see, attack, get, day, go, call, police, break, jewish, trump",
+      "exemplars": [
+        "🚨Breaking 🚨 \n\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\n\nHowever",
+        "🚨Breaking 🚨 \n\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\n\nHowever",
+        "🚨 Manchester terror attack update 🚨 \n\nManchester police have released a full statement responding to the terror attack that occurred today at a synagogue near h"
+      ]
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 3,
+      "label": "not · right · israel · gaza",
+      "top_words": "not, right, israel, gaza, trump, hamas, get, one, know, woman, love, go",
+      "exemplars": [
+        "🇹🇭🇰🇭\nEscalation at the Thailand-Cambodia border📝\nWhat is known as of the end of July 26?\n\nThe conflict at the Thailand-Cambodia border has been ongoing for the ",
+        "Israel and Hamas have reached a long-awaited agreement on a ceasefire and hostage exchange — marking the first phase of U.S. President Donald Trump’s peace plan",
+        "🇷🇺🇺🇦\nRussia is unlikely to show forgiveness to Ukraine!\n\nA compromise between Russia and Ukraine on peace in the evening negotiations is unlikely, — The New Yor"
+      ]
+    }
+  ],
+  "topic_exemplar_rows": [
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 0,
+      "rank": 1,
+      "score": 0.9876682340417708,
+      "doc_idx": 830,
+      "sentiment": "negative",
+      "preview": "The teaching profession in Nigeria, unfortunately, has not received the due attention it deserves, as a critical contributor to national development. The severe"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 0,
+      "rank": 2,
+      "score": 0.980797360656004,
+      "doc_idx": 1848,
+      "sentiment": "positive",
+      "preview": "Pujya Gurudevshri Rakeshji showers blessings and extends warm felicitations to Shri C. P. Radhakrishnan ji on being elected as the Hon’ble Vice President of Ind"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 0,
+      "rank": 3,
+      "score": 0.980724132719979,
+      "doc_idx": 2833,
+      "sentiment": "positive",
+      "preview": "Global Fintech Festival 2025 kicks off in Mumbai with PM Narendra Modi & UK PM Keir Starmer. Modi highlights India's digital ecosystem as a global standard for "
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 1,
+      "rank": 1,
+      "score": 0.9798318739841454,
+      "doc_idx": 1975,
+      "sentiment": "positive",
+      "preview": "Fast & Fabulous – The Super Catwalk was another special moment in an already memorable year for us.\n\nThe Chairman’s Collection was showcased once again, paying "
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 1,
+      "rank": 2,
+      "score": 0.975939292739315,
+      "doc_idx": 1961,
+      "sentiment": "positive",
+      "preview": "Among all the threads that define Raymond’s legacy, education is the one closest to my heart.\nIt shapes character, builds communities and empowers generations t"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 1,
+      "rank": 3,
+      "score": 0.9752414274207242,
+      "doc_idx": 1955,
+      "sentiment": "positive",
+      "preview": "100 years of Raymond is more than a milestone. It is a century of dressing India’s dreams, moments and milestones.\nThe centenary celebration brought together fa"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 2,
+      "rank": 1,
+      "score": 0.9842665503342664,
+      "doc_idx": 7602,
+      "sentiment": "negative",
+      "preview": "🚨Breaking 🚨 \n\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\n\nHowever"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 2,
+      "rank": 2,
+      "score": 0.9839521823075976,
+      "doc_idx": 7603,
+      "sentiment": "negative",
+      "preview": "🚨Breaking 🚨 \n\nReports are coming in that Ajit Bharti, who incited violence following the attack on the Chief Justice of India (CJI), has been arrested.\n\nHowever"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 2,
+      "rank": 3,
+      "score": 0.979692468438982,
+      "doc_idx": 8244,
+      "sentiment": "negative",
+      "preview": "🚨 Manchester terror attack update 🚨 \n\nManchester police have released a full statement responding to the terror attack that occurred today at a synagogue near h"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 3,
+      "rank": 1,
+      "score": 0.9911105781567346,
+      "doc_idx": 8017,
+      "sentiment": "neutral",
+      "preview": "🇹🇭🇰🇭\nEscalation at the Thailand-Cambodia border📝\nWhat is known as of the end of July 26?\n\nThe conflict at the Thailand-Cambodia border has been ongoing for the "
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 3,
+      "rank": 2,
+      "score": 0.990383622762358,
+      "doc_idx": 1105,
+      "sentiment": "neutral",
+      "preview": "Israel and Hamas have reached a long-awaited agreement on a ceasefire and hostage exchange — marking the first phase of U.S. President Donald Trump’s peace plan"
+    },
+    {
+      "subject": "keir_starmer",
+      "dataset": "codomain",
+      "topic_id": 3,
+      "rank": 3,
+      "score": 0.9863228827886316,
+      "doc_idx": 8039,
+      "sentiment": "negative",
+      "preview": "🇷🇺🇺🇦\nRussia is unlikely to show forgiveness to Ukraine!\n\nA compromise between Russia and Ukraine on peace in the evening negotiations is unlikely, — The New Yor"
+    }
+  ],
+  "available_backends": [
+    "prompt_only",
+    "ollama"
+  ],
+  "model_options": [
+    {
+      "backend": "ollama",
+      "recommended_models": [
+        "isotnek/qwen3.5:9B-Unsloth-UD-Q4_K_XL",
+        "qwen2.5:7b-instruct",
+        "qwen2.5:14b-instruct",
+        "llama3.1:8b-instruct",
+        "mistral-small:24b-instruct-2501"
+      ],
+      "notes": "Simplest cross-platform path. The default here is an Ollama community build of Qwen3.5-9B; qwen2.5:7b-instruct remains the smaller fallback."
+    },
+    {
+      "backend": "mlx_lm",
+      "recommended_models": [
+        "mlx-community/Qwen2.5-7B-Instruct-4bit",
+        "mlx-community/Llama-3.1-8B-Instruct-4bit",
+        "mlx-community/Mistral-Small-24B-Instruct-2501-4bit"
+      ],
+      "notes": "Best local performance path on Apple Silicon if you want an MLX-native stack."
+    },
+    {
+      "backend": "llama_cpp",
+      "recommended_models": [
+        "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+      ],
+      "notes": "Good when you want GGUF portability and fine-grained runtime control."
+    },
+    {
+      "backend": "prompt_only",
+      "recommended_models": [],
+      "notes": "Write the prompt bundle only. Useful when the prompt is ready but the local runtime is not."
+    }
+  ]
+}

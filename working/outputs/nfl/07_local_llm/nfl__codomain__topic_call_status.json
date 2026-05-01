@@ -1,0 +1,26 @@
+[
+  {
+    "topic_id": 0,
+    "label": "go · love · get · back",
+    "status": "ok",
+    "raw_char_count": 1269
+  },
+  {
+    "topic_id": 1,
+    "label": "get · not · good · one",
+    "status": "ok",
+    "raw_char_count": 848
+  },
+  {
+    "topic_id": 2,
+    "label": "game · nfl · lion · raven",
+    "status": "ok",
+    "raw_char_count": 1036
+  },
+  {
+    "topic_id": 3,
+    "label": "go · get · home · nfl",
+    "status": "ok",
+    "raw_char_count": 873
+  }
+]

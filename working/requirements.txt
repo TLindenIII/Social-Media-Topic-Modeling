@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+scikit-learn
+nltk
+langdetect
+torch
+transformers
+tqdm
+pyarrow
+jupyter
+ipywidgets
+requests
+pyLDAvis
+streamlit
