@@ -1,5 +1,9 @@
 # Social Media Topic Modeling
 
+<a href="https://deepwiki.com/TLindenIII/Social-Media-Topic-Modeling">
+  <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
+</a>
+  
 This repository contains a notebook-first workflow for comparing topic-specific X/Twitter corpora against codomain corpora built from users connected to those topics. The current project covers three subjects:
 
 - Costco
