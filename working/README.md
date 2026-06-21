@@ -52,6 +52,22 @@ Figures are saved inside a `figures/` subfolder inside the stage directory using
 - `06_topic_modeling`: grid search, fitted LDA outputs, summaries, exemplars, optional pyLDAvis
 - `07_local_llm`: JSONL prompt bundle plus optional local-model inference outputs
 
+## Optional Xquik Collection
+
+`working/lib/xquik_source.py` collects Xquik tweet search results into the same
+CSV schema used by the domain and codomain corpora:
+
+```bash
+XQUIK_API_KEY=... python3 working/lib/xquik_source.py \
+  --query 'costco lang:en' \
+  --dataset domain \
+  --limit 100 \
+  --output working/data/costco/domain/costco_d_corpus.csv
+```
+
+For codomain seed corpora, use `--dataset codomain` and optionally pass
+`--original-user-sentiment positive`, `neutral`, or `negative`.
+
 ## Notes
 
 - `00_n8n_collection_scaffold.ipynb` is intentionally scaffold-first. The repo only contains exported n8n workflow JSON, not a guaranteed runnable local automation setup.
